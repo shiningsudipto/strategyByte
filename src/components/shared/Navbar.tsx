@@ -30,7 +30,7 @@ const Navbar = () => {
 
         <NavigationMenu>
           <NavigationMenuList>
-            {navLinks.map((link, linkIdx) => {
+            {navLinks.map((link) => {
               // If no dropdown, render a simple link
               if (!link.dropdown) {
                 return (
