@@ -55,6 +55,36 @@
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
+  --yellow-1: #ffefd7;
+  --yellow-2: #ffc605;
+  --yellow-3: #cfa000;
+  --yellow-4: #765a00;
+  --yellow-5: #281c00;
+  --neutral-1: #f1f0f0;
+  --neutral-2: #d1cdc9;
+  --neutral-3: #aaa6a2;
+  --neutral-4: #605d5b;
+  --neutral-5: #1f1e1d;
+  --teal-1: #35fbbc;
+  --teal-2: #2acf9a;
+  --teal-3: #1fa47a;
+  --teal-4: #0b553d;
+  --teal-5: #01150c;
+  --navy-1: #eef1f8;
+  --navy-2: #c9d1ea;
+  --navy-3: #6684c4;
+  --navy-4: #496091;
+  --navy-5: #172035;
+  --maze-1: #ecd4f8;
+  --maze-2: #d89ff0;
+  --maze-3: #a13bbf;
+  --maze-4: #6f2685;
+  --maze-5: #1f0627;
+  --vibe-1: #f6d4db;
+  --vibe-2: #ed9fb1;
+  --vibe-3: #e66287;
+  --vibe-4: #822643;
+  --vibe-5: #26050f;
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
   --accent: oklch(0.97 0 0);
@@ -132,5 +162,5 @@ body {
   margin: 0 auto;
 }
 .section-gap {
-  @apply 3xl:px-[224px] 2xl:px-[180px] xl:px-[100px];
+  @apply 3xl:px-[224px] 2xl:px-[160px] xl:px-[100px] lg:px-[60px];
 }
