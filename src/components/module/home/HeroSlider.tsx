@@ -16,6 +16,7 @@ import Autoplay from "embla-carousel-autoplay";
 import Image from "next/image";
 import { Star } from "lucide-react";
 import { FiArrowUpRight } from "react-icons/fi";
+import Organizations from "./Organizations";
 
 const heroCarouselItems = [
   {
@@ -105,6 +106,7 @@ const HeroSlider = () => {
           </Carousel>
         </div>
       </div>
+      <Organizations />
     </div>
   );
 };
