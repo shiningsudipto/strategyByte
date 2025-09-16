@@ -3,6 +3,18 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
 import Navbar from "@/components/shared/Navbar";
+import localFont from "next/font/local";
+
+const chopin = localFont({
+  src: [
+    {
+      path: "../fonts/chopin-font-family/Chopin-Trial-Bold-BF65b1d691a55be.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-chopin",
+});
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -21,7 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={`${openSans.variable} font-OpenSans antialiased`}>
+      <body
+        className={`${openSans.variable} ${chopin.variable} font-OpenSans antialiased`}
+      >
         <Navbar />
         {children}
       </body>
