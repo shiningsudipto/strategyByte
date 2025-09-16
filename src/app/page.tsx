@@ -1,5 +1,5 @@
 import bgImg from "@/assets/hero-bg.png";
-import HeroSlider from "@/components/module/home/HeroSlider";
+import HeroSection from "@/components/module/home/HeroSection";
 
 const Home = () => {
   return (
@@ -7,7 +7,7 @@ const Home = () => {
       style={{ backgroundImage: `url(${bgImg.src})` }}
       className="bg-cover bg-center h-[100vh] -mt-[90px]"
     >
-      <HeroSlider />
+      <HeroSection />
     </div>
   );
 };

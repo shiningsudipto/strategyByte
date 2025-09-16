@@ -103,7 +103,7 @@ const organizationsList = [
 
 const Organizations = () => {
   return (
-    <div className=" py-20">
+    <div className="py-20">
       <h2 className="text-center text-neutral-500 mb-5">
         Trust By <span className="font-bold">30+ organizations</span>
       </h2>
