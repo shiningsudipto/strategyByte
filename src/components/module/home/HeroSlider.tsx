@@ -49,7 +49,7 @@ const HeroSlider = () => {
         <p>Growth</p>
         <div className="absolute size-2 bg-vibe-300 -bottom-[5px] -left-[5px]" />
       </div>
-      <div className="absolute z-50 bottom-16 -left-28 border-2 bg-white text-maze-400 text-sm font-semibold border-maze-400 py-2 px-5 design-shadow animate-bounce">
+      <div className="absolute z-10 bottom-16 -left-28 border-2 bg-white text-maze-400 text-sm font-semibold border-maze-400 py-2 px-5 design-shadow animate-bounce">
         <p>Design</p>
         <div className="absolute size-2 bg-maze-400 -top-[5px] -right-[5px]" />
       </div>

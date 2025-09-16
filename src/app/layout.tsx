@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={`${openSans.variable} font-OpenSans antialiased border`}>
+      <body className={`${openSans.variable} font-OpenSans antialiased`}>
         <Navbar />
         {children}
       </body>
