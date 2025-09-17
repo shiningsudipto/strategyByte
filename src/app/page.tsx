@@ -1,5 +1,6 @@
 import bgImg from "@/assets/hero-bg.png";
 import HeroSection from "@/components/module/home/HeroSection";
+import Process from "@/components/module/home/Process";
 import Service from "@/components/module/home/Service";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
     >
       <HeroSection />
       <Service />
+      <Process />
     </div>
   );
 };
