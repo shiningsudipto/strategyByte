@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
+import "swiper/css";
 import Navbar from "@/components/shared/Navbar";
 import localFont from "next/font/local";
 
