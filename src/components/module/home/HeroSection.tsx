@@ -33,10 +33,12 @@ const HeroSection = () => {
               <span className="text-sm">4.5/5 with 20 active clients</span>
             </p>
           </div>
-          <button className="bg-yellow-200 font-bold cursor-pointer py-5 px-6 rounded-full text-neutral-700 flex items-center gap-2 book-shadow">
-            Book a Session{" "}
-            <span className="bg-neutral-700 rounded-full p-1 size-6">
-              <FiArrowUpRight className="text-white" />
+          <button className="bg-yellow-200 font-bold cursor-pointer py-5 px-6 rounded-full text-neutral-700 flex items-center gap-2 book-shadow hover:bg-neutral-700 group transition duration-300">
+            <span className="group-hover:underline group-hover:text-yellow-200 transition duration-300">
+              Book a Session
+            </span>
+            <span className="bg-neutral-700 group-hover:bg-yellow-200 group-hover:text-neutral-700 rounded-full p-1 size-6 text-white transition duration-300">
+              <FiArrowUpRight className="" />
             </span>
           </button>
         </div>
