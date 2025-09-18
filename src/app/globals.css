@@ -218,7 +218,14 @@ body {
 
 /* swiper */
 .swiper{
-  height: 558px;
+  height: 580px;
+}
+.swiper-pagination-bullet{
+  background-color: transparent !important;
+  border: 1px solid var(--neutral-5) !important;
+}
+.swiper-pagination-bullet-active{
+  background-color: var(--neutral-5) !important;
 }
 .swiper-pagination {
   text-align: start !important;

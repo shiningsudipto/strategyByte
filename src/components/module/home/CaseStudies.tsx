@@ -5,9 +5,10 @@ import thumbnail from "@/assets/caseStudy/Case Studies - Thumbnail Box.png";
 import Image, { StaticImageData } from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useRef } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 type CaseStudy = {
   id: number;
@@ -103,9 +104,9 @@ const CaseStudies = () => {
               <SwiperSlide
                 style={{ marginRight: "16px" }}
                 key={item?.id}
-                className="max-w-[980px]"
+                className="max-w-[980px] "
               >
-                <div className="grid grid-cols-2">
+                <div className="grid grid-cols-2 group min-h-[508px]">
                   <div className="bg-[#F8F8F8] rounded-l-[40px] p-6">
                     <Image
                       src={item.img}
@@ -113,7 +114,7 @@ const CaseStudies = () => {
                       height={48}
                       width={164}
                     />
-                    <h3 className="text-2xl font-semibold text-neutral-700 mt-12">
+                    <h3 className="text-2xl font-semibold text-neutral-700 mt-12 group-hover:underline cursor-pointer">
                       {item.title}
                     </h3>
                     <div className="my-8 flex gap-3 items-center content-center self-stretch flex-wrap">
@@ -126,9 +127,19 @@ const CaseStudies = () => {
                         </span>
                       ))}
                     </div>
-
                     <p>Published : 7 Sep, 2024</p>
-                    <button>Read Full Case</button>
+                    <div className="mt-12">
+                      <Link
+                        href={"#"}
+                        className="bg-neutral-700 rounded-full py-3 px-5 text-white font-bold flex items-center gap-2 w-fit"
+                      >
+                        Read Full Case
+                        <ArrowRight
+                          size={20}
+                          className="hidden group-hover:block transition duration-300"
+                        />
+                      </Link>
+                    </div>
                   </div>
                   <div>
                     <Image
@@ -136,7 +147,7 @@ const CaseStudies = () => {
                       alt={item.title}
                       height={500}
                       width={500}
-                      className="rounded-r-[40px]"
+                      className="rounded-r-[40px] h-full"
                     />
                   </div>
                 </div>
@@ -144,18 +155,18 @@ const CaseStudies = () => {
             );
           })}
         </Swiper>
-        <div className="flex gap-2 justify-end absolute right-0 bottom-1 z-50">
+        <div className="flex gap-2 justify-end absolute right-0 -bottom-[2px] z-50">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
-            className="bg-gray-200 px-4 py-2 rounded"
+            className="border rounded-full border-neutral-700 size-10 flex items-center justify-center cursor-pointer hover:bg-neutral-700 hover:text-white transition duration-300"
           >
-            Prev
+            <ArrowLeft size={20} />
           </button>
           <button
             onClick={() => swiperRef.current?.slideNext()}
-            className="bg-gray-200 px-4 py-2 rounded"
+            className="border rounded-full border-neutral-700 size-10 flex items-center justify-center cursor-pointer hover:bg-neutral-700 hover:text-white transition duration-300"
           >
-            Next
+            <ArrowRight size={20} />
           </button>
         </div>
       </div>
