@@ -16,7 +16,7 @@ const Process = () => {
           Trusted by Australian brands for data-driven growth, tailored
           strategies, <br /> and measurable results.
         </p>
-        <div className="grid grid-cols-6 gap-2 py-20">
+        <div className="grid grid-cols-6 gap-[10px] py-20">
           {processSteps?.map((item, index) => (
             <div
               key={item.id}
