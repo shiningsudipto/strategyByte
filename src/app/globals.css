@@ -212,7 +212,7 @@ body {
 .design-shadow {
   box-shadow: 4px 4px 10px 0 rgba(195, 54, 250, 0.16);
 }
-.book-shadow {
+.book-shadow:hover {
   box-shadow: 0 2px 8px 0 rgba(255, 198, 5, 0.2);
 }
 

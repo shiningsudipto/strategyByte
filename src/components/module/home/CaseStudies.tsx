@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 import { useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import { FiArrowUpRight } from "react-icons/fi";
 
 type CaseStudy = {
   id: number;
@@ -169,6 +170,17 @@ const CaseStudies = () => {
             <ArrowRight size={20} />
           </button>
         </div>
+      </div>
+      <div className="flex justify-center">
+        <Link
+          href={"#"}
+          className="border-2 border-neutral-700 rounded-full p-4 hover:underline hover:text-yellow-200 font-bold hover:bg-neutral-700 flex items-center w-fit gap-2 group transition duration-300 book-shadow"
+        >
+          View Full Services
+          <span className="bg-neutral-700 group-hover:bg-yellow-200 group-hover:text-neutral-700 rounded-full p-1 size-6 text-white transition duration-300">
+            <FiArrowUpRight />
+          </span>
+        </Link>
       </div>
     </div>
   );
