@@ -127,7 +127,7 @@ const CaseStudies = () => {
                         </span>
                       ))}
                     </div>
-                    <p>Published : 7 Sep, 2024</p>
+                    <p className="text-neutral-500">Published : 7 Sep, 2024</p>
                     <div className="mt-12">
                       <Link
                         href={"#"}
