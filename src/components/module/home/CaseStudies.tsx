@@ -100,7 +100,7 @@ const CaseStudies = () => {
           mousewheel={true}
           keyboard={true}
           modules={[Pagination, Navigation, Keyboard, Mousewheel]}
-          className="mySwiper"
+          className="caseStudies"
         >
           {caseStudiesList?.map((item) => {
             return (

@@ -179,6 +179,7 @@
   --color-teal-300: #1fa47a;
   --color-vibe-300: #e66287;
   --color-maze-400: #a13bbf;
+  --color-maze-500: #6F2685;
   --color-navy-100: #eef1f8;
   --color-navy-200: #c9d1ea;
   --color-navy-bg: #091736;
@@ -219,8 +220,15 @@ body {
 }
 
 /* swiper */
-.swiper{
+/* .swiper{
   height: 580px;
+} */
+.caseStudies{
+  height: 580px;
+}
+.blogSlider .swiper-wrapper{
+ --swiper-centered-offset-before: 224px !important;
+ --swiper-centered-offset-after: 0 !important;
 }
 .swiper-pagination-bullet{
   background-color: transparent !important;
