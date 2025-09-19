@@ -171,6 +171,7 @@
   --color-yellow-200: #ffc605;
   --color-yellow-700: #281c00;
 
+  --color-neutral-300: #AAA6A2;
   --color-neutral-500: #605d5b;
   --color-neutral-700: #1f1e1d;
 
@@ -180,6 +181,7 @@
   --color-maze-400: #a13bbf;
   --color-navy-100: #eef1f8;
   --color-navy-200: #c9d1ea;
+  --color-navy-bg: #091736;
   /* end */
 }
 
