@@ -77,15 +77,17 @@ const CaseStudies = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const swiperRef = useRef<any>(null);
   return (
-    <div className="py-40 section-gap">
-      <h2 className="text-neutral-700 text-[56px] font-chopin font-bold">
-        Proven Case Studies
-      </h2>
-      <p className="text-neutral-500 text-xl mt-4">
-        Straight from the StrategyByte desk — industry news, strategy
-        breakdowns, and growth hacks that actually work.
-      </p>
-      <div className="mt-14 relative">
+    <div className="py-40">
+      <div className="section-gap">
+        <h2 className="text-neutral-700 text-[56px] font-chopin font-bold">
+          Proven Case Studies
+        </h2>
+        <p className="text-neutral-500 text-xl mt-4">
+          Straight from the StrategyByte desk — industry news, strategy
+          breakdowns, and growth hacks that actually work.
+        </p>
+      </div>
+      <div className="mt-14 relative ps-[224px]">
         <Swiper
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           cssMode={true}
@@ -156,7 +158,7 @@ const CaseStudies = () => {
             );
           })}
         </Swiper>
-        <div className="flex gap-2 justify-end absolute right-0 -bottom-[2px] z-50">
+        <div className="flex gap-2 justify-end absolute right-0 -bottom-[2px] z-50 pr-[224px]">
           <button
             onClick={() => swiperRef.current?.slidePrev()}
             className="border rounded-full border-neutral-700 size-10 flex items-center justify-center cursor-pointer hover:bg-neutral-700 hover:text-white transition duration-300"
