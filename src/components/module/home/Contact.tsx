@@ -29,7 +29,7 @@ const Contact = () => {
       <div>
         <Tabs defaultValue="meeting">
           <ScrollArea className="3xl:my-[56px]">
-            <TabsList className="mb-3 gap-1 bg-transparent">
+            <TabsList className="mb-3 gap-4 bg-transparent">
               {tabData?.map((item, index) => {
                 return (
                   <TabsTrigger
