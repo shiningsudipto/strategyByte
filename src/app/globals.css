@@ -267,3 +267,7 @@ background-repeat: no-repeat;
 background-size: 100% auto;
 background-position: center;
 } */
+
+.heading{
+  @apply font-chopin text-[56px] font-bold leading-[78px];
+}
