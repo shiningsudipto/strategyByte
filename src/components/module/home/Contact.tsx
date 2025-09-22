@@ -1,6 +1,7 @@
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import MeetingContent from "./MeetingContent";
+import CallContent from "./CallContent";
 
 const Contact = () => {
   const tabData = [
@@ -12,7 +13,7 @@ const Contact = () => {
     {
       title: "Request a Call",
       value: "call",
-      content: <p>Request</p>,
+      content: <CallContent />,
     },
   ];
 
