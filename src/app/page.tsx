@@ -1,4 +1,3 @@
-import bgImg from "@/assets/hero-bg.png";
 import Blogs from "@/components/module/home/Blogs";
 import CaseStudies from "@/components/module/home/CaseStudies";
 import Contact from "@/components/module/home/Contact";
@@ -9,10 +8,7 @@ import Service from "@/components/module/home/Service";
 
 const Home = () => {
   return (
-    <div
-      style={{ backgroundImage: `url(${bgImg.src})` }}
-      className="bg-cover bg-center h-[1020px] -mt-[90px]"
-    >
+    <>
       <HeroSection />
       <Service />
       <Process />
@@ -20,7 +16,7 @@ const Home = () => {
       <Review />
       <Blogs />
       <Contact />
-    </div>
+    </>
   );
 };
 
