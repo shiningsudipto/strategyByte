@@ -50,7 +50,7 @@ const Navbar = () => {
               // If dropdown, render trigger + content
               return (
                 <NavigationMenuItem key={link.label}>
-                  <NavigationMenuTrigger className="cursor-pointer bg-transparent hover:rounded-full hover:bg-[#EEF1F8] hover:text-[#1F1E1D] py-[10px] px-4 text-[#605D5B] font-semibold text-base">
+                  <NavigationMenuTrigger className="cursor-pointer bg-transparent hover:rounded-full hover:bg-[#EEF1F8] hover:text-[#1F1E1D] py-[10px] px-4 text-[#605D5B] font-semibold text-[15px]">
                     {link.label}
                   </NavigationMenuTrigger>
 
