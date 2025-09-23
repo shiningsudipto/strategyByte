@@ -42,7 +42,7 @@
   --color-destructive: var(--destructive);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
+  --color-muted-foreground: var(--color-neutral-500);
   --color-muted: var(--muted);
   --color-popover-foreground: var(--popover-foreground);
   --color-popover: var(--popover);
@@ -275,4 +275,8 @@ background-position: center;
 
 .heading{
   @apply font-chopin text-[56px] font-bold leading-[78px];
+}
+
+.dropdown-shadow{
+  box-shadow: 0 4px 8px -2px rgba(16, 24, 40, 0.10), 0 2px 4px -2px rgba(16, 24, 40, 0.06);
 }
