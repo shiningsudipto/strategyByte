@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bgImg.src})` }}
-      className="bg-cover bg-center h-[1020px] -mt-[90px]"
+      className="bg-cover bg-center h-[1020px] -mt-[90px] container"
     >
       <div className="section-gap pt-[200px] font-OpenSans">
         <div className="grid grid-cols-3">

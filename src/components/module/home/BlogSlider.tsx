@@ -51,7 +51,7 @@ const BlogSlider = () => {
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="mt-14 relative">
+    <div className="container mt-14 relative">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         cssMode={true}

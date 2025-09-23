@@ -3,7 +3,7 @@ import BlogSlider from "./BlogSlider";
 const Blogs = () => {
   return (
     <div className="py-40">
-      <div className="section-gap">
+      <div className="section-gap container">
         <h2 className="text-[56px] font-chopin font-bold text-neutral-700">
           The Byte Publishes
         </h2>

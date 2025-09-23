@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import NoteImg from "@/assets/contact-Notes.png";
+import Dropdown from "@/components/form/Dropdown";
 
 type callForm = {
   name: string;
@@ -55,6 +56,7 @@ const CallContent = () => {
               register={register("email", { required: "Email is required" })}
               error={errors.email}
             />
+            <Dropdown />
           </div>
           <div className="flex items-center justify-between mt-10">
             <p>Step {step}/2</p>

@@ -43,7 +43,7 @@ const serviceList = [
 
 const Service = () => {
   return (
-    <section className="section-gap py-[160px]">
+    <section className="container section-gap py-[160px]">
       <h2 className="text-[56px] font-bold text-neutral-700 text-center font-chopin">
         This is How StrategyByte Powers <br />
         <span className="text-primary">Real Business Growth.</span>

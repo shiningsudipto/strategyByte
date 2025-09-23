@@ -2,7 +2,7 @@ import CaseStudiesSlider from "./CaseStudiesSlider";
 
 const CaseStudies = () => {
   return (
-    <div className="py-40">
+    <div className="container py-40">
       <div className="section-gap">
         <h2 className="text-neutral-700 text-[56px] font-chopin font-bold">
           Proven Case Studies

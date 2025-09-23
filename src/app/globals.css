@@ -197,12 +197,15 @@
   }
 }
 
-body {
+/* body {
   max-width: 1728px;
   margin: 0 auto;
-}
+} */
 .section-gap {
   @apply 3xl:px-[224px] 2xl:px-[160px] xl:px-[100px] lg:px-[60px];
+}
+.container{
+  @apply 3xl:w-[1728px] mx-auto
 }
 
 .brand-shadow {
