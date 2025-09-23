@@ -9,6 +9,8 @@ import {
 import Image from "next/image";
 import shqImg from "@/assets/FAQ Images.png";
 import { Phone } from "lucide-react";
+import CustomButton from "@/components/ui/CustomButton";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const FAQ = () => {
   return (
@@ -21,26 +23,24 @@ const FAQ = () => {
         <span className="text-[#90949F]">StrategyByte</span>
       </h2>
       <div className="flex mt-16 gap-16">
+        <Accordion
+          type="single"
+          collapsible
+          defaultValue={"what-sets-us-apart"}
+        >
+          {faqs.map((item, index) => (
+            <AccordionItem key={index} value={item.value} className="py-8">
+              <AccordionTrigger className="text-neutral-700 text-xl font-bold cursor-pointer mb-0">
+                {item.question}
+              </AccordionTrigger>
+              <AccordionContent className="text-lg text-neutral-700 mt-6">
+                {item.answer}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
         <div className="">
-          <Accordion
-            type="single"
-            collapsible
-            defaultValue={"what-sets-us-apart"}
-          >
-            {faqs.map((item, index) => (
-              <AccordionItem key={index} value={item.value} className="py-8">
-                <AccordionTrigger className="text-neutral-700 text-xl font-bold cursor-pointer mb-0">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-lg text-neutral-700 mt-6">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-        <div className="w-[512px]">
-          <div className="border border-[#E0E3EB] rounded-[24px] p-8 bg-white w-full flex flex-col justify-center items-center">
+          <div className="w-[512px] border border-[#E0E3EB] rounded-[24px] p-8 bg-white flex flex-col justify-center items-center">
             <Image
               src={shqImg}
               alt="still-have-questions"
@@ -54,17 +54,20 @@ const FAQ = () => {
               Can’t find the answer you’re looking for? Please Call to our
               friendly team
             </p>
-            <button className="bg-yellow-200 font-bold cursor-pointer py-5 px-6 rounded-full text-neutral-700 flex items-center gap-2 book-shadow hover:bg-neutral-700 group transition duration-300">
-              <span className="group-hover:underline group-hover:text-yellow-200 transition duration-300">
-                Make a Quick Call
-              </span>
-              <span className="bg-neutral-700 group-hover:bg-yellow-200 group-hover:text-neutral-700 rounded-full p-1 size-6 text-white transition duration-300">
-                <Phone size={16} />
-              </span>
-            </button>
+            <CustomButton
+              label="Make a Quick Call"
+              icon={<Phone size={16} />}
+              size={12}
+              variant="primary"
+            />
           </div>
         </div>
       </div>
+      <CustomButton
+        label="See All FAQ's"
+        icon={<FiArrowUpRight />}
+        variant="bordered"
+      />
     </section>
   );
 };
