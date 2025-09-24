@@ -4,6 +4,7 @@ import {
   resources,
   services,
 } from "@/constants/footer.constants";
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -58,6 +59,21 @@ const Footer = () => {
               ))}
             </div>
           </div>
+        </div>
+        <div className="py-16 border-t border-[#4971C7] flex items-center gap-x-[100px]">
+          <Image
+            src={"/strategyByte-big-light-logo-.png"}
+            alt="strategyByte"
+            height={84}
+            width={500}
+            className="w-full"
+          />
+          <p>
+            We offer a comprehensive suite of digital marketing services that
+            cover all aspects of our online presence. From SEO and social media
+            marketing to content creation and PPC advertising, they have the
+            expertise and resources to handle our diverse marketing needs. 
+          </p>
         </div>
       </div>
     </nav>
