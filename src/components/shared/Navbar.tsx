@@ -10,11 +10,25 @@ import {
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
 import { FiArrowUpRight } from "react-icons/fi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navLinks } from "@/constants/importantLinks";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>();
+  const [scrollY, setScrollY] = useState(0);
+  console.log(scrollY);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    // Add event listener
+    window.addEventListener("scroll", handleScroll);
+    // Call once on mount to set initial value
+    handleScroll();
+    // Cleanup
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <nav className="sticky top-8 z-50 w-[950px] mx-auto px-6 py-4 rounded-full border bg-[#EEF1F85C]">
       <div className="flex h-14 items-center justify-between">
@@ -112,6 +126,16 @@ const Navbar = () => {
           <button className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer">
             Call
           </button>
+          {scrollY > 620 && (
+            <button className="bg-yellow-200 font-bold cursor-pointer py-[10px] px-4 rounded-full text-neutral-700 flex items-center gap-2 book-shadow hover:bg-neutral-700 group transition duration-300">
+              <span className="group-hover:underline group-hover:text-yellow-200 transition duration-300">
+                Book a Session
+              </span>
+              <span className="bg-neutral-700 group-hover:bg-yellow-200 group-hover:text-neutral-700 rounded-full p-1 size-6 text-white transition duration-300">
+                <FiArrowUpRight className="" />
+              </span>
+            </button>
+          )}
         </div>
       </div>
     </nav>
