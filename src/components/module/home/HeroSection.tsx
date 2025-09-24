@@ -12,7 +12,7 @@ const HeroSection = () => {
       style={{ backgroundImage: `url(${bgImg.src})` }}
       className="bg-cover bg-center xl:h-[1020px] -mt-[90px] container"
     >
-      <div className="section-gap lg:pt-[200px] mt-16 font-OpenSans lg:p-0 p-5">
+      <div className="section-gap lg:pt-[200px] lg:mt-0 mt-16 font-OpenSans lg:p-0 p-5">
         <div className="grid 2xl:grid-cols-3 lg:grid-cols-5 grid-cols-1 lg:gap-0 2xl:gap-0 xl:gap-24">
           <div className="2xl:col-span-2 lg:col-span-3 mt-10">
             <div className="2xl:text-7xl xl:text-6xl lg:text-5xl text-[44px] font-chopin">
