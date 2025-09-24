@@ -13,7 +13,7 @@ const Footer = () => {
     <nav className="bg-navy-bg">
       <div className="container section-gap text-white pt-40 pb-16">
         {/* 1st section */}
-        <div className="pb-16 grid grid-cols-4">
+        <div className="pb-16 grid lg:grid-cols-4 grid-cols-1">
           <div>
             <h4 className="text-xl font-semibold py-2 mb-2">Services</h4>
             <div>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
         {/* 2nd section */}
-        <div className="py-16 border-t border-[#4971C7] flex items-center gap-x-[100px]">
+        <div className="py-16 border-t border-[#4971C7] flex lg:flex-row flex-col items-center gap-x-[100px]">
           <Image
             src={"/strategyByte-big-light-logo-.png"}
             alt="strategyByte"
@@ -80,7 +80,7 @@ const Footer = () => {
           </p>
         </div>
         {/* 3rd section */}
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center lg:flex-row flex-col">
           <p>All right reserved, copyright ©2025 Australia</p>
           <p>Cookies settings</p>
           <div className="flex items-center gap-4">
