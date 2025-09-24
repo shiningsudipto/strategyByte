@@ -19,7 +19,7 @@ const StickyNote = () => {
             : { y: -300, opacity: 0, rotate: -20 }
         }
         transition={{ duration: 1, ease: "easeOut", bounce: 0.4 }}
-        className="absolute left-[64.5%] top-32 -translate-x-1/2 z-0 w-44"
+        className="absolute xl:left-[64.5%] lg:left-[72%] xl:top-32 lg:top-12 -translate-x-1/2 z-0 w-44"
       />
     </div>
   );

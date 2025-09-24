@@ -16,7 +16,6 @@ import { navLinks } from "@/constants/importantLinks";
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>();
   const [scrollY, setScrollY] = useState(0);
-  console.log(scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,6 +28,7 @@ const Navbar = () => {
     // Cleanup
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   return (
     <nav className="sticky top-8 z-50 w-[950px] mx-auto px-6 py-4 rounded-full border bg-[#EEF1F85C]">
       <div className="flex h-14 items-center justify-between">

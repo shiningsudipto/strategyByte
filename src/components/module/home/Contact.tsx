@@ -19,7 +19,7 @@ const Contact = () => {
 
   return (
     <div className="bg-yellow-200 ">
-      <div className="container section-gap py-40">
+      <div className="container section-gap xl:py-40 lg:py-20">
         <div>
           <h2 className="heading">Let’s Make it Together</h2>
           <p className="text-xl text-neutral-700 mt-4">
@@ -30,7 +30,7 @@ const Contact = () => {
         </div>
         <div>
           <Tabs defaultValue="meeting">
-            <ScrollArea className="3xl:my-[56px]">
+            <ScrollArea className="xl:my-[56px] lg:my-8">
               <TabsList className="mb-3 gap-4 bg-transparent">
                 {tabData?.map((item, index) => {
                   return (

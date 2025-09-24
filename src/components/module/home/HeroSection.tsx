@@ -10,15 +10,17 @@ const HeroSection = () => {
   return (
     <div
       style={{ backgroundImage: `url(${bgImg.src})` }}
-      className="bg-cover bg-center h-[1020px] -mt-[90px] container"
+      className="bg-cover bg-center xl:h-[1020px] -mt-[90px] container"
     >
       <div className="section-gap pt-[200px] font-OpenSans">
-        <div className="grid grid-cols-3">
-          <div className="col-span-2 mt-10">
-            <div>
-              <h1 className="font-bold text-7xl">Unlock Your Online</h1>
+        <div className="grid 2xl:grid-cols-3 lg:grid-cols-5 lg:gap-0 2xl:gap-0 xl:gap-24">
+          <div className="2xl:col-span-2 lg:col-span-3 mt-10">
+            <div className="">
+              <h1 className="font-bold 2xl:text-7xl xl:text-6xl lg:text-5xl">
+                Unlock Your Online
+              </h1>
               <TextType
-                className="font-bold text-7xl"
+                className="font-bold 2xl:text-7xl xl:text-6xl lg:text-5xl"
                 typingSpeed={20}
                 pauseDuration={1750}
                 showCursor={true}

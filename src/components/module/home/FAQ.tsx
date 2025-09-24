@@ -16,13 +16,13 @@ const FAQ = () => {
   return (
     <section
       style={{ backgroundImage: `url("/FAQ Section Background.png")` }}
-      className="relative bg-cover bg-center overflow-hidden container section-gap py-40"
+      className="relative bg-cover bg-center overflow-hidden container section-gap xl:py-40 lg:py-20"
     >
       <h2 className="heading">
         Get the answers you are <br /> looking for about{" "}
         <span className="text-[#90949F]">StrategyByte</span>
       </h2>
-      <div className="flex mt-16 gap-16">
+      <div className="flex mt-16 xl:gap-16 lg:gap-10">
         <Accordion
           type="single"
           collapsible
@@ -40,14 +40,14 @@ const FAQ = () => {
           ))}
         </Accordion>
         <div className="">
-          <div className="w-[512px] border border-[#E0E3EB] rounded-[24px] p-8 bg-white flex flex-col justify-center items-center">
+          <div className="xl:w-[512px] lg:w-[400px] border border-[#E0E3EB] rounded-[24px] p-8 bg-white flex flex-col justify-center items-center">
             <Image
               src={shqImg}
               alt="still-have-questions"
               height={48}
               width={120}
             />
-            <h3 className="text-4xl font-semibold text-neutral-700 mb-4 mt-6 text-center">
+            <h3 className="xl:text-4xl lg:text-3xl font-semibold text-neutral-700 mb-4 mt-6 text-center">
               Still Have Question?
             </h3>
             <p className="text-neutral-500 text-lg mb-11 text-center">

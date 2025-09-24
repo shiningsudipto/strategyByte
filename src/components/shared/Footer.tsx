@@ -11,7 +11,7 @@ import { FaLinkedin, FaFacebook, FaFacebookSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <nav className="bg-navy-bg">
-      <div className="container section-gap text-white pt-40 pb-16">
+      <div className="container section-gap text-white xl:pt-40 pt-20 pb-16">
         {/* 1st section */}
         <div className="pb-16 grid lg:grid-cols-4 grid-cols-1">
           <div>
@@ -64,20 +64,23 @@ const Footer = () => {
           </div>
         </div>
         {/* 2nd section */}
-        <div className="py-16 border-t border-[#4971C7] flex lg:flex-row flex-col items-center gap-x-[100px]">
+        <div className="py-16 border-t border-[#4971C7] flex lg:flex-row flex-col items-center xl:gap-x-[100px] lg:gap-x-10">
           <Image
             src={"/strategyByte-big-light-logo-.png"}
             alt="strategyByte"
             height={84}
             width={500}
-            className="w-full"
+            className="xl:w-full h-auto"
           />
-          <p>
-            We offer a comprehensive suite of digital marketing services that
-            cover all aspects of our online presence. From SEO and social media
-            marketing to content creation and PPC advertising, they have the
-            expertise and resources to handle our diverse marketing needs. 
-          </p>
+          <div className="lg:w-[600px]">
+            <p>
+              We offer a comprehensive suite of digital marketing services that
+              cover all aspects of our online presence. From SEO and social
+              media marketing to content creation and PPC advertising, they have
+              the expertise and resources to handle our diverse marketing
+              needs. 
+            </p>
+          </div>
         </div>
         {/* 3rd section */}
         <div className="flex justify-between items-center lg:flex-row flex-col">

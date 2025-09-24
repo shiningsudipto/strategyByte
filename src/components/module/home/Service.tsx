@@ -43,8 +43,8 @@ const serviceList = [
 
 const Service = () => {
   return (
-    <section className="container section-gap py-[160px]">
-      <h2 className="text-[56px] font-bold text-neutral-700 text-center font-chopin">
+    <section className="container section-gap xl:py-40 lg:py-20">
+      <h2 className="heading text-center">
         This is How StrategyByte Powers <br />
         <span className="text-primary">Real Business Growth.</span>
       </h2>
@@ -61,7 +61,7 @@ const Service = () => {
             className="p-9 rounded-[36px] bg-navy-100 group hover:bg-neutral-700 hover:text-white transition duration-300"
           >
             <Image src={item.img} alt={item.title} height={70} width={56} />
-            <h3 className="mt-5 mb-6 font-semibold text-4xl text-neutral-700 group-hover:text-white transition duration-300">
+            <h3 className="mt-5 mb-6 font-semibold xl:text-4xl lg:text-3xl text-neutral-700 group-hover:text-white transition duration-300">
               {item?.title}
             </h3>
             <p>{item?.description}</p>

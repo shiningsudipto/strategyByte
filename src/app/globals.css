@@ -206,7 +206,7 @@ button{
   cursor: pointer;
 }
 .section-gap {
-  @apply 3xl:px-[224px] 2xl:px-[160px] xl:px-[100px] lg:px-[60px];
+  @apply 3xl:px-[224px] 2xl:px-[150px] xl:px-[80px] lg:px-[40px];
 }
 .container{
   @apply 3xl:w-[1728px] mx-auto
@@ -235,13 +235,34 @@ button{
 .caseStudies{
   height: 580px;
 }
-.blogSlider .swiper-wrapper{
+/* .blogSlider .swiper-wrapper{
  --swiper-centered-offset-before: 224px !important;
  --swiper-centered-offset-after: 0 !important;
+} */
+
+@media only screen and (min-width: 1024) {
+  .blogSlider .swiper-wrapper{
+ --swiper-centered-offset-before: 40px !important;
+}
+}
+@media only screen and (min-width: 1280) {
+  .blogSlider .swiper-wrapper{
+ --swiper-centered-offset-before: 80px !important;
+}
+}
+@media only screen and (min-width: 1536) {
+  .blogSlider .swiper-wrapper{
+ --swiper-centered-offset-before: 150px !important;
+}
+}
+@media only screen and (min-width: 1780) {
+.blogSlider .swiper-wrapper{
+ --swiper-centered-offset-before: 224px !important;
+}
 }
 
 .heading{
-  @apply font-chopin text-[56px] font-bold leading-[78px];
+  @apply font-chopin xl:text-[56px] lg:text-5xl font-bold leading-[78px];
 }
 
 .dropdown-shadow{

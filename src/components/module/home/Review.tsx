@@ -89,10 +89,10 @@ const Review = () => {
   ];
 
   return (
-    <section className="py-40 bg-navy-bg text-white">
+    <section className="xl:py-40 lg:py-20 bg-navy-bg text-white">
       <div className="container">
         <div className="section-gap text-center">
-          <h2 className="font-chopin text-[56px] font-bold">
+          <h2 className="heading">
             Results That <br /> Speak for Themselves
           </h2>
           <p className="text-xl mt-4">
