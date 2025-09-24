@@ -41,26 +41,26 @@ const HeroSlider = () => {
 
   return (
     <div className="2xl:col-span-1 lg:col-span-2 relative">
-      <div className="absolute z-10 top-10 -left-16 lg:-left-14 border-2 border-teal-300 py-2 px-5 text-sm text-teal-300 bg-white font-semibold brand-shadow animate-bounce">
+      <div className="absolute z-10 top-10 xl:-left-16 lg:-left-14 left-0 border-2 border-teal-300 py-2 px-5 text-sm text-teal-300 bg-white font-semibold brand-shadow animate-bounce">
         <p>Brand</p>
         <div className="absolute size-2 bg-teal-300 -bottom-[5px] -right-[5px]" />
       </div>
-      <div className="absolute z-50 top-8 2xl:-right-20 xl:-right-14 lg:-right-6  border-2 text-vibe-300 text-sm font-semibold border-vibe-300 bg-white py-2 px-5 growth-shadow animate-bounce">
+      <div className="absolute z-50 top-8 2xl:-right-20 xl:-right-14 lg:-right-6 right-5  border-2 text-vibe-300 text-sm font-semibold border-vibe-300 bg-white py-2 px-5 growth-shadow animate-bounce">
         <p>Growth</p>
         <div className="absolute size-2 bg-vibe-300 -bottom-[5px] -left-[5px]" />
       </div>
-      <div className="absolute z-10 bottom-16 -left-28 lg:-left-20 border-2 bg-white text-maze-400 text-sm font-semibold border-maze-400 py-2 px-5 design-shadow animate-bounce">
+      <div className="absolute z-10 bottom-16 xl:-left-28 lg:-left-20 left-2 border-2 bg-white text-maze-400 text-sm font-semibold border-maze-400 py-2 px-5 design-shadow animate-bounce">
         <p>Design</p>
         <div className="absolute size-2 bg-maze-400 -top-[5px] -right-[5px]" />
       </div>
-      <div className="absolute z-50 bottom-8 2xl:-right-24 xl:-right-16 lg:-right-8 border-2 bg-white text-primary text-sm font-semibold border-primary py-2 px-5 development-shadow animate-bounce">
+      <div className="absolute z-50 bottom-8 2xl:-right-24 xl:-right-16 lg:-right-8 right-0 border-2 bg-white text-primary text-sm font-semibold border-primary py-2 px-5 development-shadow animate-bounce">
         <p>Development</p>
         <div className="absolute size-2 bg-primary -top-[5px] -left-[5px]" />
       </div>
 
-      <div ref={sliderRef} className="keen-slider">
+      <div ref={sliderRef} className="keen-slider overflow-x-hidden">
         {heroCarouselItems.map((item) => (
-          <div className="keen-slider__slide" key={item.id}>
+          <div className="keen-slider__slide overflow-x-hidden" key={item.id}>
             <Image
               alt="hero image"
               src={item.img}

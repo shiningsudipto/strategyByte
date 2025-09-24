@@ -12,15 +12,13 @@ const HeroSection = () => {
       style={{ backgroundImage: `url(${bgImg.src})` }}
       className="bg-cover bg-center xl:h-[1020px] -mt-[90px] container"
     >
-      <div className="section-gap pt-[200px] font-OpenSans">
-        <div className="grid 2xl:grid-cols-3 lg:grid-cols-5 lg:gap-0 2xl:gap-0 xl:gap-24">
+      <div className="section-gap lg:pt-[200px] mt-16 font-OpenSans lg:p-0 p-5">
+        <div className="grid 2xl:grid-cols-3 lg:grid-cols-5 grid-cols-1 lg:gap-0 2xl:gap-0 xl:gap-24">
           <div className="2xl:col-span-2 lg:col-span-3 mt-10">
-            <div className="">
-              <h1 className="font-bold 2xl:text-7xl xl:text-6xl lg:text-5xl">
-                Unlock Your Online
-              </h1>
+            <div className="2xl:text-7xl xl:text-6xl lg:text-5xl text-[44px] font-chopin">
+              <h1 className="font-bold ">Unlock Your Online</h1>
               <TextType
-                className="font-bold 2xl:text-7xl xl:text-6xl lg:text-5xl"
+                className="font-bold"
                 typingSpeed={20}
                 pauseDuration={1750}
                 showCursor={true}
@@ -28,7 +26,7 @@ const HeroSection = () => {
                 text={["Potential.", "Growth.", "Business.", "Engagement."]}
               />
             </div>
-            <p className="mt-5 font-OpenSans text-neutral-500">
+            <p className="mt-5 font-OpenSans text-neutral-500 text-xl">
               Strategybyte helps Australian businesses grow with smart websites,
               <br />
               targeted ads, and results-driven digital marketing.

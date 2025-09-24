@@ -197,10 +197,13 @@
   }
 }
 
-/* body {
-  max-width: 1728px;
-  margin: 0 auto;
-} */
+/* The CSS code `body { max-width: 1728px; margin: 0 auto; }` is styling the `body` element of the HTML
+document. */
+body {
+  /* max-width: 1728px;
+  margin: 0 auto; */
+  overflow-x: hidden;
+}
 
 button{
   cursor: pointer;
