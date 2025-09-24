@@ -1,4 +1,4 @@
-import bgImg from "@/assets/faq-bg.png";
+import bgImg from "@/assets/FAQ Section Background.png";
 import { faqs } from "@/constants/home.constants";
 import {
   Accordion,
@@ -15,7 +15,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 const FAQ = () => {
   return (
     <section
-      style={{ backgroundImage: `url(${bgImg.src})` }}
+      style={{ backgroundImage: `url("/FAQ Section Background.png")` }}
       className="relative bg-cover bg-center overflow-hidden container section-gap py-40"
     >
       <h2 className="heading">
