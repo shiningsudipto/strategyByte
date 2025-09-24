@@ -16,20 +16,46 @@ import { navLinks } from "@/constants/importantLinks";
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>();
   const [scrollY, setScrollY] = useState(0);
+  const [width, setWidth] = useState<number>(0);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-    // Add event listener
+    const handleScroll = () => setScrollY(window.scrollY);
+    const handleResize = () => setWidth(window.innerWidth);
+
+    // Initialize on mount
+    setScrollY(window.scrollY);
+    setWidth(window.innerWidth);
+
+    // Listeners
     window.addEventListener("scroll", handleScroll);
-    // Call once on mount to set initial value
-    handleScroll();
+    window.addEventListener("resize", handleResize);
+
     // Cleanup
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
-  return (
+  const isMobile = width < 960;
+
+  return isMobile ? (
+    <nav className="sticky top-0 m-5 z-50 border border-[#D1D1D3] rounded-full p-4">
+      <div className="flex items-center justify-between">
+        <Image
+          src="/strategyByte-dark.png"
+          alt="Strategy Byte Logo"
+          height={28}
+          width={200}
+        />
+        <div>
+          <button className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer">
+            Call
+          </button>
+        </div>
+      </div>
+    </nav>
+  ) : (
     <nav className="sticky top-8 z-50 w-[950px] mx-auto px-6 py-4 rounded-full border bg-[#EEF1F85C]">
       <div className="flex h-14 items-center justify-between">
         {/* Logo */}
