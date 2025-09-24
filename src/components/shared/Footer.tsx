@@ -5,12 +5,15 @@ import {
   services,
 } from "@/constants/footer.constants";
 import Image from "next/image";
+import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin, FaFacebook, FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <nav className="bg-navy-bg">
-      <div className="container section-gap text-white">
-        <div className="pt-40 pb-16 grid grid-cols-4">
+      <div className="container section-gap text-white pt-40 pb-16">
+        {/* 1st section */}
+        <div className="pb-16 grid grid-cols-4">
           <div>
             <h4 className="text-xl font-semibold py-2 mb-2">Services</h4>
             <div>
@@ -60,6 +63,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        {/* 2nd section */}
         <div className="py-16 border-t border-[#4971C7] flex items-center gap-x-[100px]">
           <Image
             src={"/strategyByte-big-light-logo-.png"}
@@ -74,6 +78,31 @@ const Footer = () => {
             marketing to content creation and PPC advertising, they have the
             expertise and resources to handle our diverse marketing needs. 
           </p>
+        </div>
+        {/* 3rd section */}
+        <div className="flex justify-between items-center">
+          <p>All right reserved, copyright ©2025 Australia</p>
+          <p>Cookies settings</p>
+          <div className="flex items-center gap-4">
+            <a
+              href="#"
+              className="p-3 hover:text-yellow-200 transform duration-300"
+            >
+              <FaFacebook size={28} />
+            </a>
+            <a
+              href="#"
+              className="p-3 hover:text-yellow-200 transform duration-300"
+            >
+              <RiInstagramFill size={30} />
+            </a>
+            <a
+              href="#"
+              className="p-3 hover:text-yellow-200 transform duration-300"
+            >
+              <FaLinkedin size={28} />
+            </a>
+          </div>
         </div>
       </div>
     </nav>
