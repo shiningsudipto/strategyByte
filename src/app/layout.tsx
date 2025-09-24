@@ -5,6 +5,7 @@ import "keen-slider/keen-slider.min.css";
 import "swiper/css";
 import Navbar from "@/components/shared/Navbar";
 import localFont from "next/font/local";
+import Footer from "@/components/shared/Footer";
 
 const chopin = localFont({
   src: [
@@ -39,6 +40,7 @@ export default function RootLayout({
       >
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

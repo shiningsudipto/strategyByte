@@ -235,43 +235,6 @@
  --swiper-centered-offset-before: 224px !important;
  --swiper-centered-offset-after: 0 !important;
 }
-.swiper-pagination-bullet{
-  background-color: transparent !important;
-  border: 1px solid var(--neutral-5) !important;
-}
-.swiper-pagination-bullet-active{
-  background-color: var(--neutral-5) !important;
-}
-.swiper-pagination {
-  text-align: start !important;
-}
-.swiper-horizontal .swiper-button-prev{
-right: 50px !important;
-left: auto !important;
-bottom: 0 !important;
-top: auto !important;
-border: 1px solid black;
-border-radius: 50%;
-}
-.swiper-horizontal .swiper-button-next{
-right: 0 !important;
-left: auto !important;
-bottom: 0 !important;
-top: auto !important;
-}
-/* .swiper-button-prev {
-background-image: url("../assets/icons/iconamoon--arrow-left-1-duotone.svg") !important;
-background-repeat: no-repeat;
-background-size: 100% auto;
-background-position: center;
-}
-
-.swiper-button-next {
-background-image: url("../assets/icons/iconamoon--arrow-right-1-duotone.svg") !important;
-background-repeat: no-repeat;
-background-size: 100% auto;
-background-position: center;
-} */
 
 .heading{
   @apply font-chopin text-[56px] font-bold leading-[78px];
