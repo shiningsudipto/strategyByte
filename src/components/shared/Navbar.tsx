@@ -12,6 +12,7 @@ import {
 import { FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/constants/importantLinks";
+import { Menu } from "lucide-react";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>();
@@ -40,17 +41,22 @@ const Navbar = () => {
   const isMobile = width < 960;
 
   return isMobile ? (
-    <nav className="sticky top-0 m-5 z-50 border border-[#D1D1D3] rounded-full p-4">
+    <nav
+      className={`sticky top-0 m-5 z-50 border border-[#D1D1D3] rounded-full p-4`}
+    >
       <div className="flex items-center justify-between">
         <Image
           src="/strategyByte-dark.png"
           alt="Strategy Byte Logo"
-          height={28}
-          width={200}
+          height={22}
+          width={163}
         />
-        <div>
+        <div className="flex items-center gap-4">
           <button className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer">
             Call
+          </button>
+          <button>
+            <Menu size={24} />
           </button>
         </div>
       </div>
