@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return isMobile ? (
     <nav
-      className={`sticky top-5 m-5 z-50 border border-[#D1D1D3] rounded-full p-4 min-w-[400px]`}
+      className={`sticky top-5 w-[90%] mx-auto z-50 border border-[#D1D1D3] rounded-full p-4`}
     >
       <div className="flex items-center justify-between">
         <Image

@@ -18,7 +18,7 @@ const CustomButton = ({
   className,
 }: TProps) => {
   const baseClasses =
-    "font-bold cursor-pointer py-5 px-6 rounded-full flex items-center gap-2 transition duration-300";
+    "font-bold cursor-pointer py-4 px-6 rounded-full flex items-center gap-2 transition duration-300";
   const variants = {
     primary:
       "bg-yellow-200 text-neutral-700 hover:bg-neutral-700 hover:text-yellow-200",
