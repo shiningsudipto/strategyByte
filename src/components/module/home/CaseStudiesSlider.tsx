@@ -69,7 +69,7 @@ const CaseStudiesSlider = () => {
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="mt-14 relative">
+    <div className="lg:mt-14 mt-5 relative">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         cssMode={true}
@@ -90,20 +90,20 @@ const CaseStudiesSlider = () => {
             <SwiperSlide
               style={{ marginRight: "16px" }}
               key={item?.id}
-              className="max-w-[980px] "
+              className="lg:max-w-[980px] "
             >
-              <div className="grid grid-cols-2 group min-h-[508px]">
-                <div className="bg-[#F8F8F8] rounded-l-[40px] p-6">
+              <div className="grid lg:grid-cols-2 grid-cols-1 group min-h-[508px]">
+                <div className="bg-[#F8F8F8] lg:rounded-l-[40px] rounded-t-[40px] lg:p-6 p-5 lg:space-y-0 space-y-5">
                   <Image
                     src={item.img}
                     alt={item.title}
                     height={48}
                     width={164}
                   />
-                  <h3 className="text-2xl font-semibold text-neutral-700 mt-12 group-hover:underline cursor-pointer">
+                  <h3 className="text-2xl font-semibold text-neutral-700 lg:mt-12 group-hover:underline cursor-pointer">
                     {item.title}
                   </h3>
-                  <div className="my-8 flex gap-3 items-center content-center self-stretch flex-wrap">
+                  <div className="lg:my-8 flex gap-3 items-center content-center self-stretch flex-wrap">
                     {item.tags.map((tag, index) => (
                       <span
                         key={index}
@@ -114,7 +114,7 @@ const CaseStudiesSlider = () => {
                     ))}
                   </div>
                   <p className="text-neutral-500">Published : 7 Sep, 2024</p>
-                  <div className="mt-12">
+                  <div className="lg:mt-12">
                     <Link
                       href={"#"}
                       className="bg-neutral-700 rounded-full py-3 px-5 text-white font-bold flex items-center gap-2 w-fit"
@@ -133,7 +133,7 @@ const CaseStudiesSlider = () => {
                     alt={item.title}
                     height={500}
                     width={500}
-                    className="rounded-r-[40px] h-full"
+                    className="lg:rounded-r-[40px] rounded-b-[40px] h-full"
                   />
                 </div>
               </div>
@@ -141,9 +141,25 @@ const CaseStudiesSlider = () => {
           );
         })}
       </Swiper>
+      <div className="flex lg:hidden justify-center gap-3 mt-10">
+        {caseStudiesList.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              swiperRef.current?.slideTo(index);
+              setActiveIndex(index);
+            }}
+            className={`size-2 rounded-full transition-all duration-300 cursor-pointer ${
+              activeIndex === index
+                ? "bg-neutral-700 scale-125"
+                : "bg-neutral-300"
+            }`}
+          ></button>
+        ))}
+      </div>
       <div className="flex justify-between items-center gap-2 mt-10 section-gap">
         {/* Custom Pagination */}
-        <div className="flex justify-center gap-3">
+        <div className="hidden lg:flex justify-center gap-3">
           {caseStudiesList.map((_, index) => (
             <button
               key={index}

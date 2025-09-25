@@ -265,7 +265,7 @@ button{
 }
 
 .heading{
-  @apply font-chopin xl:text-[56px] lg:text-5xl font-bold leading-[78px];
+  @apply font-chopin xl:text-[56px] lg:text-5xl text-3xl font-bold lg:leading-[78px];
 }
 
 .dropdown-shadow{

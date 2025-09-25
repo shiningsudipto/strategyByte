@@ -89,9 +89,9 @@ const Review = () => {
   ];
 
   return (
-    <section className="xl:py-40 lg:py-20 bg-navy-bg text-white">
+    <section className="xl:py-40 lg:py-20 py-10 bg-navy-bg text-white">
       <div className="container">
-        <div className="section-gap text-center">
+        <div className="section-gap text-center lg:px-0 px-5">
           <h2 className="heading">
             Results That <br /> Speak for Themselves
           </h2>
@@ -100,7 +100,7 @@ const Review = () => {
             trust StrategyByte to deliver <br /> results that matter.
           </p>
         </div>
-        <div className="space-y-2 mt-20">
+        <div className="space-y-2 lg:mt-20 mt-10">
           <Marquee>
             <MarqueeContent pauseOnHover={false} pauseOnClick={false}>
               {testimonials.map((item) => (

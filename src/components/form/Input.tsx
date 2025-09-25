@@ -32,7 +32,7 @@ const Input = ({ label, error, register, ...rest }: InputFieldProps) => {
     <div
       ref={wrapperRef}
       onClick={() => setClicked(true)}
-      className={`relative w-[400px] h-[70px] rounded-[12px] px-4 py-2 
+      className={`relative lg:w-[400px] w-full h-[70px] rounded-[12px] px-4 py-2 
         bg-navy-100 transition-colors cursor-text
         ${
           error

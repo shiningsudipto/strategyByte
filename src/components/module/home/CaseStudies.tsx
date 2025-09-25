@@ -2,7 +2,7 @@ import CaseStudiesSlider from "./CaseStudiesSlider";
 
 const CaseStudies = () => {
   return (
-    <div className="container xl:py-40 lg:py-20">
+    <div className="container xl:py-40 lg:py-20 py-10 p-5">
       <div className="section-gap">
         <h2 className="text-neutral-700 heading">Proven Case Studies</h2>
         <p className="text-neutral-500 text-xl mt-4">

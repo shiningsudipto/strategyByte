@@ -18,8 +18,8 @@ const Contact = () => {
   ];
 
   return (
-    <div className="bg-yellow-200 ">
-      <div className="container section-gap xl:py-40 lg:py-20">
+    <div className="bg-yellow-200">
+      <div className="container section-gap xl:py-40 lg:py-20 py-10 lg:px-0 px-5">
         <div>
           <h2 className="heading">Let’s Make it Together</h2>
           <p className="text-xl text-neutral-700 mt-4">
@@ -29,7 +29,7 @@ const Contact = () => {
           </p>
         </div>
         <div>
-          <Tabs defaultValue="meeting">
+          <Tabs defaultValue="meeting" className="lg:mt-0 mt-5">
             <ScrollArea className="xl:my-[56px] lg:my-8">
               <TabsList className="mb-3 gap-4 bg-transparent">
                 {tabData?.map((item, index) => {

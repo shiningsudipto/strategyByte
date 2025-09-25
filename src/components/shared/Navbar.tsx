@@ -12,7 +12,7 @@ import {
 import { FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/constants/importantLinks";
-import { Menu } from "lucide-react";
+import MobileSidebar from "./MobileSidebar";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>();
@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return isMobile ? (
     <nav
-      className={`sticky top-0 m-5 z-50 border border-[#D1D1D3] rounded-full p-4`}
+      className={`sticky top-5 m-5 z-50 border border-[#D1D1D3] rounded-full p-4 min-w-[400px]`}
     >
       <div className="flex items-center justify-between">
         <Image
@@ -55,9 +55,7 @@ const Navbar = () => {
           <button className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer">
             Call
           </button>
-          <button>
-            <Menu size={24} />
-          </button>
+          <MobileSidebar />
         </div>
       </div>
     </nav>

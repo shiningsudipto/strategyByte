@@ -11,27 +11,29 @@ const Process = () => {
       <div className="container section-gap">
         <StickyNote />
         <div className="xl:mt-20 relative z-10">
-          <h2 className="heading text-center text-white relative">
-            StrategyByte’s <br />
-            <span className="text-teal-100 relative z-10">Growth Method</span>
-          </h2>
-          <p className="text-xl text-neutral-200 mt-5 text-center mx-20">
-            Trusted by Australian brands for data-driven growth, tailored
-            strategies, <br /> and measurable results.
-          </p>
+          <div className="lg:px-0 px-5">
+            <h2 className="heading text-center text-white relative">
+              StrategyByte’s <br />
+              <span className="text-teal-100 relative z-10">Growth Method</span>
+            </h2>
+            <p className="text-xl text-neutral-200 mt-5 text-center lg:mx-20">
+              Trusted by Australian brands for data-driven growth, tailored
+              strategies, <br /> and measurable results.
+            </p>
+          </div>
 
-          <div className="grid grid-cols-6 gap-[10px] xl:py-20 lg:pt-20">
+          <div className="grid lg:grid-cols-6 grid-cols-1 gap-[10px] xl:py-20 lg:pt-20 pt-10 lg:p-0 p-5">
             {processSteps?.map((item, index) => (
               <div
                 key={item.id}
-                className={`p-5 rounded-[36px] bg-white space-y-6 ${
-                  index < 3 ? "col-span-2" : "col-span-3"
+                className={`p-5 rounded-[36px] bg-white lg:space-y-6 space-y-4 ${
+                  index < 3 ? "lg:col-span-2" : "lg:col-span-3"
                 }`}
               >
-                <p className="xl:text-[56px] lg:text-5xl font-chopin font-bold text-navy-200">
+                <p className="xl:text-[56px] lg:text-5xl text-4xl font-chopin font-bold text-navy-200">
                   {item.id}
                 </p>
-                <h2 className="xl:text-5xl lg:text-4xl font-chopin text-[#0F1C2B]">
+                <h2 className="xl:text-5xl lg:text-4xl text-3xl font-chopin text-[#0F1C2B]">
                   {item.title}
                 </h2>
                 <p className="text-neutral-700 text-lg font-OpenSans">

@@ -2,7 +2,7 @@ import BlogSlider from "./BlogSlider";
 
 const Blogs = () => {
   return (
-    <div className="xl:py-40 lg:py-20">
+    <div className="xl:py-40 lg:py-20 py-10 lg:px-0 px-5">
       <div className="section-gap container">
         <h2 className="heading text-neutral-700">The Byte Publishes</h2>
         <p className="text-xl text-neutral-500 mt-4">

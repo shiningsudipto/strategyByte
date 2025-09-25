@@ -11,9 +11,9 @@ import { FaLinkedin, FaFacebook, FaFacebookSquare } from "react-icons/fa";
 const Footer = () => {
   return (
     <nav className="bg-navy-bg">
-      <div className="container section-gap text-white xl:pt-40 pt-20 pb-16">
+      <div className="container section-gap text-white xl:pt-40 lg:pt-20 pt-10 pb-10 lg:pb-16">
         {/* 1st section */}
-        <div className="pb-16 grid lg:grid-cols-4 grid-cols-1">
+        <div className="lg:pb-16 pb-10 lg:px-0 px-5 grid lg:grid-cols-4 grid-cols-1 gap-y-5">
           <div>
             <h4 className="text-xl font-semibold py-2 mb-2">Services</h4>
             <div>
@@ -64,7 +64,7 @@ const Footer = () => {
           </div>
         </div>
         {/* 2nd section */}
-        <div className="py-16 border-t border-[#4971C7] flex lg:flex-row flex-col items-center xl:gap-x-[100px] lg:gap-x-10">
+        <div className="lg:py-16 py-10 lg:px-0 px-5 border-t border-[#4971C7] flex lg:flex-row flex-col items-center xl:gap-x-[100px] lg:gap-x-10">
           <Image
             src={"/strategyByte-big-light-logo-.png"}
             alt="strategyByte"
@@ -72,7 +72,7 @@ const Footer = () => {
             width={500}
             className="xl:w-full h-auto"
           />
-          <div className="lg:w-[600px]">
+          <div className="xl:w-auto lg:w-[600px]">
             <p>
               We offer a comprehensive suite of digital marketing services that
               cover all aspects of our online presence. From SEO and social

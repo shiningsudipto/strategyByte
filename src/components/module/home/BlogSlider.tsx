@@ -51,7 +51,7 @@ const BlogSlider = () => {
   const swiperRef = useRef<any>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div className="container mt-14 relative">
+    <div className="container lg:mt-14 mt-10 relative">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
         cssMode={true}
@@ -113,9 +113,25 @@ const BlogSlider = () => {
           );
         })}
       </Swiper>
+      <div className="flex lg:hidden justify-center gap-3 mt-10">
+        {articles.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => {
+              swiperRef.current?.slideTo(index);
+              setActiveIndex(index);
+            }}
+            className={`size-2 rounded-full transition-all duration-300 cursor-pointer ${
+              activeIndex === index
+                ? "bg-neutral-700 scale-125"
+                : "bg-neutral-300"
+            }`}
+          ></button>
+        ))}
+      </div>
       <div className="flex justify-between items-center gap-2 mt-10 section-gap">
         {/* Custom Pagination */}
-        <div className="flex justify-center gap-3">
+        <div className="lg:flex hidden justify-center gap-3">
           {articles.map((_, index) => (
             <button
               key={index}

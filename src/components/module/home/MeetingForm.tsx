@@ -18,7 +18,7 @@ const MeetingForm = () => {
   const onSubmit = (data: FieldValues) => {};
   return (
     <div>
-      <form onSubmit={handleSubmit(onSubmit)} className="py-10 w-[400px]">
+      <form onSubmit={handleSubmit(onSubmit)} className="lg:py-10 lg:w-[400px]">
         <div className="space-y-5 ">
           {/* Name */}
           <Input

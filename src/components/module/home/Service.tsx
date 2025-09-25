@@ -43,18 +43,18 @@ const serviceList = [
 
 const Service = () => {
   return (
-    <section className="container section-gap xl:py-40 lg:py-20">
+    <section className="container section-gap xl:py-40 lg:py-20 lg:px-0 px-5 py-10">
       <h2 className="heading text-center">
-        This is How StrategyByte Powers <br />
+        This is How StrategyByte Powers <br className="lg:block hidden" />
         <span className="text-primary">Real Business Growth.</span>
       </h2>
-      <p className="text-xl text-neutral-500 mt-5 text-center mx-20">
+      <p className="text-xl text-neutral-500 mt-5 text-center lg:mx-20">
         Our approach is designed to maximize the impact of your marketing
         efforts by delivering measurable ROI. We focus on strategic allocation
         of resources, ensuring every dollar spent contributes to meaningful
         growth and business success.
       </p>
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 mt-20">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-2 lg:mt-20 mt-10">
         {serviceList?.map((item) => (
           <div
             key={item?.id}
