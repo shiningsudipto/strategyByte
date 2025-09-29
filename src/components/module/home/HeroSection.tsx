@@ -52,8 +52,8 @@ const HeroSection = () => {
           </div>
           <HeroSlider />
         </div>
-        <Organizations />
       </div>
+      <Organizations />
     </div>
   );
 };

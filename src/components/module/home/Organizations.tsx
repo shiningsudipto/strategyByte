@@ -18,7 +18,7 @@ import WheresYourHeadAt from "@/assets/organizations/Where's Your Head At.png";
 import {
   Marquee,
   MarqueeContent,
-  MarqueeFade,
+  // MarqueeFade,
   MarqueeItem,
 } from "@/components/ui/kibo-ui/marquee";
 import Image from "next/image";
@@ -101,15 +101,21 @@ const organizationsList = [
   },
 ];
 
-const Organizations = () => {
+const Organizations = ({ title }: { title?: string }) => {
   return (
     <div className="py-20">
       <h2 className="text-center text-neutral-500 mb-5">
-        Trust By <span className="font-bold">30+ organizations</span>
+        {title ? (
+          title
+        ) : (
+          <>
+            Trust By <span className="font-bold">30+ organizations</span>
+          </>
+        )}
       </h2>
       <Marquee>
-        <MarqueeFade side="left" />
-        <MarqueeFade side="right" />
+        {/* <MarqueeFade side="left" />
+        <MarqueeFade side="right" /> */}
         <MarqueeContent className="">
           {organizationsList.map((item) => (
             <MarqueeItem className="px-5" key={item?.id}>
