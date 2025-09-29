@@ -59,3 +59,21 @@ export const marketingStrategies = [
       "Our digital marketing solutions prioritize security, protecting customer data and ensuring compliance to maintain trust and safeguard your online presence.",
   },
 ];
+
+export const strategies = [
+  {
+    title: "Building Digital Trust",
+    description:
+      "A strong digital marketing strategy establishes credibility and trust. In Australia's competitive market, our tailored marketing services ensure your online presence reflects the quality of your business, building customer confidence from the first interaction.",
+  },
+  {
+    title: "Creating Strong First Impressions",
+    description:
+      "Visitors form an opinion about your site in just 50 milliseconds. Our digital marketing and SEO strategies ensure that your site’s first impression is positive, engaging visitors and encouraging them to stay longer.",
+  },
+  {
+    title: "Competing in Australia's Digital Marketplace",
+    description:
+      "With 88% of consumers researching online before making purchases, your website is your most powerful marketing tool. We help you stand out in Australia's competitive landscape with a site that performs exceptionally.",
+  },
+];
