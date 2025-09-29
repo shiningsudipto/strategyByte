@@ -75,7 +75,7 @@ const FAQ = () => {
         </div>
       </div>
       <CustomButton
-        className="hidden lg:block"
+        className="hidden lg:inline-flex"
         label="See All FAQ's"
         icon={<FiArrowUpRight />}
         variant="bordered"
