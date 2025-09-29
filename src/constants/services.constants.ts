@@ -36,3 +36,26 @@ export const features = [
     desc: "Full Digital marketing approach integrating SEO, PPC, content, and social media.",
   },
 ];
+
+export const marketingStrategies = [
+  {
+    title: "Scalability",
+    description:
+      "We create digital marketing strategies that scale with your business, handling increased traffic and growing demands for long-term success.",
+  },
+  {
+    title: "Performance",
+    description:
+      "We optimize digital marketing campaigns for peak performance, ensuring fast-loading pages and strategies that drive high conversions and improved rankings.",
+  },
+  {
+    title: "Usability",
+    description:
+      "We create user-friendly digital marketing experiences, optimizing websites for easy navigation and mobile access to keep visitors engaged and boost conversions.",
+  },
+  {
+    title: "Security",
+    description:
+      "Our digital marketing solutions prioritize security, protecting customer data and ensuring compliance to maintain trust and safeguard your online presence.",
+  },
+];

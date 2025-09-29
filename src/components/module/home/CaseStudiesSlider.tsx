@@ -1,7 +1,6 @@
 "use client";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import "swiper/css/pagination";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";

@@ -211,6 +211,9 @@ button{
 .section-gap {
   @apply 3xl:px-[224px] 2xl:px-[150px] xl:px-[80px] lg:px-[40px];
 }
+.section-gap-y{
+  @apply 3xl:py-40 2xl:py-32 xl:py-20 lg:py-10 py-5
+}
 .container{
   @apply 3xl:w-[1728px] mx-auto
 }
@@ -230,18 +233,9 @@ button{
 .book-shadow:hover {
   box-shadow: 0 2px 8px 0 rgba(255, 198, 5, 0.2);
 }
-
-/* swiper */
-/* .swiper{
-  height: 580px;
-} */
 .caseStudies{
   height: 580px;
 }
-/* .blogSlider .swiper-wrapper{
- --swiper-centered-offset-before: 224px !important;
- --swiper-centered-offset-after: 0 !important;
-} */
 
 @media only screen and (min-width: 1024) {
   .blogSlider .swiper-wrapper{
