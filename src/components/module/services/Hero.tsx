@@ -16,13 +16,14 @@ const Hero = () => {
             <span className="text-white">4.5 Ratings with</span>
             <span className="text-teal-100">25 Reviews</span>
           </p>
-          <h1 className="font-chopin text-7xl font-bold text-navy-100 pt-5 pb-6 text-center">
-            Data-Driven Business Optimization
+          <h1 className="font-chopin font-bold text-7xl text-navy-100 pt-5 pb-6 text-center">
+            Top Digital Marketing & SEO Services for Australian Businesses
           </h1>
           <p className="text-navy-200 text-2xl text-center mb-16">
-            Streamline workflows, reduce costs, and boost efficiency with
-            tailored process optimization strategies designed to help your
-            business scale faster.
+            Boost your Australian business with targeted digital marketing
+            strategies. From SEO and paid search to content and social media, we
+            deliver results that increase visibility and drive customer
+            conversions.
           </p>
           <CustomButton
             label="Book a Session"

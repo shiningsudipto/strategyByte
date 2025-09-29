@@ -15,7 +15,7 @@ export const navLinks = [
       {
         title: "Digital Marketing & SEO",
         desc: "We create targeted campaigns that drive real results and help your brand grow smarter online",
-        path: "#",
+        path: "/services/digital-marketing",
       },
       {
         title: "Strategic Branding Management",

@@ -10,9 +10,24 @@ import Footer from "@/components/shared/Footer";
 const chopin = localFont({
   src: [
     {
+      path: "../fonts/chopin-font-family/Chopin-Trial-Regular-BF65b1d6917c0ec.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/chopin-font-family/Chopin-Trial-Medium-BF65b1d69162573.otf",
+      weight: "500",
+      style: "medium",
+    },
+    {
+      path: "../fonts/chopin-font-family/Chopin-Trial-SemiBold-BF65b1d6917f846.otf",
+      weight: "600",
+      style: "semibold",
+    },
+    {
       path: "../fonts/chopin-font-family/Chopin-Trial-Bold-BF65b1d691a55be.otf",
       weight: "700",
-      style: "normal",
+      style: "bold",
     },
   ],
   variable: "--font-chopin",

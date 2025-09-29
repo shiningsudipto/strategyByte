@@ -1,17 +1,38 @@
 export const features = [
   {
     serial: "01",
-    title: "Engaging Content Marketing",
-    desc: "Create people-focused content that resonates with your audience, strengthens your brand, and drives measurable growth through strategic content marketing.",
+    img: "/services/process/doc-search-two.png",
+    title: "Improved Search Rankings",
+    desc: "Boost your visibility and rankings on search engines with proven SEO strategies.",
   },
   {
     serial: "02",
-    title: "SEO Authority & Optimization",
-    desc: "Boost your website’s authority with proven SEO strategies, technical enhancements, and keyword-driven campaigns that improve rankings and visibility.",
+    img: "/services/process/magnet.png",
+    title: "Targeted Lead Generation",
+    desc: "Drive qualified traffic with data-driven, result-oriented campaigns.",
   },
   {
     serial: "03",
-    title: "Seamless User Experience",
-    desc: "Deliver a top-tier user experience with optimized site structure, faster load times, and conversion-focused design to keep visitors engaged.",
+    img: "/services/process/chart-line.png",
+    title: "Conversion Optimization",
+    desc: "Maximize ROI with conversion-focused strategies tailored for your business.",
+  },
+  {
+    serial: "04",
+    img: "/services/process/sales-report.png",
+    title: "Advanced Analytics & Reporting",
+    desc: "Make informed decisions with transparent, easy-to-understand reports and analytics.",
+  },
+  {
+    serial: "05",
+    img: "/services/process/flag.png",
+    title: "Local SEO Expertise",
+    desc: "Rank higher in local searches and connect with nearby customers to grow your business.",
+  },
+  {
+    serial: "06",
+    img: "/services/process/chess.png",
+    title: "Comprehensive Digital Strategy",
+    desc: "Full Digital marketing approach integrating SEO, PPC, content, and social media.",
   },
 ];
