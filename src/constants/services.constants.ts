@@ -77,3 +77,45 @@ export const strategies = [
       "With 88% of consumers researching online before making purchases, your website is your most powerful marketing tool. We help you stand out in Australia's competitive landscape with a site that performs exceptionally.",
   },
 ];
+
+export const seoServices = [
+  {
+    title: "On-page SEO",
+    description: [
+      "Keyword optimization for web pages",
+      "Meta tags and headers optimization",
+      "Internal linking strategy",
+      "Optimizing content for user engagement",
+    ],
+    action: "Learn More",
+  },
+  {
+    title: "Off-page SEO",
+    description: [
+      "Link-building strategy",
+      "Social media engagement",
+      "Influencer outreach",
+      "Directory submissions and local SEO",
+    ],
+    action: "Learn More",
+  },
+  {
+    title: "Technical SEO",
+    description: [
+      "Optimizing site speed and mobile responsiveness",
+      "Crawling, indexing, and site map optimization",
+      "Implementing schema markup and rich snippets",
+      "Secure connections (HTTPS) and URL structure optimization",
+    ],
+    action: "Learn More",
+  },
+  {
+    title: "Digital Marketing Strategy",
+    description: [
+      "Targeted content strategies to enhance audience engagement",
+      "Social media management and advertising",
+      "Pay-Per-Click (PPC) management",
+    ],
+    action: "Learn More",
+  },
+];

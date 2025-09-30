@@ -4,6 +4,7 @@ import Impact from "@/components/module/services/Impact";
 import Importancy from "@/components/module/services/Importancy";
 import Info from "@/components/module/services/Info";
 import Marketing from "@/components/module/services/Marketing";
+import SEOServices from "@/components/module/services/SEOServices";
 
 const page = () => {
   return (
@@ -16,6 +17,7 @@ const page = () => {
       <Info />
       <Importancy />
       <Impact />
+      <SEOServices />
     </div>
   );
 };
