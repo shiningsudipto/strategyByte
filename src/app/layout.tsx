@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Licorice, Open_Sans } from "next/font/google";
 import "./globals.css";
 import "keen-slider/keen-slider.min.css";
 import "swiper/css";
@@ -37,6 +37,11 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
 });
+const licorice = Licorice({
+  weight: "400",
+  variable: "--font-licorice",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "StrategyByte",
@@ -51,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning={true}>
       <body
-        className={`${openSans.variable} ${chopin.variable} font-OpenSans antialiased`}
+        className={`${openSans.variable} ${chopin.variable} ${licorice.variable} font-OpenSans antialiased`}
       >
         <Navbar />
         {children}
