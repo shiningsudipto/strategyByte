@@ -132,7 +132,7 @@ const CaseStudiesSlider = () => {
                     alt={item.title}
                     height={500}
                     width={500}
-                    className="lg:rounded-r-[40px] rounded-b-[40px] h-full"
+                    className="lg:rounded-r-[40px] lg:rounded-bl-none rounded-b-[40px] h-full"
                   />
                 </div>
               </div>
