@@ -92,7 +92,7 @@ const CaseStudiesSlider = () => {
               className="lg:max-w-[980px] "
             >
               <div className="grid lg:grid-cols-2 grid-cols-1 group min-h-[508px]">
-                <div className="bg-[#F8F8F8] lg:rounded-l-[40px] rounded-t-[40px] lg:p-6 p-5 lg:space-y-0 space-y-5">
+                <div className="bg-[#F8F8F8] lg:rounded-l-[40px] lg:rounded-t-none rounded-t-[40px] lg:p-6 p-5 lg:space-y-0 space-y-5">
                   <Image
                     src={item.img}
                     alt={item.title}
