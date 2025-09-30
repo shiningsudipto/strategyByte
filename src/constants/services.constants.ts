@@ -119,3 +119,70 @@ export const seoServices = [
     action: "Learn More",
   },
 ];
+
+export const industries = [
+  {
+    title: "Corporate",
+    image: "/industry/corporate.png",
+    description:
+      "Enterprises need consistent branding and scalable digital presence.",
+    points: [
+      "Brand-aligned visual systems",
+      "Enterprise-ready responsive design",
+      "Storytelling that builds authority",
+    ],
+  },
+  {
+    title: "Health Tech",
+    image: "/industry/tech.png",
+    description:
+      "Requires clarity, accessibility, and compliance with sensitive data.",
+    points: [
+      "Clean, compliant interfaces",
+      "Mobile-first, accessible design",
+      "Trust-focused visual storytelling",
+    ],
+  },
+  {
+    title: "SaaS Application",
+    image: "/industry/corporate.png",
+    description:
+      "SaaS thrives on usability, clarity, and conversion-focused design.",
+    points: [
+      "High-converting landing pages",
+      "Scalable UI for growth",
+      "Clear visuals for product features",
+    ],
+  },
+  {
+    title: "E-Commerce",
+    image: "/industry/tech.png",
+    description: "Fast, intuitive shopping experiences that convert.",
+    points: [
+      "Mobile-optimized product layouts",
+      "Fast-loading, responsive design",
+      "Storytelling that sells",
+    ],
+  },
+  {
+    title: "Edu-Tech",
+    image: "/industry/corporate.png",
+    description: "Education platforms need to inform, engage, and guide.",
+    points: [
+      "Easy-to-use, inclusive design",
+      "Course-focused UX",
+      "Messaging that connects with learners",
+    ],
+  },
+  {
+    title: "Fintech",
+    image: "/industry/tech.png",
+    description:
+      "A fast-paced industry where clarity, trust, and security are key.",
+    points: [
+      "Simplified, goal-focused layouts",
+      "Responsive, secure design",
+      "Data made visual and user-friendly",
+    ],
+  },
+];
