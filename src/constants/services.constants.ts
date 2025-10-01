@@ -186,3 +186,41 @@ export const industries = [
     ],
   },
 ];
+
+export const processPhases = [
+  {
+    title: "Strategy Development",
+    description:
+      "Align goals, audience, and strategy for clear, focused digital marketing and SEO campaigns.",
+    points: [
+      "Business Goals Analysis",
+      "User Persona Development",
+      "Competitive Digital Marketing Analysis",
+      "Technical SEO Requirements Documentation",
+      "Project Roadmap Creation",
+    ],
+  },
+  {
+    title: "Implementation",
+    description:
+      "Execute targeted digital marketing strategies and optimize SEO to drive traffic and boost conversions.",
+    points: [
+      "Tailored Digital Marketing Strategies",
+      "SEO Optimization",
+      "Content Enhancement",
+      "Targeted Paid Ads",
+      "Analytics Setup",
+      "Continuous Optimization",
+    ],
+  },
+  {
+    title: "Continuous Improvement",
+    description:
+      "We analyze data and adjust strategies to ensure ongoing growth and optimal results.",
+    points: [
+      "Track performance and insights",
+      "Optimize strategies based on data",
+      "Refine SEO and marketing for growth",
+    ],
+  },
+];
