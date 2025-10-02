@@ -224,3 +224,21 @@ export const processPhases = [
     ],
   },
 ];
+
+export const services = [
+  {
+    img: "/services/services/Website Development.png",
+    title: "Website Development",
+    desc: "We design fast, functional, and conversion-driven websites tailored to specific goals",
+  },
+  {
+    img: "/services/services/Strategic Brand Management.png",
+    title: "Strategic Branding Management",
+    desc: "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth",
+  },
+  {
+    img: "/services/services/Business Optimization.png",
+    title: "Business Optimization",
+    desc: "We optimize your business by refining workflows, maintaining content consistency, and implementing scalable systems to boost efficiency, clarity, and growth.",
+  },
+];
