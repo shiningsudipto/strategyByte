@@ -4,7 +4,7 @@ import { ArrowUpRight, Check } from "lucide-react";
 const SEOServices = () => {
   return (
     <section className="container  section-gap-y">
-      <div className="text-center w-[1076px] mx-auto section-gap">
+      <div className="text-center mx-auto section-gap">
         <h2 className="heading mb-5">
           Comprehensive Digital Marketing Services for{" "}
           <span className="text-primary">Australian Businesses</span>
