@@ -317,3 +317,36 @@ export const testimonials = [
     position: "Product Lead at Tesla",
   },
 ];
+
+export const marketingFaqs = [
+  {
+    question: "How much does it cost to develop a website in Australia?",
+    answer:
+      "Website development costs in Australia vary based on complexity. A simple business site might start around $2,000–$5,000, while custom, feature-rich platforms can exceed $20,000. Ongoing hosting, maintenance, and updates are also additional costs.",
+  },
+  {
+    question: "How to develop a WordPress website for my business?",
+    answer:
+      "Plan your structure, choose a fast theme, and use trusted plugins. Add SEO-ready content, set up analytics, and secure your site. If you prefer done-for-you WordPress development, our Australian team handles strategy, design, build, and optimization.",
+  },
+  {
+    question: "What is website development and what does it include?",
+    answer:
+      "Website development is the process of designing, building, and maintaining a website. It typically includes planning, UI/UX design, coding, content integration, SEO optimization, and ongoing support.",
+  },
+  {
+    question: "Where can I find a website developer in Australia?",
+    answer:
+      "You can find website developers through freelance platforms, local agencies, LinkedIn, or professional directories. Partnering with an Australian-based agency ensures familiarity with local markets and compliance standards.",
+  },
+  {
+    question: "Are website development costs tax deductible in Australia?",
+    answer:
+      "Yes. In Australia, website development costs are generally considered a business expense and can often be claimed as a tax deduction. Specific eligibility depends on the type of expense and your business structure.",
+  },
+  {
+    question: "Can you capitalise website development costs?",
+    answer:
+      "In some cases, yes. Costs directly tied to building or improving a long-term business asset (like a website) may be capitalised, while routine maintenance and content updates are usually treated as expenses. Always confirm with your accountant.",
+  },
+];
