@@ -7,6 +7,7 @@ import Marketing from "@/components/module/services/Marketing";
 import MarketingFields from "@/components/module/services/MarketingFields";
 import MarketingProcess from "@/components/module/services/MarketingProcess";
 import Offering from "@/components/module/services/Offering";
+import Reviews from "@/components/module/services/Reviews";
 import SEOServices from "@/components/module/services/SEOServices";
 import SuccessStories from "@/components/module/services/SuccessStories";
 import Area from "@/components/shared/Area";
@@ -28,6 +29,7 @@ const page = () => {
       <SuccessStories />
       <Area />
       <Offering />
+      <Reviews />
     </div>
   );
 };

@@ -242,3 +242,78 @@ export const services = [
     desc: "We optimize your business by refining workflows, maintaining content consistency, and implementing scalable systems to boost efficiency, clarity, and growth.",
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    brand: "/brands/dropbox.png",
+    review:
+      "StrategyByte helped us optimize campaigns with data-driven insights. We saw immediate ROI improvements.",
+    name: "Emily Johnson",
+    avatar: "/avatars/avatar1.png",
+    position: "Marketing Manager at Google",
+  },
+  {
+    id: 2,
+    brand: "/brands/microsoft.png",
+    review:
+      "Their approach to growth is refreshing and results-oriented. Our engagement metrics skyrocketed.",
+    name: "David Lee",
+    avatar: "/avatars/avatar2.png",
+    position: "Growth Lead at Meta",
+  },
+  {
+    id: 3,
+    brand: "/brands/slack.png",
+    review:
+      "We trusted StrategyByte for our new product launch, and they exceeded expectations.",
+    name: "Sophia Martinez",
+    avatar: "/avatars/avatar3.png",
+    position: "Product Manager at Amazon",
+  },
+  {
+    id: 4,
+    brand: "/brands/spotify.png",
+    review:
+      "The team delivered measurable results while being collaborative and transparent.",
+    name: "James Wilson",
+    avatar: "/avatars/avatar1.png",
+    position: "Head of Strategy at Airbnb",
+  },
+  {
+    id: 5,
+    brand: "/brands/dropbox.png",
+    review:
+      "Excellent experience — the StrategyByte team really understands data-driven scaling.",
+    name: "Olivia Chen",
+    avatar: "/avatars/avatar2.png",
+    position: "Senior Analyst at Microsoft",
+  },
+  {
+    id: 6,
+    brand: "/brands/microsoft.png",
+    review:
+      "They helped us reach new audiences with precision targeting and smart insights.",
+    name: "Michael Brown",
+    avatar: "/avatars/avatar3.png",
+    position: "Creative Director at Netflix",
+  },
+  {
+    id: 7,
+    brand: "/brands/slack.png",
+    review:
+      "A great partner for growth marketing. Our subscriptions increased significantly.",
+    name: "Ava Thompson",
+    avatar: "/avatars/avatar1.png",
+    position: "Marketing Strategist at Spotify",
+  },
+  {
+    id: 8,
+    brand: "/brands/spotify.png",
+    review:
+      "Innovative, agile, and data-backed — they align perfectly with how we build products.",
+    name: "Daniel Carter",
+    avatar: "/avatars/avatar2.png",
+    position: "Product Lead at Tesla",
+  },
+];
