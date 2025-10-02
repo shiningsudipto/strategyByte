@@ -265,7 +265,7 @@ button {
   @apply font-chopin xl:text-[56px] lg:text-5xl text-3xl font-bold lg:leading-[78px];
 }
 .subheading {
-  @apply text-xl mt-5 text-neutral-500 font-OpenSans;
+  @apply text-xl mt-5 font-OpenSans;
 }
 
 .dropdown-shadow {

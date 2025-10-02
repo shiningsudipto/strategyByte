@@ -8,6 +8,7 @@ import MarketingFields from "@/components/module/services/MarketingFields";
 import MarketingProcess from "@/components/module/services/MarketingProcess";
 import SEOServices from "@/components/module/services/SEOServices";
 import SuccessStories from "@/components/module/services/SuccessStories";
+import Area from "@/components/shared/Area";
 
 const page = () => {
   return (
@@ -24,6 +25,7 @@ const page = () => {
       <MarketingFields />
       <MarketingProcess />
       <SuccessStories />
+      <Area />
     </div>
   );
 };

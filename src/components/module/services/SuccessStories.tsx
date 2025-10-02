@@ -8,7 +8,7 @@ const SuccessStories = () => {
           <h2 className="heading">
             Our Digital Marketing & SEO Success Stories
           </h2>
-          <p className="subheading">
+          <p className="subheading text-neutral-500">
             Discover how our Australian-based web development services have
             helped businesses across various industries achieve their digital
             goals. 
