@@ -1,18 +1,19 @@
-import { strategies } from "@/constants/services.constants";
+import { TOfTitleAndDesc } from "@/types/types";
 
-const Importancy = () => {
+type TProps = {
+  title: string;
+  subtitle: string;
+  description: string;
+  strategies: TOfTitleAndDesc[];
+};
+
+const Importancy = ({ title, subtitle, description, strategies }: TProps) => {
   return (
     <section className="container section-gap section-gap-y grid grid-cols-2 gap-x-40 items-center">
       <div>
-        <p className="text-2xl font-semibold text-blue-100 mb-4">
-          Why Digital Marketing
-        </p>
-        <h2 className="heading mb-8">Matters For Your Australian Business </h2>
-        <p className="text-neutral-700 text-xl">
-          In today’s digital-first world, your online presence driven by
-          effective digital marketing and SEO is often the first touchpoint for
-          potential customers.
-        </p>
+        <p className="text-2xl font-semibold text-blue-100 mb-4">{title}</p>
+        <h2 className="heading mb-8">{subtitle}</h2>
+        <p className="text-neutral-700 text-xl">{description}</p>
       </div>
       <div className="grid grid-cols-1 gap-y-8">
         {strategies.map((item, index) => (

@@ -81,3 +81,27 @@ export const info = {
     },
   ],
 };
+
+export const importancy = {
+  subtitle: "Why Content Marketing",
+  title: "Matters For Your Australian Business",
+  description:
+    "In today’s digital-first world, your content is often the first point of contact with potential customers.",
+  strategies: [
+    {
+      title: "Content That Connects",
+      description:
+        "A strong content marketing strategy builds trust and authority with your audience. In Australia’s competitive landscape, our services ensure your brand's voice connects authentically, fostering trust and loyalty from the very first interaction.",
+    },
+    {
+      title: "Captivating Content Strategies",
+      description:
+        "Your audience makes quick judgments about your brand based on your content. Our content marketing strategies are designed to captivate, inform, and build long-term relationships with your audience, keeping them engaged and loyal to your brand.",
+    },
+    {
+      title: "Driving Engagement Through Content",
+      description:
+        "With most consumers relying on online content to make informed decisions, your content strategy plays a pivotal role in attracting and retaining customers. We create content that resonates with your audience, drives engagement, and converts leads into loyal customers in Australia’s competitive market.",
+    },
+  ],
+};
