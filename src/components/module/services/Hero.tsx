@@ -2,7 +2,6 @@ import CustomButton from "@/components/ui/CustomButton";
 import { Star } from "lucide-react";
 import { FiArrowUpRight } from "react-icons/fi";
 import WavyLine from "./WavyLine";
-import dataImg from "@/assets/Data Driven Business Optimization.png";
 import Image from "next/image";
 // import HeroAnimate from "./HeroAnimate";
 
@@ -29,16 +28,18 @@ const Hero = () => {
             label="Book a Session"
             icon={<FiArrowUpRight />}
             variant="primary"
+            className="z-10"
           />
         </div>
         <div className="relative h-[600px] mt-20">
           <WavyLine />
           <div className="absolute bottom-0 w-full mx-auto">
             <Image
-              src={dataImg}
+              src={"/services/Digital Marketing & SEO.png"}
               alt="Data Driven Business Optimization"
-              sizes="500"
-              className="mx-auto size-[600px]"
+              width={600}
+              height={600}
+              className="mx-auto w-[600px] h-auto z-0"
             />
           </div>
         </div>
