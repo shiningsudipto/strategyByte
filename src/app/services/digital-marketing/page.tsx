@@ -1,3 +1,4 @@
+import Contact from "@/components/module/home/Contact";
 import Organizations from "@/components/module/home/Organizations";
 import Hero from "@/components/module/services/Hero";
 import Impact from "@/components/module/services/Impact";
@@ -33,6 +34,7 @@ const page = () => {
       <Offering />
       <Reviews />
       <FAQS faqs={marketingFaqs} title="Full-Stack Website Development" />
+      <Contact />
     </div>
   );
 };

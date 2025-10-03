@@ -1,14 +1,16 @@
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import MeetingContent from "./MeetingContent";
+// import MeetingContent from "./MeetingContent";
 import CallContent from "./CallContent";
+import CalendlyForm from "@/components/shared/CalendlyForm";
 
 const Contact = () => {
   const tabData = [
     {
       title: "Schedule a Meeting",
       value: "meeting",
-      content: <MeetingContent />,
+      // content: <MeetingContent />,
+      content: <CalendlyForm />,
     },
     {
       title: "Request a Call",
