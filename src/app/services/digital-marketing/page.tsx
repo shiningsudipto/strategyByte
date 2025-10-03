@@ -14,12 +14,14 @@ import SuccessStories from "@/components/module/services/SuccessStories";
 import Area from "@/components/shared/Area";
 import FAQS from "@/components/shared/FAQS";
 import { marketingFaqs } from "@/constants/services.constants";
+// constants
+import { hero, marketing } from "@/constants/service.marketing";
 
 const page = () => {
   return (
     <div>
-      <Hero />
-      <Marketing />
+      <Hero {...hero} />
+      <Marketing {...marketing} />
       <div className="container">
         <Organizations title={"Proudly worked with"} />
       </div>

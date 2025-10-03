@@ -4,6 +4,7 @@ export const hero = {
   description:
     "Boost your Australian business with targeted digital marketing strategies. From SEO and paid search to content and social media, we deliver results that increase visibility and drive customer conversions.",
   button: "Book a Session",
+  img: "/services/Digital Marketing & SEO.png",
 };
 
 export const marketing = {
@@ -11,6 +12,7 @@ export const marketing = {
   title_highlight: "Australian Businesses",
   description:
     "We specialize in delivering high-performance digital marketing strategies for Australian businesses. Our services include SEO, paid search, content marketing, and social media campaigns, all designed to drive results. As an Australia-based digital marketing agency, we offer transparent pricing, local support, and strategies that increase visibility and convert visitors into customers.",
+  img: "/services/process/Approach Image.png",
   features: [
     {
       serial: "01",

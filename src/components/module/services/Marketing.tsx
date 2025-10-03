@@ -1,14 +1,27 @@
-import { features } from "@/constants/services.constants";
-import approachImg from "@/assets/Approach.png";
+// import { features } from "@/constants/services.constants";
 import Image from "next/image";
 
-const Marketing = () => {
+type Feature = {
+  serial: string;
+  img: string;
+  title: string;
+  desc: string;
+};
+
+type TProps = {
+  title: string;
+  title_highlight: string;
+  img: string;
+  features: Feature[];
+};
+
+const Marketing = ({ title, title_highlight, img, features }: TProps) => {
   return (
     <div className="container section-gap py-16">
       <div className="">
         <h2 className="heading">
-          Delivering Measurable Digital Marketing & SEO Results For{" "}
-          <span className="text-blue-100">Australian Businesses</span>
+          {title}
+          <span className="text-blue-100">{title_highlight}</span>
         </h2>
         <p className="text-xl text-neutral-500 w-[1000px] mt-5">
           We specialize in delivering high-performance digital marketing
@@ -37,7 +50,7 @@ const Marketing = () => {
         ))}
       </div>
       <Image
-        src={approachImg}
+        src={img}
         alt="approach"
         height={1280}
         width={720}

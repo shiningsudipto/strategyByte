@@ -4,8 +4,13 @@ import { FiArrowUpRight } from "react-icons/fi";
 import WavyLine from "./WavyLine";
 import Image from "next/image";
 // import HeroAnimate from "./HeroAnimate";
+type TProps = {
+  title: string;
+  subtitle: string;
+  img: string;
+};
 
-const Hero = () => {
+const Hero = (props: TProps) => {
   return (
     <div className="bg-navy-bg -mt-[90px] pt-[200px] pb-20">
       <div className="container text-white">
@@ -16,13 +21,10 @@ const Hero = () => {
             <span className="text-teal-100">25 Reviews</span>
           </p>
           <h1 className="font-chopin font-bold text-7xl text-navy-100 pt-5 pb-6 text-center">
-            Top Digital Marketing & SEO Services for Australian Businesses
+            {props.title}
           </h1>
           <p className="text-navy-200 text-2xl text-center mb-16">
-            Boost your Australian business with targeted digital marketing
-            strategies. From SEO and paid search to content and social media, we
-            deliver results that increase visibility and drive customer
-            conversions.
+            {props.subtitle}
           </p>
           <CustomButton
             label="Book a Session"
@@ -35,7 +37,7 @@ const Hero = () => {
           <WavyLine />
           <div className="absolute bottom-0 w-full mx-auto">
             <Image
-              src={"/services/Digital Marketing & SEO.png"}
+              src={props.img}
               alt="Data Driven Business Optimization"
               width={600}
               height={600}
