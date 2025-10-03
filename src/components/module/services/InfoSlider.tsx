@@ -2,9 +2,9 @@
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules";
-import { marketingStrategies } from "@/constants/services.constants";
+import { TStrategies } from "./Info";
 
-const InfoSlider = () => {
+const InfoSlider = ({ strategies }: { strategies: TStrategies[] }) => {
   return (
     <div className="w-full mt-16 relative px-28">
       <Swiper
@@ -14,7 +14,7 @@ const InfoSlider = () => {
         modules={[Mousewheel]}
         className=""
       >
-        {marketingStrategies.map((strategy, index) => (
+        {strategies.map((strategy, index) => (
           <SwiperSlide
             key={index}
             className="max-w-[400px] min-h-[240px] border bg-white p-10 rounded-[16px] cursor-grab"

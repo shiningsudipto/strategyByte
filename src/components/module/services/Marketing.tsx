@@ -11,11 +11,18 @@ type Feature = {
 type TProps = {
   title: string;
   title_highlight: string;
+  description: string;
   img: string;
   features: Feature[];
 };
 
-const Marketing = ({ title, title_highlight, img, features }: TProps) => {
+const Marketing = ({
+  title,
+  title_highlight,
+  img,
+  description,
+  features,
+}: TProps) => {
   return (
     <div className="container section-gap py-16">
       <div className="">
@@ -24,12 +31,7 @@ const Marketing = ({ title, title_highlight, img, features }: TProps) => {
           <span className="text-blue-100">{title_highlight}</span>
         </h2>
         <p className="text-xl text-neutral-500 w-[1000px] mt-5">
-          We specialize in delivering high-performance digital marketing
-          strategies for Australian businesses. Our services include SEO, paid
-          search, content marketing, and social media campaigns, all designed to
-          drive results. As an Australia-based digital marketing agency, we
-          offer transparent pricing, local support, and strategies that increase
-          visibility and convert visitors into customers.
+          {description}
         </p>
       </div>
       <div className="grid grid-cols-3 gap-x-10 gap-y-16 mb-14 mt-[100px]">

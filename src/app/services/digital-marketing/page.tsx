@@ -15,7 +15,7 @@ import Area from "@/components/shared/Area";
 import FAQS from "@/components/shared/FAQS";
 import { marketingFaqs } from "@/constants/services.constants";
 // constants
-import { hero, marketing } from "@/constants/service.marketing";
+import { hero, info, marketing } from "@/constants/service.marketing";
 
 const page = () => {
   return (
@@ -25,7 +25,7 @@ const page = () => {
       <div className="container">
         <Organizations title={"Proudly worked with"} />
       </div>
-      <Info />
+      <Info {...info} />
       <Importancy />
       <Impact />
       <SEOServices />

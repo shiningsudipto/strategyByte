@@ -52,3 +52,32 @@ export const marketing = {
     },
   ],
 };
+
+export const info = {
+  subtitle: "Why Choose StrategyByte For",
+  title: "Content Marketing Services in Australia?",
+  description:
+    "Content marketing builds trust and engages your audience by showcasing your brand and providing value through blogs, videos, and social media. A strong strategy boosts Google visibility, nurtures relationships, and drives conversions, turning your audience into loyal customers.",
+  strategies: [
+    {
+      title: "Visibility",
+      description:
+        "High-quality content improves search engine rankings, making your business easier to find by potential customers.",
+    },
+    {
+      title: "Authority",
+      description:
+        "Consistent, valuable content establishes your brand as an expert in your field, fostering trust and credibility.",
+    },
+    {
+      title: "Engagement",
+      description:
+        "Informative and interactive content keeps your audience interested, building relationships that drive conversions.",
+    },
+    {
+      title: "Longevity",
+      description:
+        "Well-crafted content continues to attract traffic and generate leads over time, providing ongoing business growth.",
+    },
+  ],
+};

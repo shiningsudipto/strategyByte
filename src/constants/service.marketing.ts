@@ -63,7 +63,7 @@ export const info = {
   title: "Digital Marketing Services in Australia?",
   description:
     "At Strategybyte, we deliver high-performance digital marketing services to boost visibility and drive results for Australian businesses. Our expertise includes SEO, paid search, content marketing, and social media campaigns, all based on data-driven strategies. As an Australia-based agency, we offer transparent pricing, local support, and tailored strategies that convert visitors into valuable leads.",
-  marketingStrategies: [
+  strategies: [
     {
       title: "Scalability",
       description:
