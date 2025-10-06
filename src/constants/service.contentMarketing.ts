@@ -154,3 +154,50 @@ export const contentMarketingServices = {
     },
   ],
 };
+
+export const contentMarketingProcess = {
+  subtitle: "#3 Pillar Concept",
+  title: "Our 3-Step",
+  title_highlight: "Content Marketing Process",
+  description:
+    "We follow a proven approach to ensure your content marketing strategy is delivered on time, within budget, and exceeds your goals.",
+  process: [
+    {
+      title: "Content Strategy",
+      description:
+        "Align content goals with audience needs to drive engagement and conversions.",
+      points: [
+        "Business Goals Analysis",
+        "Audience Persona Development",
+        "Content Gap Analysis",
+        "Competitive Content Review",
+        "Editorial Calendar Creation",
+      ],
+    },
+    {
+      title: "Content Creation",
+      description:
+        "Develop compelling and high-quality content that resonates with your audience.",
+      points: [
+        "Blog Post Writing",
+        "Social Media Content",
+        "Video Production",
+        "Infographics and Visual Content",
+        "Email Campaigns",
+      ],
+    },
+    {
+      title: "Content Distribution",
+      description:
+        "Reach the right people with your content across multiple channels.",
+      points: [
+        "Content Distribution",
+        "SEO Optimization",
+        "Social Media Strategy",
+        "Influencer Partnerships",
+        "Paid Media Campaigns",
+        "Content Syndication",
+      ],
+    },
+  ],
+};

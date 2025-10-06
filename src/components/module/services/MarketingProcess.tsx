@@ -1,6 +1,20 @@
-import { processPhases } from "@/constants/services.constants";
+type TProcess = {
+  title: string;
+  description: string;
+  points: string[];
+};
 
-const MarketingProcess = () => {
+type TProps = {
+  title_highlight: string;
+  description: string;
+  process: TProcess[];
+};
+
+const MarketingProcess = ({
+  title_highlight,
+  description,
+  process,
+}: TProps) => {
   return (
     <section className="container px-40 section-gap-y overflow-visible">
       <div className="text-center lg:w-[800px] mx-auto">
@@ -8,19 +22,12 @@ const MarketingProcess = () => {
           #3 Pillar Concept
         </p>
         <h2 className="heading">
-          Our 3-Step{" "}
-          <span className="text-[#C4C2BF]">
-            Digital Marketing & SEO Process
-          </span>
+          Our 3-Step <span className="text-[#C4C2BF]">{title_highlight}</span>
         </h2>
-        <p className="text-lg text-neutral-500 mt-5">
-          We follow a proven methodology to ensure your digital marketing and
-          SEO strategies are executed on time, within budget, and deliver
-          results that exceed your expectations.
-        </p>
+        <p className="text-lg text-neutral-500 mt-5">{description}</p>
       </div>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-16">
-        {processPhases.map((process, index) => {
+        {process.map((process, index) => {
           const bgImages = [
             "/sticky-notes/1st.png",
             "/sticky-notes/2nd.png",

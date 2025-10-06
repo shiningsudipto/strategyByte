@@ -3,8 +3,11 @@ import Hero from "@/components/module/services/Hero";
 import Importancy from "@/components/module/services/Importancy";
 import Info from "@/components/module/services/Info";
 import Marketing from "@/components/module/services/Marketing";
+import MarketingFields from "@/components/module/services/MarketingFields";
+import MarketingProcess from "@/components/module/services/MarketingProcess";
 import SEOServices from "@/components/module/services/SEOServices";
 import {
+  contentMarketingProcess,
   contentMarketingServices,
   hero,
   importancy,
@@ -23,6 +26,8 @@ const page = () => {
       <Info {...info} />
       <Importancy {...importancy} />
       <SEOServices {...contentMarketingServices} />
+      <MarketingFields />
+      <MarketingProcess {...contentMarketingProcess} />
     </main>
   );
 };

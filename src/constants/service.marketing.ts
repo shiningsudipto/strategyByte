@@ -245,7 +245,7 @@ export const marketingProcess = {
   title_highlight: "Digital Marketing & SEO Process",
   description:
     "We follow a proven methodology to ensure your digital marketing and SEO strategies are executed on time, within budget, and deliver results that exceed your expectations.",
-  processPhases: [
+  process: [
     {
       title: "Strategy Development",
       description:
