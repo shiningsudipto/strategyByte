@@ -1,18 +1,17 @@
 import CaseStudiesSlider from "../home/CaseStudiesSlider";
 
-const SuccessStories = () => {
+type TProps = {
+  title: string;
+  description: string;
+};
+
+const SuccessStories = ({ title, description }: TProps) => {
   return (
     <section className="container section-gap-y">
       <div className="section-gap">
         <div className="lg:w-[800px]">
-          <h2 className="heading">
-            Our Digital Marketing & SEO Success Stories
-          </h2>
-          <p className="subheading text-neutral-500">
-            Discover how our Australian-based web development services have
-            helped businesses across various industries achieve their digital
-            goals. 
-          </p>
+          <h2 className="heading">{title}</h2>
+          <p className="subheading text-neutral-500">{description}</p>
         </div>
       </div>
       <CaseStudiesSlider />

@@ -12,10 +12,10 @@ import { FiArrowUpRight } from "react-icons/fi";
 
 type TProps = {
   faqs: { question: string; answer: string }[];
-  title: string;
+  title_highlight: string;
 };
 
-const FAQS = ({ faqs, title }: TProps) => {
+const FAQS = ({ faqs, title_highlight }: TProps) => {
   return (
     <section
       style={{ backgroundImage: `url("/FAQ Section Background.png")` }}
@@ -23,7 +23,7 @@ const FAQS = ({ faqs, title }: TProps) => {
     >
       <h2 className="heading">
         Get the answers you are <br /> looking for about{" "}
-        <span className="text-[#90949F]">{title}</span>
+        <span className="text-[#90949F]">{title_highlight}</span>
       </h2>
       <div className="flex lg:flex-row flex-col lg:mt-16 xl:gap-16 lg:gap-10 gap-10">
         <div>

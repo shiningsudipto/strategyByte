@@ -201,3 +201,45 @@ export const contentMarketingProcess = {
     },
   ],
 };
+
+export const successStories = {
+  title: "Our Content Marketing Success Stories",
+  description:
+    "Discover how our Australian-based web development services have helped businesses across various industries achieve their digital goals.",
+};
+
+export const faq = {
+  title_highlight: "Content Marketing",
+  faqs: [
+    {
+      question: "What is Content Marketing?",
+      answer:
+        "Content marketing involves creating and sharing valuable content designed to attract, engage, and retain a target audience. By providing useful information, businesses can establish trust, foster brand loyalty, and ultimately drive customer actions.",
+    },
+    {
+      question: "How do I create a Content Marketing Strategy?",
+      answer:
+        "To create an effective content marketing strategy, start by defining your target audience and setting clear, measurable goals. From there, choose the right content formats—whether blogs, videos, or social media posts—and consistently distribute it across appropriate channels. It’s essential to track performance and adapt your strategy based on results to ensure it remains aligned with your business objectives.",
+    },
+    {
+      question: "Why is Content Marketing Important?",
+      answer:
+        "Content marketing is crucial because it allows businesses to build long-term relationships with their customers. By providing valuable content, you enhance your brand’s credibility and authority within your industry, while also improving your SEO, which can result in more organic traffic and higher conversions.",
+    },
+    {
+      question: "What are the Benefits of Content Marketing?",
+      answer:
+        "The benefits of content marketing are vast. It helps businesses increase brand awareness, engage with customers more effectively, improve their SEO rankings, and drive website traffic. Over time, it builds a loyal audience that is more likely to convert into paying customers.",
+    },
+    {
+      question: "How Does Content Marketing Improve SEO?",
+      answer:
+        "Content marketing directly impacts SEO by incorporating relevant keywords, increasing the time users spend on your site, and reducing bounce rates. Additionally, well-crafted content attracts backlinks, which are a key factor in improving search engine rankings and driving organic traffic.",
+    },
+    {
+      question: "What Types of Content are Used in Content Marketing?",
+      answer:
+        "Content marketing encompasses a wide variety of formats, such as blogs, videos, infographics, social media posts, podcasts, case studies, and eBooks. The type of content chosen will depend on your audience’s preferences and the goals of your campaign.",
+    },
+  ],
+};

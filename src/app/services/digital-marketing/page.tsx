@@ -16,12 +16,14 @@ import FAQS from "@/components/shared/FAQS";
 import { marketingFaqs } from "@/constants/services.constants";
 // constants
 import {
+  faq,
   hero,
   importancy,
   info,
   marketing,
   marketingProcess,
   seoServices,
+  successStories,
 } from "@/constants/service.marketing";
 
 const page = () => {
@@ -38,11 +40,11 @@ const page = () => {
       <SEOServices {...seoServices} />
       <MarketingFields />
       <MarketingProcess {...marketingProcess} />
-      <SuccessStories />
+      <SuccessStories {...successStories} />
       <Area />
       <Offering />
       <Reviews />
-      <FAQS faqs={marketingFaqs} title="Full-Stack Website Development" />
+      <FAQS {...faq} />
       <Contact />
     </div>
   );
