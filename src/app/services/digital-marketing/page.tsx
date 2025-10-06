@@ -20,6 +20,7 @@ import {
   importancy,
   info,
   marketing,
+  seoServices,
 } from "@/constants/service.marketing";
 
 const page = () => {
@@ -33,7 +34,7 @@ const page = () => {
       <Info {...info} />
       <Importancy {...importancy} />
       <Impact />
-      <SEOServices />
+      <SEOServices {...seoServices} />
       <MarketingFields />
       <MarketingProcess />
       <SuccessStories />

@@ -105,3 +105,52 @@ export const importancy = {
     },
   ],
 };
+
+export const contentMarketingServices = {
+  title: "Comprehensive Content Marketing Services for",
+  title_highlight: "Australian Businesses",
+  description:
+    "Our approach is designed to maximize the impact of your marketing efforts by delivering measurable ROI. We focus on strategic allocation of resources, ensuring every dollar spent contributes to meaningful growth and business success.",
+  services: [
+    {
+      title: "Audience-Centric Content Creation",
+      description: [
+        "Customize content to address audience pain points and desires",
+        "Craft compelling, relatable narratives that foster brand loyalty",
+        "Create diverse content formats including blogs, videos, and infographics",
+        "Leverage audience insights and behavioral data for content refinement",
+      ],
+      action: "Learn More",
+    },
+    {
+      title: "SEO-Optimized Articles & Blogs",
+      description: [
+        "Conduct comprehensive keyword research to drive organic traffic",
+        "Optimize content with SEO-friendly meta tags and headings",
+        "Ensure content is structured for both SEO and user experience",
+        "Regularly update content to maintain SEO rankings",
+      ],
+      action: "Learn More",
+    },
+    {
+      title: "Social Media Amplification",
+      description: [
+        "Tailor content for maximum impact on each social platform",
+        "Promote content using both organic and paid methods",
+        "Engage with followers to foster community and brand advocacy",
+        "Use social media trends to amplify reach and engagement",
+      ],
+      action: "Learn More",
+    },
+    {
+      title: "Performance Analytics & Reporting",
+      description: [
+        "Track key performance indicators (KPIs) like engagement and conversions",
+        "Use analytics tools to identify content strengths and weaknesses",
+        "Provide clear, actionable insights to inform content strategy",
+        "Regularly report on ROI and refine campaigns for better results",
+      ],
+      action: "Learn More",
+    },
+  ],
+};
