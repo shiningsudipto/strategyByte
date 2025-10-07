@@ -20,12 +20,12 @@ export const navLinks = [
       {
         title: "Strategic Branding Management",
         desc: "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth",
-        path: "/services/content-marketing",
+        path: "/services/brand-management",
       },
       {
-        title: "Business Optimization",
-        desc: "We optimize your business by refining workflows, maintaining content consistency, and implementing scalable systems to boost efficiency, clarity, and growth.",
-        path: "/services/brand-management",
+        title: "CONTENT MARKETING",
+        desc: "We plan, create, and distribute high-value content that attracts the right audience, builds trust, and drives conversions.",
+        path: "/services/content-marketing",
       },
     ],
   },

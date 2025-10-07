@@ -17,37 +17,37 @@ export const brandManagement = {
   features: [
     {
       serial: "01",
-      img: "/services/brand/process/compass-one.png",
+      img: "/services/brand/features/compass-one.png",
       title: "Brand Positioning Excellence",
       desc: "Define and position your brand for long-term success in the competitive market.",
     },
     {
       serial: "02",
-      img: "/services/brand/process/message.png",
+      img: "/services/brand/features/message.png",
       title: "Consistent Brand Messaging",
       desc: "Maintain a clear, consistent message across all channels to strengthen brand identity.",
     },
     {
       serial: "03",
-      img: "/services/brand/process/market-analysis.png",
+      img: "/services/brand/features/market-analysis.png",
       title: "Market Research & Insights",
       desc: "Leverage in-depth market research to identify trends, understand competitors, and refine your brand strategy.",
     },
     {
       serial: "04",
-      img: "/services/brand/process/check-one.png",
+      img: "/services/brand/features/check-one.png",
       title: "Reputation & Brand Trust",
       desc: "Build and maintain a positive brand reputation that fosters customer trust and loyalty.",
     },
     {
       serial: "05",
-      img: "/services/brand/process/multi-circular.png",
+      img: "/services/brand/features/multi-circular.png",
       title: "Creative Brand Campaigns",
       desc: "Develop innovative campaigns that engage audiences and elevate your brand’s presence.",
     },
     {
       serial: "06",
-      img: "/services/brand/process/performance.png",
+      img: "/services/brand/features/performance.png",
       title: "Brand Performance Monitoring",
       desc: "Continuously track and optimize your brand’s performance to ensure it meets strategic goals.",
     },
