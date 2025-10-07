@@ -116,140 +116,143 @@ export const webDevImportance = {
   ],
 };
 
-export const contentMarketingServices = {
-  title: "Comprehensive Content Marketing Services for",
+export const webDevelopmentServices = {
+  title: "Comprehensive Web Development Services For",
   title_highlight: "Australian Businesses",
   description:
-    "Our approach is designed to maximize the impact of your marketing efforts by delivering measurable ROI. We focus on strategic allocation of resources, ensuring every dollar spent contributes to meaningful growth and business success.",
+    "Our approach is designed to maximize the impact of your web presence by delivering measurable ROI. We focus on strategic allocation of resources, ensuring every dollar spent contributes to meaningful growth and long-term business success.",
   services: [
     {
-      title: "Audience-Centric Content Creation",
+      title: "Website Design & Redesign",
       description: [
-        "Customize content to address audience pain points and desires",
-        "Craft compelling, relatable narratives that foster brand loyalty",
-        "Create diverse content formats including blogs, videos, and infographics",
-        "Leverage audience insights and behavioral data for content refinement",
+        "Modern layouts aligned to your brand identity",
+        "Mobile-responsive pages with WCAG-aligned accessibility",
+        "Conversion-focused structure with clear CTAs",
+        "Visual refresh that maintains SEO equity",
+        "User journey mapping and quick usability checks",
       ],
       action: "Learn More",
     },
     {
-      title: "SEO-Optimized Articles & Blogs",
+      title: "Design And Development",
       description: [
-        "Conduct comprehensive keyword research to drive organic traffic",
-        "Optimize content with SEO-friendly meta tags and headings",
-        "Ensure content is structured for both SEO and user experience",
-        "Regularly update content to maintain SEO rankings",
+        "Custom front-end and back-end built with clean, scalable code",
+        "API integrations, automation, and third-party services",
+        "Performance tuning for fast load and Core Web Vitals",
+        "Cross-browser and device QA with bug tracking",
+        "Secure deployment, backups, and version control",
       ],
       action: "Learn More",
     },
     {
-      title: "Social Media Amplification",
+      title: "CMS Development",
       description: [
-        "Tailor content for maximum impact on each social platform",
-        "Promote content using both organic and paid methods",
-        "Engage with followers to foster community and brand advocacy",
-        "Use social media trends to amplify reach and engagement",
+        "WordPress, Webflow, Craft CMS, or headless setups",
+        "Frameworks and CMS tailored to your stack needs",
+        "Reusable content blocks and flexible page templates",
+        "Roles, permissions, and editorial workflows",
+        "Training, handover docs, and post-launch support",
       ],
       action: "Learn More",
     },
     {
-      title: "Performance Analytics & Reporting",
+      title: "Wireframe Development",
       description: [
-        "Track key performance indicators (KPIs) like engagement and conversions",
-        "Use analytics tools to identify content strengths and weaknesses",
-        "Provide clear, actionable insights to inform content strategy",
-        "Regularly report on ROI and refine campaigns for better results",
+        "Information architecture and sitemap planning",
+        "Low and mid-fidelity wireframes for key pages",
+        "Clickable Figma prototypes to validate user flows",
+        "Iterations based on stakeholder feedback",
+        "Design alignment for smooth development handoff",
       ],
       action: "Learn More",
     },
   ],
 };
 
-export const contentMarketingProcess = {
+export const webDevelopmentProcess = {
   subtitle: "#3 Pillar Concept",
   title: "Our 3-Step",
-  title_highlight: "Content Marketing Process",
+  title_highlight: "Web Development Process",
   description:
-    "We follow a proven approach to ensure your content marketing strategy is delivered on time, within budget, and exceeds your goals.",
+    "We follow a proven methodology to ensure your website is delivered on time, within budget, and exceeds your expectations.",
   process: [
     {
-      title: "Content Strategy",
+      title: "Planning",
       description:
-        "Align content goals with audience needs to drive engagement and conversions.",
+        "Align goals, audience, and technology so the project starts with clarity and a realistic scope.",
       points: [
         "Business Goals Analysis",
-        "Audience Persona Development",
-        "Content Gap Analysis",
-        "Competitive Content Review",
-        "Editorial Calendar Creation",
+        "User Persona Development",
+        "Competitive Website Analysis",
+        "Technical Requirements Documentation",
+        "Project Roadmap Creation",
       ],
     },
     {
-      title: "Content Creation",
+      title: "Wireframing",
       description:
-        "Develop compelling and high-quality content that resonates with your audience.",
+        "Translate strategy into structure and flows you can click through and validate early.",
       points: [
-        "Blog Post Writing",
-        "Social Media Content",
-        "Video Production",
-        "Infographics and Visual Content",
-        "Email Campaigns",
+        "Information Architecture Planning",
+        "Low-fidelity Wireframes",
+        "Interactive Figma Prototypes",
+        "User Journey Mapping",
+        "Stakeholder Review And Feedback",
       ],
     },
     {
-      title: "Content Distribution",
+      title: "Development & Testing",
       description:
-        "Reach the right people with your content across multiple channels.",
+        "Build, harden, and tune the site for speed, SEO, and reliability before go-live.",
       points: [
-        "Content Distribution",
-        "SEO Optimization",
-        "Social Media Strategy",
-        "Influencer Partnerships",
-        "Paid Media Campaigns",
-        "Content Syndication",
+        "Frontend And Backend Development",
+        "Cross-device QA Testing",
+        "Performance Optimization",
+        "SEO Implementation",
+        "Launch Preparation And Deployment",
       ],
     },
   ],
 };
 
 export const successStories = {
-  title: "Our Content Marketing Success Stories",
+  title: "Our Web Development Success Stories",
   description:
     "Discover how our Australian-based web development services have helped businesses across various industries achieve their digital goals.",
 };
 
 export const faq = {
-  title_highlight: "Content Marketing",
+  title_highlight: "Full-Stack Website Development",
   faqs: [
     {
-      question: "What is Content Marketing?",
+      question: "How much does it cost to develop a website in Australia?",
       answer:
-        "Content marketing involves creating and sharing valuable content designed to attract, engage, and retain a target audience. By providing useful information, businesses can establish trust, foster brand loyalty, and ultimately drive customer actions.",
+        "The cost of developing a website in Australia depends on factors like complexity, design requirements, functionality, and integrations. Basic business websites may start from $1,500–$3,000, while larger, custom-built or eCommerce sites can range from $5,000 to $20,000 or more, depending on scope and features.",
     },
     {
-      question: "How do I create a Content Marketing Strategy?",
+      question: "How to develop a WordPress website for my business?",
       answer:
-        "To create an effective content marketing strategy, start by defining your target audience and setting clear, measurable goals. From there, choose the right content formats—whether blogs, videos, or social media posts—and consistently distribute it across appropriate channels. It’s essential to track performance and adapt your strategy based on results to ensure it remains aligned with your business objectives.",
+        "To develop a WordPress website, start by planning your site structure and choosing a reliable, fast-loading theme. Install essential plugins for SEO, security, and performance, then add optimized content and set up analytics for tracking. If you prefer professional help, our Australian web development team handles strategy, design, build, and optimization for you.",
     },
     {
-      question: "Why is Content Marketing Important?",
+      question: "What is website development and what does it include?",
       answer:
-        "Content marketing is crucial because it allows businesses to build long-term relationships with their customers. By providing valuable content, you enhance your brand’s credibility and authority within your industry, while also improving your SEO, which can result in more organic traffic and higher conversions.",
+        "Website development involves designing, building, and maintaining websites. It includes planning, UI/UX design, front-end and back-end development, CMS setup, SEO implementation, testing, and ongoing performance optimization to ensure your website functions smoothly and effectively.",
     },
     {
-      question: "What are the Benefits of Content Marketing?",
+      question: "Where can I find a website developer in Australia?",
       answer:
-        "The benefits of content marketing are vast. It helps businesses increase brand awareness, engage with customers more effectively, improve their SEO rankings, and drive website traffic. Over time, it builds a loyal audience that is more likely to convert into paying customers.",
+        "You can find reliable website developers in Australia through professional agencies, freelance platforms, or local business directories. Our team at StrategyByte offers end-to-end web development services, from planning and design to deployment and ongoing maintenance.",
     },
     {
-      question: "How Does Content Marketing Improve SEO?",
+      question: "Are website development costs tax deductible in Australia?",
       answer:
-        "Content marketing directly impacts SEO by incorporating relevant keywords, increasing the time users spend on your site, and reducing bounce rates. Additionally, well-crafted content attracts backlinks, which are a key factor in improving search engine rankings and driving organic traffic.",
+        "Yes, website development costs are generally tax deductible in Australia as a business expense, provided the website is used for generating income or promoting your business. Always consult with a qualified tax professional to confirm eligibility for your specific situation.",
     },
     {
-      question: "What Types of Content are Used in Content Marketing?",
+      question: "Can you capitalise website development costs?",
       answer:
-        "Content marketing encompasses a wide variety of formats, such as blogs, videos, infographics, social media posts, podcasts, case studies, and eBooks. The type of content chosen will depend on your audience’s preferences and the goals of your campaign.",
+        "Yes, in many cases, website development costs can be capitalised as an intangible asset, especially when they relate to creating or improving a long-term business asset. However, costs like maintenance or minor updates are usually expensed immediately. It’s best to seek advice from your accountant for proper treatment under Australian tax law.",
     },
   ],
 };

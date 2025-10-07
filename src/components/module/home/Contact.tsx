@@ -3,6 +3,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // import MeetingContent from "./MeetingContent";
 import CallContent from "./CallContent";
 import CalendlyForm from "@/components/shared/CalendlyForm";
+import { Suspense } from "react";
 
 const Contact = () => {
   const tabData = [
@@ -10,7 +11,11 @@ const Contact = () => {
       title: "Schedule a Meeting",
       value: "meeting",
       // content: <MeetingContent />,
-      content: <CalendlyForm />,
+      content: (
+        <Suspense fallback={<p>Loading... Please Wait!</p>}>
+          <CalendlyForm />
+        </Suspense>
+      ),
     },
     {
       title: "Request a Call",

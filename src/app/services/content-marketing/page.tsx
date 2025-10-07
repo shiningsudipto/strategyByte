@@ -1,6 +1,7 @@
 import Contact from "@/components/module/home/Contact";
 import Organizations from "@/components/module/home/Organizations";
 import Hero from "@/components/module/services/Hero";
+import Impact from "@/components/module/services/Impact";
 import Importancy from "@/components/module/services/Importancy";
 import Info from "@/components/module/services/Info";
 import Marketing from "@/components/module/services/Marketing";
@@ -33,6 +34,7 @@ const page = () => {
       </div>
       <Info {...info} />
       <Importancy {...importancy} />
+      <Impact />
       <SEOServices {...contentMarketingServices} />
       <MarketingFields />
       <MarketingProcess {...contentMarketingProcess} />
@@ -40,8 +42,8 @@ const page = () => {
       <Area />
       <Offering />
       <Reviews />
-      <Contact />
       <FAQS {...faq} />
+      <Contact />
     </main>
   );
 };
