@@ -10,8 +10,14 @@ import { Phone } from "lucide-react";
 import CustomButton from "@/components/ui/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
 
+type FAQItem = {
+  question: string;
+  answer: string;
+  points?: string[];
+};
+
 type TProps = {
-  faqs: { question: string; answer: string }[];
+  faqs: FAQItem[];
   title_highlight: string;
 };
 
@@ -37,8 +43,21 @@ const FAQS = ({ faqs, title_highlight }: TProps) => {
                 <AccordionTrigger className="text-neutral-700 text-xl font-bold cursor-pointer mb-0">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-lg text-neutral-700 mt-6">
-                  {item.answer}
+                <AccordionContent className="text-lg text-neutral-700 mt-6 flex flex-col gap-3">
+                  <p>{item.answer}</p>
+                  {item.points && item.points.length > 0 && (
+                    <ul className="list-disc list-inside mt-4 space-y-2">
+                      {item.points.map((point, i) => {
+                        const [label, ...desc] = point.split(":");
+                        return (
+                          <li key={i}>
+                            <span className="font-medium">{label}:</span>
+                            {desc.join(":")}{" "}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  )}
                 </AccordionContent>
               </AccordionItem>
             ))}
@@ -50,7 +69,7 @@ const FAQS = ({ faqs, title_highlight }: TProps) => {
             className="lg:hidden block mx-auto"
           />
         </div>
-        <div className="">
+        <div>
           <div className="xl:w-[512px] lg:w-[400px] w-full border border-[#E0E3EB] rounded-[24px] p-8 bg-white flex flex-col justify-center items-center">
             <Image
               src={shqImg}
