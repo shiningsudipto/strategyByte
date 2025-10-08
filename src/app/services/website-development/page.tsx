@@ -26,7 +26,7 @@ import {
 
 const page = () => {
   return (
-    <main>
+    <main className="">
       <Hero {...hero} />
       <Marketing {...webDevelopment} />
       <div className="container">

@@ -24,17 +24,17 @@ const Marketing = ({
   features,
 }: TProps) => {
   return (
-    <div className="container section-gap py-16">
+    <div className="container section-gap lg:py-16 py-10 lg:px-0 px-4">
       <div className="">
         <h2 className="heading">
           {title}
           <span className="text-blue-100">{title_highlight}</span>
         </h2>
-        <p className="text-xl text-neutral-500 w-[1000px] mt-5">
+        <p className="text-xl text-neutral-500 lg:w-[1000px] mt-5">
           {description}
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-x-10 gap-y-16 mb-14 mt-[100px]">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-x-10 lg:gap-y-16 gap-y-5 mb-14 lg:mt-[100px] mt-10">
         {features.map((item) => (
           <div key={item.serial}>
             <Image
@@ -42,9 +42,9 @@ const Marketing = ({
               alt={item.title}
               height={64}
               width={64}
-              className=""
+              className="lg:size-16 size-12"
             />
-            <h3 className="text-[40px] text-blue-100 font-normal mt-5 mb-3">
+            <h3 className="lg:text-[40px] text-3xl text-blue-100 font-normal mt-5 mb-3">
               {item.title}
             </h3>
             <p className="text-lg text-neutral-500">{item.desc}</p>

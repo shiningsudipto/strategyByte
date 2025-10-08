@@ -12,7 +12,7 @@ const IndustrySlider = () => {
         spaceBetween={20}
         mousewheel
         modules={[Mousewheel]}
-        className="mt-20"
+        className="lg:mt-20 mt-10"
       >
         {industries.map((item, index) => (
           <SwiperSlide

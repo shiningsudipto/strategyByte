@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Location = ({ name, className }: { name: string; className: string }) => (
   <p
-    className={`text-yellow-200 text-lg flex items-center gap-2 absolute group  cursor-pointer ${className}`}
+    className={`text-yellow-200 lg:text-lg text-xs flex items-center gap-2 absolute group  cursor-pointer ${className}`}
   >
     <Dot size={30} />{" "}
     <span className="uppercase group-hover:scale-[1.2] duration-300">
@@ -17,7 +17,7 @@ const Location = ({ name, className }: { name: string; className: string }) => (
 const Area = () => {
   return (
     <section className="bg-navy-bg">
-      <div className="container section-gap section-gap-y">
+      <div className="container section-gap section-gap-y px-4 lg:px-0">
         <div className="lg:w-[900px] mx-auto text-center flex flex-col justify-center items-center">
           <h2 className="heading text-white">We are everywhere</h2>
           <p className="subheading text-navy-200">
@@ -38,22 +38,46 @@ const Area = () => {
         <div className="flex justify-center mt-20">
           <div className="relative flex justify-center lg:h-[814px] lg:w-[848px]">
             <Image src={"/map.png"} alt="map" height={814} width={848} />
-            <Location name="DARWIN" className="top-14" />
-            <Location name="TOWNSVILLE" className="right-2 top-[195px]" />
-            <Location name="BRISBANE" className="-right-14 top-[365px]" />
-            <Location name="GOLD COAST" className="-right-30 top-[395px]" />
-            <Location name="SYDNEY" className="-right-5 bottom-[280px]" />
-            <Location name="CANBERRA" className="right-3 bottom-[230px]" />
+            <Location
+              name="DARWIN"
+              className="lg:top-14 top-5 lg:left-auto left-[160px]"
+            />
+            <Location
+              name="TOWNSVILLE"
+              className="lg:right-2 lg:top-[195px] top-20 right-0"
+            />
+            <Location
+              name="BRISBANE"
+              className="lg:-right-14 lg:top-[365px] top-[165px] right-0"
+            />
+            <Location
+              name="GOLD COAST"
+              className="lg:-right-30 lg:top-[395px] top-[185px] right-0"
+            />
+            <Location
+              name="SYDNEY"
+              className="lg:-right-5 lg:bottom-[280px] bottom-[130px] right-0"
+            />
+            <Location
+              name="CANBERRA"
+              className="lg:right-3 lg:bottom-[230px] right-0 bottom-[100px]"
+            />
             <Location
               name="ADELAIDE"
-              className="right-[205px] bottom-[230px]"
+              className="lg:right-[205px] lg:bottom-[230px] bottom-[110px] right-[70px]"
             />
             <Location
               name="MELBOURNE"
-              className="right-[80px] bottom-[155px]"
+              className="lg:right-[80px] lg:bottom-[155px] right-0 bottom-[70px]"
             />
-            <Location name="HOBART" className="right-[40px] bottom-[30px]" />
-            <Location name="PERTH" className="left-[50] bottom-[280px]" />
+            <Location
+              name="HOBART"
+              className="lg:right-[40px] -right-2 lg:bottom-[30px] bottom-2"
+            />
+            <Location
+              name="PERTH"
+              className="lg:left-[50] left-5 lg:bottom-[280px] bottom-[125px]"
+            />
           </div>
         </div>
       </div>

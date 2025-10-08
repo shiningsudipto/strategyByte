@@ -75,7 +75,7 @@ function CardSlider() {
   };
 
   return (
-    <div className="relative w-[500px] h-[456px]">
+    <div className="relative lg:w-[500px] w-[400px] mx-auto lg:h-[456px] h-[450px]">
       {cards.map((card, index) => {
         const position = getCardPosition(index);
 
@@ -109,17 +109,23 @@ function CardSlider() {
                   `}
           >
             <div className="p-5 flex flex-col justify-between h-full">
-              <div className="grid grid-cols-2 gap-5 text-neutral-700">
+              <div className="grid grid-cols-2 lg:gap-5 gap-2 text-neutral-700">
                 <div className="bg-[#F4F4F4] p-4 rounded-full">
-                  <p className="text-2xl font-bold">{card.headline}</p>
-                  <p className="text-lg font-semibold">{card.subHeadline}</p>
+                  <p className="lg:text-2xl text-lg font-bold">
+                    {card.headline}
+                  </p>
+                  <p className="lg:text-lg text-base font-semibold">
+                    {card.subHeadline}
+                  </p>
                 </div>
                 <div className="bg-[#F4F4F4] p-4 rounded-full">
-                  <p className="text-2xl font-bold">{card.metric}</p>
-                  <p className="text-lg font-semibold">{card.subMetric}</p>
+                  <p className="lg:text-2xl text-lg font-bold">{card.metric}</p>
+                  <p className="lg:text-lg text-base font-semibold">
+                    {card.subMetric}
+                  </p>
                 </div>
               </div>
-              <h4 className="text-xl font-semibold">{card.quote}</h4>
+              <h4 className="lg:text-xl text-lg font-semibold">{card.quote}</h4>
               <div className="flex items-center justify-between gap-5">
                 <div className="flex items-center gap-4">
                   <Image

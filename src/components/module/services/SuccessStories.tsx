@@ -7,7 +7,7 @@ type TProps = {
 
 const SuccessStories = ({ title, description }: TProps) => {
   return (
-    <section className="container section-gap-y">
+    <section className="container section-gap-y lg:px-0 px-4">
       <div className="section-gap">
         <div className="lg:w-[800px]">
           <h2 className="heading">{title}</h2>

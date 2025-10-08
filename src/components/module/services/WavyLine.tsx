@@ -10,7 +10,7 @@ export default function WavyLine() {
         height="250"
         viewBox="0 0 1728 250"
         fill="none"
-        className={"h-full"}
+        className={"h-full lg:w-[1728px] w-full"}
       >
         <motion.path
           stroke="#496091"

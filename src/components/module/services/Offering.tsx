@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Offering = () => {
   return (
-    <section className="container section-gap section-gap-y">
+    <section className="container section-gap section-gap-y px-4 lg:px-0">
       <div className="text-center">
         <h2 className="heading">
           See All That <br />{" "}
@@ -18,13 +18,13 @@ const Offering = () => {
           growth and business success.
         </p>
       </div>
-      <div className="grid grid-cols-3 gap-4 mt-20">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:mt-20 mt-10">
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-navy-100 p-8 rounded-[36px] flex flex-col justify-between h-[500px] group hover:bg-neutral-700 hover:text-white duration-300 text-neutral-700"
+            className="bg-navy-100 p-8 rounded-[36px] flex flex-col justify-between lg:h-[500px] group hover:bg-neutral-700 hover:text-white duration-300 text-neutral-700"
           >
-            <div>
+            <div className="mb-10">
               <Image
                 src={service.img}
                 alt={service.title}
@@ -32,10 +32,10 @@ const Offering = () => {
                 width={56}
                 className="w-14 h-auto"
               />
-              <h3 className="font-semibold text-4xl mt-5 mb-6">
+              <h3 className="font-semibold lg:text-4xl text-3xl mt-5 mb-6">
                 {service.title}
               </h3>
-              <p className="text-lg ">{service.desc}</p>
+              <p className="text-lg">{service.desc}</p>
             </div>
             <Link
               href={"#"}

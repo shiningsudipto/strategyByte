@@ -6,7 +6,7 @@ import { TStrategies } from "./Info";
 
 const InfoSlider = ({ strategies }: { strategies: TStrategies[] }) => {
   return (
-    <div className="w-full mt-16 relative px-28">
+    <div className="w-full mt-16 relative lg:px-28">
       <Swiper
         slidesPerView="auto"
         spaceBetween={20}

@@ -16,8 +16,8 @@ const MarketingProcess = ({
   process,
 }: TProps) => {
   return (
-    <section className="container px-40 section-gap-y overflow-visible">
-      <div className="text-center lg:w-[800px] mx-auto">
+    <section className="container lg:px-40 section-gap-y overflow-visible">
+      <div className="text-center lg:w-[800px] mx-auto px-4 lg:px-0">
         <p className="text-primary font-semibold text-2xl mb-4">
           #3 Pillar Concept
         </p>
@@ -51,12 +51,12 @@ const MarketingProcess = ({
                 }}
                 className={`group hover:scale-[1.1] transform duration-300 flex flex-col justify-between overflow-visible  
                   ${first && "p-12 min-h-[500px] w-full"} 
-                  ${second && "p-8 m-7 min-h-[450px] w-[400px]"} 
+                  ${second && "p-8 lg:m-7 mx-auto min-h-[450px] w-[400px]"} 
                 ${third && "p-16 min-h-[500px] w-full"}`}
               >
                 <div className={`${rotation}`}>
                   <div>
-                    <h3 className="text-[40px] text-neutral-700 mb-3">
+                    <h3 className="lg:text-[40px] text-3xl text-neutral-700 mb-3">
                       {process.title}
                     </h3>
                     <p className="text-sm text-neutral-500">

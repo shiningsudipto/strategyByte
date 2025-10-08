@@ -2,9 +2,9 @@ import IndustrySlider from "./IndustrySlider";
 
 const MarketingFields = () => {
   return (
-    <section className="section-gap-y bg-navy-bg text-white">
+    <section className="section-gap-y bg-navy-bg px-4 lg:px-0 text-white">
       <div className="container">
-        <div className="w-[918px] mx-auto text-center">
+        <div className="lg:w-[918px] mx-auto text-center">
           <h2 className="heading mb-5">
             Industry-Specific Digital Marketing Expertise
           </h2>

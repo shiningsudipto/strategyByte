@@ -9,7 +9,7 @@ import Image from "next/image";
 const Reviews = () => {
   return (
     <section className="bg-navy-bg section-gap-y">
-      <div className="container section-gap mb-20">
+      <div className="container section-gap lg:mb-20 mb-10 px-4 lg:px-0">
         <div className="text-white text-center">
           <h2 className="heading">Real Clients Reviews</h2>
           <p className="subheading">

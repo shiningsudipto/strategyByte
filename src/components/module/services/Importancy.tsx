@@ -9,7 +9,7 @@ type TProps = {
 
 const Importancy = ({ title, subtitle, description, strategies }: TProps) => {
   return (
-    <section className="container section-gap section-gap-y grid grid-cols-2 gap-x-40 items-center">
+    <section className="container px-4 lg:px-0 section-gap section-gap-y grid lg:grid-cols-2 grid-cols-1 lg:gap-x-40 gap-y-10 items-center">
       <div>
         <p className="text-2xl font-semibold text-blue-100 mb-4">{title}</p>
         <h2 className="heading mb-8">{subtitle}</h2>
@@ -22,7 +22,7 @@ const Importancy = ({ title, subtitle, description, strategies }: TProps) => {
             className="group relative p-10 bg-navy-100 rounded-[16px] overflow-hidden cursor-pointer transition-all duration-500 ease-in-out"
           >
             {/* Title (always visible) */}
-            <h3 className="text-[40px] text-neutral-700 relative z-10">
+            <h3 className="lg:text-[40px] text-3xl text-neutral-700 relative z-10">
               {item.title}
             </h3>
 

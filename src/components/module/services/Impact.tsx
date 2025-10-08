@@ -3,8 +3,8 @@ import CardSlider from "./CardSlider";
 
 const Impact = () => {
   return (
-    <section className=" bg-navy-bg">
-      <div className="grid lg:grid-cols-2 grid-cols-1 container section-gap py-56">
+    <section className="bg-navy-bg lg:px-0 px-4">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-y-10 container section-gap lg:py-56 py-16 lg:pb-0 pb-30">
         <div>
           <h3 className="font-licorice text-[80px] text-navy-400">
             Proven Impacts
@@ -18,14 +18,14 @@ const Impact = () => {
             to drive new traffic and attract potential customers to your
             website.
           </p>
-          <div className="mt-14 flex items-center gap-5">
+          <div className="mt-14 flex lg:flex-row flex-col items-center gap-5">
             <BookASession />
             <p className="font-semibold text-white">
               <span className="text-teal-100">FREE!</span> 1 Hour Growth Talk
             </p>
           </div>
         </div>
-        <div className="flex justify-end">
+        <div className="lg:flex justify-end lg:mt-0 mt-20">
           <CardSlider />
         </div>
       </div>
