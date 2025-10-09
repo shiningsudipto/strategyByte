@@ -36,12 +36,12 @@ export const navLinks = [
       {
         title: "Case Studies",
         desc: "We design fast, functional, and conversion-driven websites tailored to specific goals",
-        path: "#",
+        path: "/resources/case-studies",
       },
       {
         title: "Byte Articles",
         desc: "We create targeted campaigns that drive real results and help your brand grow smarter online",
-        path: "#",
+        path: "/resources/byte-articles",
       },
     ],
   },
