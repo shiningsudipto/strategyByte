@@ -7,6 +7,7 @@ export const articleBlogDetailsQuery = `
           slug
           description
           metaDescription
+          publishedAt
           thumbnail {
             url
           }
@@ -28,7 +29,10 @@ export const articleBlogsQuery = `
     {
       newsCollection(limit: 6) {
         items {
-          sys { id }
+          sys { 
+           id 
+           publishedAt
+          }
           title
           slug
           description

@@ -54,15 +54,14 @@ export const navLinks = [
 export const menuLinks = [
   {
     label: "ALL PUBLISHES",
-    href: "#",
-    active: true,
+    href: "/resources/articles",
   },
   {
     label: "ARTICLES",
-    href: "#",
+    href: "/resources/byte-articles",
   },
   {
     label: "CASE STUDIES",
-    href: "#",
+    href: "/resources/case-studies",
   },
 ];

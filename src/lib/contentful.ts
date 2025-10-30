@@ -1,4 +1,4 @@
-export const fetchGraphQL = async (query: string) => {
+export const fetchFromContentful = async (query: string) => {
   const response = await fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
