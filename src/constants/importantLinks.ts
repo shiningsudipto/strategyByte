@@ -50,3 +50,19 @@ export const navLinks = [
     path: "/about",
   },
 ];
+
+export const menuLinks = [
+  {
+    label: "ALL PUBLISHES",
+    href: "#",
+    active: true,
+  },
+  {
+    label: "ARTICLES",
+    href: "#",
+  },
+  {
+    label: "CASE STUDIES",
+    href: "#",
+  },
+];
