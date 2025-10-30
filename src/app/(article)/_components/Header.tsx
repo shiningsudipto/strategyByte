@@ -1,5 +1,4 @@
 "use client";
-
 import Tree from "@/components/icons/Tree";
 import { menuLinks } from "@/constants/importantLinks";
 import Link from "next/link";
@@ -9,7 +8,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Articles = () => {
+const Header = () => {
   const headerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLUListElement>(null);
 
@@ -48,7 +47,7 @@ const Articles = () => {
   }, []);
 
   return (
-    <div>
+    <>
       {/* Header */}
       <div
         ref={headerRef}
@@ -89,17 +88,8 @@ const Articles = () => {
           </li>
         ))}
       </ul>
-
-      {/* Blog content */}
-      <div className="p-10 space-y-20">
-        <p className="text-xl font-medium">Blog Post 1</p>
-        <p className="text-xl font-medium">Blog Post 2</p>
-        <p className="text-xl font-medium">Blog Post 3</p>
-        <p className="text-xl font-medium">Blog Post 4</p>
-        <p className="text-xl font-medium">Blog Post 5</p>
-      </div>
-    </div>
+    </>
   );
 };
 
-export default Articles;
+export default Header;
