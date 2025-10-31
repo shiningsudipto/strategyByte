@@ -54,7 +54,7 @@ export const navLinks = [
 export const menuLinks = [
   {
     label: "ALL PUBLISHES",
-    href: "/resources/articles",
+    href: "/resources",
   },
   {
     label: "ARTICLES",
