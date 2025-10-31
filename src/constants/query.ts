@@ -27,7 +27,7 @@ export const articleBlogDetailsQuery = `
 
 export const articleBlogsQuery = `
     {
-      newsCollection(limit: 6) {
+      newsCollection(limit: 8) {
         items {
           sys { 
            id 

@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Header = () => {
   const pathname = usePathname();
   const headerRef = useRef<HTMLDivElement>(null);
-  const menuRef = useRef<HTMLUListElement>(null);
+  const menuRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const headerEl = headerRef.current;
@@ -21,6 +21,7 @@ const Header = () => {
 
     gsap.to([headerEl, menuEl], {
       backgroundColor: "#ffffff",
+      height: "180px",
       ease: "none",
       scrollTrigger: {
         trigger: headerEl,
@@ -67,11 +68,11 @@ const Header = () => {
       </div>
 
       {/* Sticky Menu */}
-      <div className="bg-[#EDF4FF]">
-        <ul
-          ref={menuRef}
-          className="container articleMenu section-gap flex items-center sticky top-0 z-10 border-b"
-        >
+      <div
+        ref={menuRef}
+        className="flex items-center sticky top-0 z-10 border-b bg-[#EDF4FF]"
+      >
+        <ul className="section-gap container flex items-center">
           {menuLinks.map((link, index) => {
             const isActive = pathname === link.href;
 
