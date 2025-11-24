@@ -15,7 +15,7 @@ const CalendlyForm = () => {
   return (
     <div
       className="calendly-inline-widget"
-      data-url="https://calendly.com/shiningsudipto/30min?hide_gdpr_banner=1"
+      data-url="https://calendly.com/abda-strategybyte/free-consultation"
       style={{ minWidth: "320px", width: "100%", height: "700px" }}
     />
   );

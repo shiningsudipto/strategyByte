@@ -14,9 +14,9 @@ export const resources = [
 
 // Company Section
 export const company = [
-  { title: "Careers", note: "We’re hiring" },
-  { title: "Get Support" },
-  { title: "Terms & Policies" },
+  { title: "Careers", note: "We’re hiring", href: "/career" },
+  { title: "Get Support", href: "/career" },
+  { title: "Terms & Policies", href: "/terms-and-condition" },
 ];
 
 // Contact Section

@@ -7,6 +7,7 @@ import {
 import Image from "next/image";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -41,14 +42,14 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-xl font-semibold py-2 mb-2">Company</h4>
-            <div>
+            <div className="flex flex-col">
               {company.map((item, index) => (
-                <p key={index} className="py-2">
+                <Link href={item.href} key={index} className="py-2">
                   {item.title}{" "}
                   {index === 0 && (
                     <span className="text-yellow-200">We’re hiring</span>
                   )}
-                </p>
+                </Link>
               ))}
             </div>
           </div>
