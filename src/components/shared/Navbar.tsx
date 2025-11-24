@@ -60,7 +60,7 @@ const Navbar = () => {
       </div>
     </nav>
   ) : (
-    <nav className="sticky top-8 z-50 w-[950px] mx-auto px-6 py-4 rounded-full border bg-[#EEF1F85C]">
+    <nav className="sticky top-8 z-50 w-[950px] mx-auto px-6 py-4 rounded-full border bg-white/60 border-[#D1D1D3] backdrop-blur-lg book-shadow">
       <div className="flex h-14 items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
