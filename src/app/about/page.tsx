@@ -1,20 +1,26 @@
 import React from "react";
 import Image from "next/image";
 
-// TODO: Replace these placeholder paths with actual image paths from your assets
 const IMAGES = {
+  // Hero Section
   heroBanner: "/about/hero-banner.png",
+
+  // Who We Are Section
   storyBanner: "/about/story-banner.png",
   approachBanner: "/about/approach-banner.png",
-  iconStrategicVision: "/images/about/icon-strategic-vision.png",
-  iconPracticalExecution: "/images/about/icon-practical-execution.png",
-  iconMeasurableResults: "/images/about/icon-measurable-results.png",
-  iconIntegrity: "/images/about/icon-integrity.png",
-  iconInnovation: "/images/about/icon-innovation.png",
-  iconCollaboration: "/images/about/icon-collaboration.png",
-  iconExcellence: "/images/about/icon-excellence.png",
-  iconPassion: "/images/about/icon-passion.png",
-  iconResponsibility: "/images/about/icon-responsibility.png",
+
+  // Our Approach Icons
+  iconStrategicVision: "/about/Strategic Vision.png",
+  iconPracticalExecution: "/about/Practical Execution.png",
+  iconMeasurableResults: "/about/Measuraable Results.png",
+
+  // Core Values Icons
+  iconIntegrity: "/about/Integrity.png",
+  iconInnovation: "/about/Innovation.png",
+  iconCollaboration: "/about/Collaboration.png",
+  iconExcellence: "/about/Excellence.png",
+  iconPassion: "/about/Passion.png",
+  iconResponsibility: "/about/Responsibility.png",
 };
 
 const AboutPage = () => {
@@ -24,7 +30,7 @@ const AboutPage = () => {
       <section className="relative w-full bg-[rgba(255,255,255,0.15)] py-8 sm:py-12 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
               {/* Left Content */}
               <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
                 <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] leading-tight md:leading-[48px] font-bold text-[#0f0f0f]">
@@ -57,15 +63,15 @@ const AboutPage = () => {
       </section>
 
       {/* Who We Are Section */}
-      <section className="w-full py-8 sm:py-12 md:py-16 lg:py-24 bg-white">
+      <section className="w-full py-8 sm:py-12 md:py-16 lg:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-10 md:gap-16 lg:gap-20">
+          <div className="max-w-7xl mx-auto flex flex-col gap-8 sm:gap-10 md:gap-16">
             {/* Section Title */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] leading-tight md:leading-[60px] font-bold text-black text-center">
               Who We Are
             </h2>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-26">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
               {/* Left Content - Our Story */}
               <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
                 <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[30px] leading-tight md:leading-[36px] font-bold text-[#1f1e1d]">
@@ -91,7 +97,7 @@ const AboutPage = () => {
               </div>
 
               {/* Right Image */}
-              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]">
+              <div className="relative w-full aspect-square max-w-md lg:max-w-none mx-auto lg:mx-0">
                 <Image
                   src={IMAGES.storyBanner}
                   alt="Team Working Together"
@@ -101,9 +107,9 @@ const AboutPage = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 pt-6 sm:pt-8 md:pt-10">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
               {/* Left Image */}
-              <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[500px] order-2 lg:order-1">
+              <div className="relative w-full aspect-square max-w-md lg:max-w-none mx-auto lg:mx-0 order-2 lg:order-1">
                 <Image
                   src={IMAGES.approachBanner}
                   alt="Our Approach"

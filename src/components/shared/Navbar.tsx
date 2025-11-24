@@ -45,12 +45,14 @@ const Navbar = () => {
       className={`sticky top-5 w-[90%] mx-auto z-50 border border-[#D1D1D3] rounded-full p-4 backdrop-blur-lg`}
     >
       <div className="flex items-center justify-between">
-        <Image
-          src="/strategyByte-dark.png"
-          alt="Strategy Byte Logo"
-          height={22}
-          width={163}
-        />
+        <Link href={"/"}>
+          <Image
+            src="/strategyByte-dark.png"
+            alt="Strategy Byte Logo"
+            height={22}
+            width={163}
+          />
+        </Link>
         <div className="flex items-center gap-4">
           <button className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer">
             Call
@@ -64,12 +66,14 @@ const Navbar = () => {
       <div className="flex h-14 items-center justify-between">
         {/* Logo */}
         <div className="flex-shrink-0">
-          <Image
-            src="/strategyByte-dark.png"
-            alt="Strategy Byte Logo"
-            height={28}
-            width={200}
-          />
+          <Link href={"/"}>
+            <Image
+              src="/strategyByte-dark.png"
+              alt="Strategy Byte Logo"
+              height={28}
+              width={200}
+            />
+          </Link>
         </div>
 
         <NavigationMenu>
