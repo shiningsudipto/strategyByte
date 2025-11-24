@@ -6,6 +6,7 @@ import "swiper/css";
 import Navbar from "@/components/shared/Navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/shared/Footer";
+import { Toaster } from "sonner";
 
 const chopin = localFont({
   src: [
@@ -58,6 +59,7 @@ export default function RootLayout({
       <body
         className={`${openSans.variable} ${chopin.variable} ${licorice.variable} font-OpenSans antialiased`}
       >
+        <Toaster richColors />
         <Navbar />
         {children}
         <Footer />
