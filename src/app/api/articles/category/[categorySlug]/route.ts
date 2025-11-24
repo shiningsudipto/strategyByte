@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { fetchFromContentful } from "@/lib/contentful";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { categorySlug: string } }
+  { params }: { params: Promise<{ categorySlug: string }> }
 ) {
-  const { categorySlug } = params;
+  const { categorySlug } = await params;
   const searchParams = request.nextUrl.searchParams;
   const limit = parseInt(searchParams.get("limit") || "4");
   const excludeSlug = searchParams.get("excludeSlug") || "";
@@ -51,7 +52,9 @@ export async function GET(
 
     // Exclude current article if specified
     if (excludeSlug) {
-      articles = articles.filter((article: any) => article.slug !== excludeSlug);
+      articles = articles.filter(
+        (article: any) => article.slug !== excludeSlug
+      );
     }
 
     // Apply limit

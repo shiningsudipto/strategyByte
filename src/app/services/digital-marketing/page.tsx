@@ -13,7 +13,6 @@ import SEOServices from "@/components/module/services/SEOServices";
 import SuccessStories from "@/components/module/services/SuccessStories";
 import Area from "@/components/shared/Area";
 import FAQS from "@/components/shared/FAQS";
-import { marketingFaqs } from "@/constants/services.constants";
 // constants
 import {
   faq,

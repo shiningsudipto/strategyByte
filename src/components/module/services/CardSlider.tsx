@@ -52,12 +52,12 @@ function CardSlider() {
     setTimeout(() => setIsAnimating(false), 600);
   };
 
-  const prevSlide = () => {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setCurrentIndex((prev) => (prev - 1 + cards.length) % cards.length);
-    setTimeout(() => setIsAnimating(false), 600);
-  };
+  // const prevSlide = () => {
+  //   if (isAnimating) return;
+  //   setIsAnimating(true);
+  //   setCurrentIndex((prev) => (prev - 1 + cards.length) % cards.length);
+  //   setTimeout(() => setIsAnimating(false), 600);
+  // };
 
   // Auto-advance slides every 4 seconds
   useEffect(() => {

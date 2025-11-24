@@ -6,7 +6,7 @@ import {
 } from "@/constants/footer.constants";
 import Image from "next/image";
 import { RiInstagramFill } from "react-icons/ri";
-import { FaLinkedin, FaFacebook, FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin, FaFacebook } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -80,27 +80,48 @@ const Footer = () => {
               the expertise and resources to handle our diverse marketing
               needs. 
             </p>
+            <div className="flex items-center gap-2 mt-2">
+              <Image
+                src={"/Google.webp"}
+                alt="strategyByte"
+                height={100}
+                width={100}
+                quality={100}
+                className="size-[100px]"
+              />
+              <Image
+                src={"/Hubspot.webp"}
+                alt="strategyByte"
+                height={100}
+                width={100}
+                quality={100}
+                className="size-[105px]"
+              />
+            </div>
           </div>
         </div>
         {/* 3rd section */}
         <div className="flex justify-between items-center lg:flex-row flex-col">
           <p>All right reserved, copyright ©2025 Australia</p>
-          <p>Cookies settings</p>
+          {/* <p>Cookies settings</p> */}
           <div className="flex items-center gap-4">
             <a
-              href="#"
+              href="https://www.facebook.com/StrategyByteAU"
+              target="_blank"
               className="p-3 hover:text-yellow-200 transform duration-300"
             >
               <FaFacebook size={28} />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/strategybyte_au"
+              target="_blank"
               className="p-3 hover:text-yellow-200 transform duration-300"
             >
               <RiInstagramFill size={30} />
             </a>
             <a
-              href="#"
+              href="https://www.facebook.com/StrategyByteAU"
+              target="_blank"
               className="p-3 hover:text-yellow-200 transform duration-300"
             >
               <FaLinkedin size={28} />

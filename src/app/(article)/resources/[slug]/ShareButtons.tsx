@@ -5,10 +5,9 @@ import { toast } from "sonner";
 
 interface ShareButtonsProps {
   url: string;
-  title: string;
 }
 
-const ShareButtons = ({ url, title }: ShareButtonsProps) => {
+const ShareButtons = ({ url }: ShareButtonsProps) => {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(url);
@@ -29,7 +28,9 @@ const ShareButtons = ({ url, title }: ShareButtonsProps) => {
 
   const shareToLinkedIn = () => {
     window.open(
-      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+      `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+        url
+      )}`,
       "_blank",
       "width=600,height=400"
     );

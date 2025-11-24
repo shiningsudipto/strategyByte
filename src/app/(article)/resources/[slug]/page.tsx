@@ -217,7 +217,6 @@ const ArticleDetailPage = async ({
         </div>
         <ShareButtons
           url={`https://www.strategybyte.com.au/resources/${article.slug}`}
-          title={article.title}
         />
       </div>
       <NextToRead

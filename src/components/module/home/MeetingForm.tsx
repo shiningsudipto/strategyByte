@@ -12,10 +12,11 @@ const MeetingForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: { errors },
   } = useForm<meetingForm>();
-  const onSubmit = (data: FieldValues) => {};
+  const onSubmit = (data: FieldValues) => {
+    console.log(data);
+  };
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)} className="lg:py-10 lg:w-[400px]">

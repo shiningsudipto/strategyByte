@@ -34,7 +34,6 @@ const CallContent = () => {
   const {
     register,
     handleSubmit,
-    watch,
     control,
     formState: { errors },
   } = useForm<callForm>();
