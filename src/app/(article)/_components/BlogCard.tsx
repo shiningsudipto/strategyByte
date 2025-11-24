@@ -12,15 +12,24 @@ const tags = [
 
 function formatDate(dateString: string): string {
   const date = new Date(dateString);
-  const options: Intl.DateTimeFormatOptions = {
-    day: "2-digit",
-    month: "short",
-    year: "numeric",
-  };
-  return date
-    .toLocaleDateString("en-US", options)
-    .replace(" ", " ")
-    .replace(/(\w{3}) (\d{4})/, "$1, $2");
+  const months = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = months[date.getMonth()];
+  const year = date.getFullYear();
+  return `${day} ${month}, ${year}`;
 }
 
 const BlogCard = ({ data }: { data: TArticle[] }) => {
@@ -41,7 +50,7 @@ const BlogCard = ({ data }: { data: TArticle[] }) => {
                   Published : {formatDate(item.sys.publishedAt)}
                 </p>
                 <Link
-                  href={item.slug}
+                  href={`/resources/${item.slug}`}
                   className="2xl:text-4xl xl:text-3xl lg:text-2xl text-xl font-semibold lg:leading-[54px] text-neutral-600"
                 >
                   {item.title}

@@ -27,8 +27,6 @@ const Articles = () => {
   const [loading, setLoading] = useState(true);
   const [loadingMore, setLoadingMore] = useState(false);
 
-  console.log(articles);
-
   useEffect(() => {
     const fetchInitialArticles = async () => {
       try {

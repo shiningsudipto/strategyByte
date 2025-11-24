@@ -54,7 +54,6 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
 }
-
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
@@ -209,6 +208,7 @@ body {
   /* max-width: 1728px;
   margin: 0 auto; */
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 button {

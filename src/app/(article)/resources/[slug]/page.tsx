@@ -8,6 +8,7 @@ import {
 import { BLOCKS, INLINES, Document } from "@contentful/rich-text-types";
 import React from "react";
 import ShareButtons from "./ShareButtons";
+import NextToRead from "../../_components/NextToRead";
 
 const ArticleDetailPage = async ({
   params,
@@ -206,10 +207,10 @@ const ArticleDetailPage = async ({
       </div>
 
       {/* Category & Share Section */}
-      <div className="flex items-center justify-between mt-12 pt-8 border-t border-neutral-200">
+      <div className="flex items-center justify-between mt-10">
         <div className="flex items-center gap-3">
           {article.blogCategory && (
-            <span className="px-4 py-2 bg-neutral-100 text-neutral-700 rounded-full text-sm font-medium">
+            <span className="bg-yellow-100 rounded-xl border border-yellow-200 text-neutral-700 px-3 py-1.5 font-semibold text-sm">
               {article.blogCategory.title}
             </span>
           )}
@@ -219,6 +220,10 @@ const ArticleDetailPage = async ({
           title={article.title}
         />
       </div>
+      <NextToRead
+        categorySlug={article.blogCategory?.slug}
+        currentArticleSlug={article.slug}
+      />
     </div>
   );
 };
