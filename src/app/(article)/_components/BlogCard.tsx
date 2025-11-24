@@ -1,6 +1,7 @@
 import { TArticle } from "@/types/types";
 import Image from "next/image";
 import Link from "next/link";
+import { format } from "date-fns";
 
 const tags = [
   "Growth Mapping",
@@ -11,25 +12,7 @@ const tags = [
 ];
 
 function formatDate(dateString: string): string {
-  const date = new Date(dateString);
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
-  ];
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = months[date.getMonth()];
-  const year = date.getFullYear();
-  return `${day} ${month}, ${year}`;
+  return format(new Date(dateString), "dd MMM, yyyy");
 }
 
 const BlogCard = ({ data }: { data: TArticle[] }) => {

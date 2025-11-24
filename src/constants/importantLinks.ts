@@ -36,7 +36,8 @@ export const navLinks = [
       {
         title: "Case Studies",
         desc: "We design fast, functional, and conversion-driven websites tailored to specific goals",
-        path: "/resources/case-studies",
+        // path: "/resources/case-studies",
+        path: "/resources/byte-articles",
       },
       {
         title: "Byte Articles",
@@ -52,16 +53,16 @@ export const navLinks = [
 ];
 
 export const menuLinks = [
-  {
-    label: "ALL PUBLISHES",
-    href: "/resources",
-  },
+  // {
+  //   label: "ALL PUBLISHES",
+  //   href: "/resources",
+  // },
   {
     label: "ARTICLES",
     href: "/resources/byte-articles",
   },
-  {
-    label: "CASE STUDIES",
-    href: "/resources/case-studies",
-  },
+  // {
+  //   label: "CASE STUDIES",
+  //   href: "/resources/case-studies",
+  // },
 ];

@@ -53,9 +53,9 @@ const Header = () => {
       {/* Header */}
       <div
         ref={headerRef}
-        className="-mt-[100px] lg:pt-[130px] pt-[100px] bg-[#EDF4FF]"
+        className="-mt-[100px] lg:pt-[130px] pt-[150px] bg-[#EDF4FF]"
       >
-        <div className="container section-gap flex justify-between items-center lg:h-[290px] h-[240px]">
+        <div className="container section-gap flex justify-between items-center lg:h-[290px] h-[200px]">
           <div>
             <h6 className="text-navy-700">
               Welcome to StrategyByte’s <strong>Growth Journal</strong>, where
