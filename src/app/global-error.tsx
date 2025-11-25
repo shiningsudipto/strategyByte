@@ -61,12 +61,12 @@ export default function GlobalError({
                 >
                   Try Again
                 </button>
-                <a
-                  href="/"
+                <button
+                  onClick={() => (window.location.href = "/")}
                   className="px-8 py-4 border-2 border-neutral-700 text-neutral-700 font-bold rounded-full hover:bg-neutral-700 hover:text-white transition duration-300"
                 >
                   Return Home
-                </a>
+                </button>
               </div>
 
               <div className="mt-8 pt-8 border-t border-neutral-200">
