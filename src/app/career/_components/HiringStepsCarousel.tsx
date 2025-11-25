@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface Step {
   step: number;
@@ -13,37 +13,41 @@ interface Step {
 const steps: Step[] = [
   {
     step: 1,
-    title: 'Apply',
+    title: "Apply",
     description: "Submit your application, and we'll take it from there!",
-    color: '#ff974d',
+    color: "#ff974d",
     rotation: -10,
   },
   {
     step: 2,
-    title: 'Recruitment Interview',
-    description: "We sit with you to understand you skills, experience and goals.",
-    color: '#A3B9FF',
+    title: "Recruitment Interview",
+    description:
+      "We sit with you to understand you skills, experience and goals.",
+    color: "#A3B9FF",
     rotation: 10,
   },
   {
     step: 3,
-    title: 'Technical Assessment',
-    description: 'Showcase your experience in a hands-on test so we know where you stand.',
-    color: '#ED9FB1',
+    title: "Technical Assessment",
+    description:
+      "Showcase your experience in a hands-on test so we know where you stand.",
+    color: "#ED9FB1",
     rotation: -10,
   },
   {
     step: 4,
-    title: 'Final Round Interview',
-    description: 'Meet with your potential future team mates to confirm the fit.',
-    color: '#FFC605',
+    title: "Final Round Interview",
+    description:
+      "Meet with your potential future team mates to confirm the fit.",
+    color: "#FFC605",
     rotation: 10,
   },
   {
     step: 5,
-    title: 'Decision & Offer',
-    description: "We review your journey and, if everything aligns we share with you your offer details.",
-    color: '#35FBBC',
+    title: "Decision & Offer",
+    description:
+      "We review your journey and, if everything aligns we share with you your offer details.",
+    color: "#35FBBC",
     rotation: 10,
   },
 ];
@@ -64,8 +68,8 @@ const HiringStepsCarousel = () => {
     };
 
     updateCardsPerView();
-    window.addEventListener('resize', updateCardsPerView);
-    return () => window.removeEventListener('resize', updateCardsPerView);
+    window.addEventListener("resize", updateCardsPerView);
+    return () => window.removeEventListener("resize", updateCardsPerView);
   }, []);
 
   const handlePrev = () => {
@@ -85,11 +89,11 @@ const HiringStepsCarousel = () => {
           {/* Header */}
           <div className="flex flex-col gap-4">
             <h2 className="text-3xl md:text-4xl lg:text-[56px] leading-tight md:leading-[78px] font-bold text-[#1f1e1d]">
-              Simple 5 step of{' '}
-              <span className="text-[#0061ff]">hiring</span>
+              Simple 5 step of <span className="text-[#0061ff]">hiring</span>
             </h2>
             <p className="text-base md:text-lg lg:text-xl leading-6 md:leading-8 text-[#605d5b]">
-              We&apos;re looking for adaptable, pro-active team players who are ready to drive global impact. Is that you?
+              We&apos;re looking for adaptable, pro-active team players who are
+              ready to drive global impact. Is that you?
             </p>
           </div>
 
@@ -102,7 +106,7 @@ const HiringStepsCarousel = () => {
                   className="flex items-center justify-center shrink-0"
                   style={{
                     transform: `rotate(${step.rotation}deg)`,
-                    transformOrigin: 'center',
+                    transformOrigin: "center",
                   }}
                 >
                   <div
@@ -111,7 +115,11 @@ const HiringStepsCarousel = () => {
                       h-[320px] sm:h-[340px] md:h-[350px] lg:h-[356px]
                       rounded-2xl p-6 md:p-8 flex flex-col justify-between
                       shadow-[0px_12px_16px_-4px_rgba(16,24,40,0.08),0px_4px_6px_-2px_rgba(16,24,40,0.03)]
-                      ${step.color === '#ffffff' ? 'bg-white border border-[#eef1f8]' : ''}
+                      ${
+                        step.color === "#ffffff"
+                          ? "bg-white border border-[#eef1f8]"
+                          : ""
+                      }
                     `}
                     style={{
                       backgroundColor: step.color,
@@ -145,13 +153,17 @@ const HiringStepsCarousel = () => {
           <div className="flex flex-col-reverse md:flex-row items-center justify-between w-full gap-4 md:gap-0 md:h-12">
             {/* Pagination Dots - Bottom Left on Desktop, Top on Mobile */}
             <div className="flex gap-2 justify-center md:justify-start">
-              {steps.map((_, index) => (
+              {steps.slice(0, 3).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(Math.min(index, steps.length - cardsPerView))}
+                  onClick={() =>
+                    setCurrentIndex(
+                      Math.min(index, steps.length - cardsPerView)
+                    )
+                  }
                   className={`
                     w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all
-                    ${index === currentIndex ? 'bg-[#1f1e1d]' : 'bg-[#aaa6a2]'}
+                    ${index === currentIndex ? "bg-[#1f1e1d]" : "bg-[#aaa6a2]"}
                   `}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -166,9 +178,10 @@ const HiringStepsCarousel = () => {
                 className={`
                   w-10 h-10 md:w-12 md:h-12 rounded-full border-[1.5px] flex items-center justify-center
                   transition-all
-                  ${currentIndex === 0
-                    ? 'border-[#aaa6a2] cursor-not-allowed opacity-50'
-                    : 'border-[#1f1e1d] hover:bg-[#f5f5f5]'
+                  ${
+                    currentIndex === 0
+                      ? "border-[#aaa6a2] cursor-not-allowed opacity-50"
+                      : "border-[#1f1e1d] hover:bg-[#f5f5f5]"
                   }
                 `}
                 aria-label="Previous slide"
@@ -183,7 +196,7 @@ const HiringStepsCarousel = () => {
                 >
                   <path
                     d="M12.5 15L7.5 10L12.5 5"
-                    stroke={currentIndex === 0 ? '#aaa6a2' : '#1f1e1d'}
+                    stroke={currentIndex === 0 ? "#aaa6a2" : "#1f1e1d"}
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -197,9 +210,10 @@ const HiringStepsCarousel = () => {
                 className={`
                   w-10 h-10 md:w-12 md:h-12 rounded-full border-[1.5px] flex items-center justify-center
                   transition-all
-                  ${currentIndex >= steps.length - cardsPerView
-                    ? 'border-[#aaa6a2] cursor-not-allowed opacity-50'
-                    : 'border-[#1f1e1d] hover:bg-[#f5f5f5]'
+                  ${
+                    currentIndex >= steps.length - cardsPerView
+                      ? "border-[#aaa6a2] cursor-not-allowed opacity-50"
+                      : "border-[#1f1e1d] hover:bg-[#f5f5f5]"
                   }
                 `}
                 aria-label="Next slide"
@@ -214,7 +228,11 @@ const HiringStepsCarousel = () => {
                 >
                   <path
                     d="M7.5 15L12.5 10L7.5 5"
-                    stroke={currentIndex >= steps.length - cardsPerView ? '#aaa6a2' : '#1f1e1d'}
+                    stroke={
+                      currentIndex >= steps.length - cardsPerView
+                        ? "#aaa6a2"
+                        : "#1f1e1d"
+                    }
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"

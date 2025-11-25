@@ -3,10 +3,30 @@ import {
   MarqueeContent,
   MarqueeItem,
 } from "@/components/ui/kibo-ui/marquee";
-import { testimonials } from "@/constants/services.constants";
+import { reviews } from "@/constants/reviews";
+import { Quote } from "lucide-react";
 import Image from "next/image";
 
 const Reviews = () => {
+  const ReviewerAvatar = ({ photo, name }: { photo: string; name: string }) => {
+    if (photo) {
+      return (
+        <Image
+          src={photo}
+          alt={name}
+          width={56}
+          height={56}
+          className="size-14 rounded-full object-cover"
+        />
+      );
+    }
+
+    return (
+      <div className="size-14 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-200 flex items-center justify-center text-neutral-700 font-bold text-xl shrink-0">
+        {name.charAt(0)}
+      </div>
+    );
+  };
   return (
     <section className="bg-navy-bg section-gap-y">
       <div className="container section-gap lg:mb-20 mb-10 px-4 lg:px-0">
@@ -19,40 +39,32 @@ const Reviews = () => {
         </div>
       </div>
       <Marquee>
-        <MarqueeContent pauseOnHover={false} pauseOnClick={false}>
-          {testimonials.map((item) => (
+        <MarqueeContent pauseOnHover={true} pauseOnClick={true}>
+          {reviews.map((item, index) => (
             <MarqueeItem
-              key={item?.id}
-              className="bg-white p-6 rounded-[36px] w-[534px] h-[520px] flex flex-col"
+              key={index}
+              className="bg-white p-8 rounded-[36px] w-[534px] min-h-[400px] flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div>
-                <Image
-                  src={item?.brand}
-                  alt={item?.position}
-                  height={48}
-                  width={90}
-                  className="w-auto h-12"
-                />
+              {/* Quote icon */}
+              <div className="mb-6">
+                <Quote size={40} className="text-yellow-400 fill-yellow-100" />
               </div>
 
-              <p className="text-neutral-300 text-2 font-semibold mt-10">
-                {item.review}
+              {/* Review text */}
+              <p className="text-neutral-700 text-lg leading-relaxed flex-1">
+                &ldquo;{item.text}&rdquo;
               </p>
 
-              {/* footer */}
-              <div className="flex gap-4 mt-auto">
-                <Image
-                  src={item?.avatar}
-                  alt={item?.name}
-                  height={56}
-                  width={56}
-                  className="rounded-full"
-                />
-                <div className="flex flex-col items-start gap-2">
-                  <p className="text-neutral-700 text-xl font-semibold">
-                    {item.name}
-                  </p>
-                  <p className="text-neutral-500 text-sm">{item.position}</p>
+              {/* Reviewer info */}
+              <div className="mt-8 pt-6 border-t border-neutral-200">
+                <div className="flex items-center gap-4">
+                  <ReviewerAvatar photo={item.photo} name={item.name} />
+                  <div className="flex flex-col">
+                    <p className="text-neutral-800 text-lg font-semibold">
+                      {item.name}
+                    </p>
+                    <p className="text-neutral-500 text-sm">{item.role}</p>
+                  </div>
                 </div>
               </div>
             </MarqueeItem>

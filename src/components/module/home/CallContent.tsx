@@ -125,13 +125,16 @@ const CallContent = () => {
           </div>
           <p className="text-neutral-700 text-sm">
             By proceeding, you confirm that you have read and agree to{" "}
-            <Link href={"#"} className="text-primary underline font-semibold">
-              StrategyByte&apos;s Terms of Use
+            <Link
+              href={"/terms-and-condition"}
+              className="text-primary underline font-semibold"
+            >
+              StrategyByte&apos;s Terms of Conditions
             </Link>{" "}
-            and{" "}
+            {/* and{" "}
             <Link href={"#"} className="text-primary underline font-semibold">
               Privacy Notice.
-            </Link>
+            </Link> */}
           </p>
         </form>
       </div>

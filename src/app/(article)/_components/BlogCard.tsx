@@ -16,6 +16,7 @@ function formatDate(dateString: string): string {
 }
 
 const BlogCard = ({ data }: { data: TArticle[] }) => {
+  console.log(data);
   return (
     <div className="space-y-8">
       {data?.map((item: TArticle, index: number) => {
@@ -39,7 +40,7 @@ const BlogCard = ({ data }: { data: TArticle[] }) => {
                   {item.title}
                 </Link>
               </div>
-              <div className="flex items-center flex-wrap lg:w-1/2 gap-4 mt-5">
+              {/* <div className="flex items-center flex-wrap lg:w-1/2 gap-4 mt-5">
                 {tags.map((tag, index) => (
                   <p
                     key={index}
@@ -48,6 +49,11 @@ const BlogCard = ({ data }: { data: TArticle[] }) => {
                     {tag}
                   </p>
                 ))}
+              </div> */}
+              <div>
+                <p className="bg-yellow-100 rounded-xl border border-yellow-200 text-neutral-700 px-3 py-1.5 font-semibold text-sm w-fit mt-5">
+                  {item.blogCategory?.title}
+                </p>
               </div>
             </div>
             <div>
