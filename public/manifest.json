@@ -55,6 +55,24 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    },
+    {
+      "src": "/logo/open-graph-image.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo/open-graph-square.png",
+      "sizes": "1200x1200",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/logo/twitter-card.png",
+      "sizes": "1200x600",
+      "type": "image/png",
+      "purpose": "any"
     }
   ]
 }
