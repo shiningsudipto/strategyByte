@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return isMobile ? (
     <nav
-      className={`sticky top-5 w-[90%] mx-auto z-50 border border-[#D1D1D3] rounded-full p-4 backdrop-blur-lg`}
+      className={`sticky top-5 w-[90%] mx-auto z-50 border bg-white/60 border-[#D1D1D3] rounded-full p-4 backdrop-blur-lg`}
     >
       <div className="flex items-center justify-between">
         <Link href={"/"}>

@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "next/image";
+import CustomButton from "@/components/ui/CustomButton";
+import { FiArrowUpRight } from "react-icons/fi";
 
 const IMAGES = {
   // Hero Section
@@ -27,25 +29,28 @@ const AboutPage = () => {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative w-full bg-[rgba(255,255,255,0.15)] py-8 sm:py-12 md:py-16 lg:py-20">
+      <section className="relative w-full bg-[rgba(255,255,255,0.15)] py-12 sm:py-16 md:py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12 lg:gap-16 items-center">
               {/* Left Content */}
               <div className="flex flex-col gap-4 sm:gap-6 md:gap-8">
-                <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[48px] leading-tight md:leading-[48px] font-bold text-[#0f0f0f]">
-                  Driving Growth Through Digital
-                  <br className="hidden sm:block" />
-                  <span className="sm:hidden"> </span>Marketing & Innovation
+                <h1 className="text-2xl md:text-4xl font-bold text-neutral-700 leading-normal lg:text-5xl xl:text-[48px]">
+                  Driving Growth Through Digital Marketing & Innovation
                 </h1>
                 <p className="text-sm sm:text-base md:text-lg lg:text-[18px] leading-6 sm:leading-7 md:leading-[28px] text-[#848484]">
                   Strategybyte helps organizations navigate the complex digital
                   landscape with strategic consulting and cutting-edge
                   technology solutions.
                 </p>
-                <button className="bg-[#ffc605] hover:bg-[#e6b304] transition-all text-white font-semibold text-sm md:text-[14px] leading-5 px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg w-fit">
-                  Get in Touch
-                </button>
+                <div>
+                  <CustomButton
+                    label="Book a Session"
+                    icon={<FiArrowUpRight />}
+                    variant="primary"
+                    href="/book-a-demo"
+                  />
+                </div>
               </div>
 
               {/* Right Image */}

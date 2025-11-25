@@ -1,5 +1,6 @@
 "use client";
 import { ReactNode, ElementType } from "react";
+import Link from "next/link";
 
 type TProps = {
   label: string;
@@ -8,6 +9,8 @@ type TProps = {
   icon?: ElementType | ReactNode;
   size?: number;
   variant?: "primary" | "bordered";
+  href?: string; // URL for Link functionality
+  onClick?: () => void; // Click handler for button functionality
 };
 
 const CustomButton = ({
@@ -16,6 +19,8 @@ const CustomButton = ({
   size = 16,
   variant = "primary",
   className,
+  href,
+  onClick,
 }: TProps) => {
   const baseClasses =
     "font-bold cursor-pointer py-4 px-6 rounded-full flex items-center gap-2 transition duration-300";
@@ -26,18 +31,35 @@ const CustomButton = ({
       "border border-neutral-700 text-neutral-700 hover:bg-neutral-700 hover:text-yellow-200",
   };
 
-  return (
-    <button
-      className={`${baseClasses} ${variants[variant]} group ${
-        className && className
-      }`}
-    >
+  const content = (
+    <>
       <span className="group-hover:underline">{label}</span>
 
-      <span className="bg-neutral-700 group-hover:bg-yellow-200 text-white group-hover:text-neutral-700 rounded-full p-1 flex items-center justify-center transition duration-300">
-        {/* Case 1: If it's a component type (like LucideIcon or react-icons component) */}
-        {typeof Icon === "function" ? <Icon size={size} /> : Icon}
-      </span>
+      {Icon && (
+        <span className="bg-neutral-700 group-hover:bg-yellow-200 text-white group-hover:text-neutral-700 rounded-full p-1 flex items-center justify-center transition duration-300">
+          {typeof Icon === "function" ? <Icon size={size} /> : Icon}
+        </span>
+      )}
+    </>
+  );
+
+  const classes = `${baseClasses} ${variants[variant]} group ${
+    className || ""
+  } w-fit`;
+
+  // If href is provided, render as Link
+  if (href) {
+    return (
+      <Link href={href} className={classes}>
+        {content}
+      </Link>
+    );
+  }
+
+  // Otherwise, render as button
+  return (
+    <button onClick={onClick} className={classes}>
+      {content}
     </button>
   );
 };
