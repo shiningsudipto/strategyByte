@@ -123,7 +123,7 @@ export const seoServices = [
 export const industries = [
   {
     title: "Corporate",
-    image: "/industry/corporate.png",
+    image: "/industry/Corporate-min.jpg",
     description:
       "Enterprises need consistent branding and scalable digital presence.",
     points: [
@@ -134,7 +134,7 @@ export const industries = [
   },
   {
     title: "Health Tech",
-    image: "/industry/tech.png",
+    image: "/industry/Health Tech-min.jpg",
     description:
       "Requires clarity, accessibility, and compliance with sensitive data.",
     points: [
@@ -145,7 +145,7 @@ export const industries = [
   },
   {
     title: "SaaS Application",
-    image: "/industry/corporate.png",
+    image: "/industry/SaaS Application-min.jpg",
     description:
       "SaaS thrives on usability, clarity, and conversion-focused design.",
     points: [
@@ -156,7 +156,7 @@ export const industries = [
   },
   {
     title: "E-Commerce",
-    image: "/industry/tech.png",
+    image: "/industry/E Commerce-min.jpg",
     description: "Fast, intuitive shopping experiences that convert.",
     points: [
       "Mobile-optimized product layouts",
@@ -166,7 +166,7 @@ export const industries = [
   },
   {
     title: "Edu-Tech",
-    image: "/industry/corporate.png",
+    image: "/industry/Edu Tech-min.jpg",
     description: "Education platforms need to inform, engage, and guide.",
     points: [
       "Easy-to-use, inclusive design",
@@ -176,7 +176,7 @@ export const industries = [
   },
   {
     title: "Fintech",
-    image: "/industry/tech.png",
+    image: "/industry/Fintech-min.jpg",
     description:
       "A fast-paced industry where clarity, trust, and security are key.",
     points: [
@@ -230,19 +230,19 @@ export const services = [
     img: "/services/services/Website Development.png",
     title: "Website Development",
     desc: "We design fast, functional, and conversion-driven websites tailored to specific goals",
-    href: "/services/website-development",
+    href: "/our-services/website-development",
   },
   {
     img: "/services/services/Strategic Brand Management.png",
     title: "Strategic Branding Management",
     desc: "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth",
-    href: "/services/brand-management",
+    href: "/our-services/brand-management",
   },
   {
     img: "/services/services/Business Optimization.png",
     title: "Business Optimization",
     desc: "We optimize your business by refining workflows, maintaining content consistency, and implementing scalable systems to boost efficiency, clarity, and growth.",
-    href: "/services/website-development",
+    href: "/our-services/website-development",
   },
 ];
 

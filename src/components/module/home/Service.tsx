@@ -14,7 +14,7 @@ const serviceList = [
       "We create targeted campaigns that drive real results and help your brand grow smarter online.",
     buttonText: "View Full Service",
     img: DMandSEO,
-    href: "/services/digital-marketing",
+    href: "/our-services/digital-marketing",
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const serviceList = [
       "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth.",
     buttonText: "View Full Service",
     img: StrategicBrandManagement,
-    href: "/services/brand-management",
+    href: "/our-services/brand-management",
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const serviceList = [
       "We design fast, functional, and conversion-driven websites tailored to your specific goals.",
     buttonText: "View Full Service",
     img: WebsiteDevelopment,
-    href: "/services/website-development",
+    href: "/our-services/website-development",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const serviceList = [
       "We optimize your business by refining workflows, maintaining content consistency, and implementing scalable systems to boost efficiency, clarity, and growth.",
     buttonText: "View Full Service",
     img: DataDrivenBusinessOptimization,
-    href: "/services/content-marketing",
+    href: "/our-services/content-marketing",
   },
 ];
 

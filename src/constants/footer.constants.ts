@@ -1,11 +1,11 @@
 // Services Section
 export const services = [
-  { title: "Website Development", href: "/services/website-development" },
-  { title: "Digital Marketing & SEO", href: "/services/digital-marketing" },
-  { title: "Content Marketing", href: "/services/content-marketing" },
+  { title: "Website Development", href: "/our-services/website-development" },
+  { title: "Digital Marketing & SEO", href: "/our-services/digital-marketing" },
+  { title: "Content Marketing", href: "/our-services/content-marketing" },
   {
     title: "Strategic Branding Management",
-    href: "/services/brand-management",
+    href: "/our-services/brand-management",
   },
 ];
 

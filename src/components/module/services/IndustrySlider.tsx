@@ -27,7 +27,7 @@ const IndustrySlider = () => {
               alt={item.title}
               height={368}
               width={416}
-              className="object-cover rounded-b-[16px]"
+              className="object-cover rounded-b-[16px] h-[300px]"
             />
             <div
               className="
@@ -40,7 +40,7 @@ const IndustrySlider = () => {
                 {item.description}
               </p>
 
-              <ul className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity delay-300 list-disc ml-5 mt-40">
+              <ul className="space-y-2 opacity-0 group-hover:opacity-100 transition-opacity delay-300 list-disc ml-5 mt-32">
                 {item.points.map((list, i) => (
                   <li className="text-neutral-800" key={i}>
                     {list}

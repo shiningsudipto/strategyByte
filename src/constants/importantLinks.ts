@@ -5,27 +5,27 @@ export const navLinks = [
   },
   {
     label: "Services",
-    path: "/services",
+    path: "/our-services",
     dropdown: [
       {
         title: "Website Development",
         desc: "We design fast, functional, and conversion-driven websites tailored to specific goals",
-        path: "/services/website-development",
+        path: "/our-services/website-development",
       },
       {
         title: "Digital Marketing & SEO",
         desc: "We create targeted campaigns that drive real results and help your brand grow smarter online",
-        path: "/services/digital-marketing",
+        path: "/our-services/digital-marketing",
       },
       {
         title: "Strategic Branding Management",
         desc: "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth",
-        path: "/services/brand-management",
+        path: "/our-services/brand-management",
       },
       {
         title: "CONTENT MARKETING",
         desc: "We plan, create, and distribute high-value content that attracts the right audience, builds trust, and drives conversions.",
-        path: "/services/content-marketing",
+        path: "/our-services/content-marketing",
       },
     ],
   },
