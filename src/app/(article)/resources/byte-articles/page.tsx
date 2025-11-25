@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import BecomeAuthor from "../../_components/BecomeAuthor";
 import BlogCard from "../../_components/BlogCard";
 import { FiArrowUpRight } from "react-icons/fi";
 interface Article {
@@ -98,22 +97,11 @@ const Articles = () => {
     );
   }
 
-  const firstFourArticles = articles.slice(0, 4);
-  const remainingArticles = articles.slice(4);
-
   return (
-    <main className="py-10">
+    <main className="py-20">
       <section className="container section-gap">
-        <BlogCard data={firstFourArticles} />
+        <BlogCard data={articles} />
       </section>
-
-      <BecomeAuthor />
-
-      {remainingArticles.length > 0 && (
-        <section className="container section-gap mt-10">
-          <BlogCard data={remainingArticles} />
-        </section>
-      )}
 
       {hasMore && (
         <div className="container section-gap mt-10">
@@ -126,7 +114,7 @@ const Articles = () => {
               "Loading..."
             ) : (
               <>
-                View Full Service <FiArrowUpRight />
+                View All Articles <FiArrowUpRight />
               </>
             )}
           </button>
