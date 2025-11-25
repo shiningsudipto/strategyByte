@@ -1,15 +1,14 @@
-import React from 'react';
-import Image from 'next/image';
-
-// TODO: Replace these placeholder paths with actual image paths from your assets
-const AVATAR_IMAGES = {
-  avatar1: '/images/career/avatar-1.png',
-  avatar2: '/images/career/avatar-2.png',
-  avatar3: '/images/career/avatar-3.png',
-};
+import React from "react";
+import Image from "next/image";
 
 const StarIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <svg
+    width="20"
+    height="20"
+    viewBox="0 0 20 20"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
     <path
       d="M10 1.61804L12.2451 7.90983L12.3647 8.26286H12.7431H19.5106L14.0395 12.2022L13.7408 12.4209L13.8604 12.7739L16.1056 19.0657L10.6345 15.1264L10.3358 14.9076L10.0371 15.1264L4.56598 19.0657L6.81115 12.7739L6.93079 12.4209L6.63205 12.2022L1.16094 8.26286H7.92848H8.30691L8.42655 7.90983L10.6717 1.61804H10Z"
       fill="#CFA000"
@@ -30,32 +29,14 @@ const HeroSection = () => {
             {/* Rating Section */}
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
               {/* Avatars */}
-              <div className="flex items-center justify-center relative">
-                <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.625px] border-white overflow-hidden">
-                  <Image
-                    src={AVATAR_IMAGES.avatar1}
-                    alt="Team member"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full border-[1.625px] border-white overflow-hidden -ml-1.5 sm:-ml-2">
-                  <Image
-                    src={AVATAR_IMAGES.avatar2}
-                    alt="Team member"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full border-2 border-white overflow-hidden -ml-1.5 sm:-ml-2">
-                  <Image
-                    src={AVATAR_IMAGES.avatar3}
-                    alt="Team member"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+              <Image
+                src={"/avatar-rating.png"}
+                alt="Team member"
+                quality={100}
+                width={80}
+                height={32}
+                className="object-cover"
+              />
 
               {/* Rating Text */}
               <div className="flex items-center gap-1">
@@ -81,7 +62,10 @@ const HeroSection = () => {
 
           {/* Description */}
           <div className="text-center text-sm sm:text-base md:text-lg text-[#605d5b] font-semibold max-w-full px-4">
-            <p>We provide avenues to building a strong career to ambitious newbies and</p>
+            <p>
+              We provide avenues to building a strong career to ambitious
+              newbies and
+            </p>
             <p>to pros alike.</p>
           </div>
         </div>
@@ -93,7 +77,9 @@ const HeroSection = () => {
             <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
               43+
             </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">Brand Shaped</p>
+            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
+              Brand Shaped
+            </p>
           </div>
 
           {/* Stat Card 2 */}
@@ -101,7 +87,9 @@ const HeroSection = () => {
             <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
               6150+
             </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">Hours Worked</p>
+            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
+              Hours Worked
+            </p>
           </div>
 
           {/* Stat Card 3 */}
@@ -109,7 +97,9 @@ const HeroSection = () => {
             <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
               650M
             </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">Help Revenue</p>
+            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
+              Help Revenue
+            </p>
           </div>
 
           {/* Stat Card 4 */}
@@ -117,7 +107,9 @@ const HeroSection = () => {
             <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
               250+
             </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">Projects</p>
+            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
+              Projects
+            </p>
           </div>
         </div>
 

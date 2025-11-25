@@ -1,21 +1,24 @@
 // Services Section
 export const services = [
-  { title: "Website Development" },
-  { title: "Digital Marketing & SEO" },
-  { title: "Business Optimization" },
-  { title: "Strategic Branding Management" },
+  { title: "Website Development", href: "/services/website-development" },
+  { title: "Digital Marketing & SEO", href: "/services/digital-marketing" },
+  { title: "Content Marketing", href: "/services/content-marketing" },
+  {
+    title: "Strategic Branding Management",
+    href: "/services/brand-management",
+  },
 ];
 
 // Resources Section
 export const resources = [
-  { title: "Case Studies" },
-  { title: "The Byte Articles" },
+  { title: "Case Studies", href: "/resources/byte-articles" },
+  { title: "The Byte Articles", href: "/resources/byte-articles" },
 ];
 
 // Company Section
 export const company = [
   { title: "Careers", note: "We’re hiring", href: "/career" },
-  { title: "Get Support", href: "#" },
+  { title: "Get Support", href: "/book-a-demo" },
   { title: "Terms & Policies", href: "/terms-and-condition" },
 ];
 

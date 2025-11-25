@@ -1,42 +1,25 @@
-import React from 'react';
-import Link from 'next/link';
-
-const ArrowLeftIcon = () => (
-  <svg
-    width="20"
-    height="20"
-    viewBox="0 0 20 20"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M12.5 15L7.5 10L12.5 5"
-      stroke="white"
-      strokeWidth="1.5"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    />
-  </svg>
-);
+import React from "react";
+import Link from "next/link";
+import { ChevronLeft } from "lucide-react";
 
 const sections = [
   {
-    title: 'License & Content Liability',
+    title: "License & Content Liability",
     content:
       "We shall not be held responsible for any content that appears on your Website. You agree to protect and defend us against all claims that are rising on your Website. No link(s) should appear on any Website that may be interpreted as libellous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.",
   },
   {
-    title: 'Privacy Policy',
+    title: "Privacy Policy",
     content:
       "We shall not be held responsible for any content that appears on your Website. You agree to protect and defend us against all claims that are rising on your Website. No link(s) should appear on any Website that may be interpreted as libellous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.",
   },
   {
-    title: 'Reservation Of Rights',
+    title: "Reservation Of Rights",
     content:
       "We shall not be held responsible for any content that appears on your Website. You agree to protect and defend us against all claims that are rising on your Website. No link(s) should appear on any Website that may be interpreted as libellous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.",
   },
   {
-    title: 'Cookies',
+    title: "Cookies",
     content:
       "We shall not be held responsible for any content that appears on your Website. You agree to protect and defend us against all claims that are rising on your Website. No link(s) should appear on any Website that may be interpreted as libellous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.",
   },
@@ -44,7 +27,7 @@ const sections = [
 
 export default function TermsAndConditionPage() {
   return (
-    <div className="min-h-screen bg-[#FFFBF0] py-8 md:py-12 lg:py-16">
+    <div className="min-h-screen bg-[#FFFBF0] py-8 md:py-12 lg:py-16 lg:pt-48 -mt-[90px]">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto flex flex-col gap-8 md:gap-12 lg:gap-16">
           {/* Content Container */}
@@ -52,9 +35,9 @@ export default function TermsAndConditionPage() {
             {/* Back Button */}
             <Link
               href="/"
-              className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#1f1e1d] flex items-center justify-center hover:bg-black transition-all"
+              className="group w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:bg-black/70 transition-all duration-300 border border-black"
             >
-              <ArrowLeftIcon />
+              <ChevronLeft className="text-neutral-700 group-hover:text-white" />
             </Link>
 
             {/* Hero Section */}
@@ -65,16 +48,37 @@ export default function TermsAndConditionPage() {
               <div className="text-sm sm:text-base md:text-lg leading-6 sm:leading-7 md:leading-8 text-[#605d5b] text-justify">
                 <p>Welcome to StrategyByte!</p>
                 <p>
-                  These terms and conditions outline the rules and regulations for the use of Octet Design Studios Website,
+                  These terms and conditions outline the rules and regulations
+                  for the use of Octet Design Studios Website,
                 </p>
                 <p>located at Sydney, Australia</p>
                 <p>&nbsp;</p>
                 <p>
-                  By accessing this website we assume you accept these terms and conditions. Do not continue to use Octet Design Studio if you do not agree to take all of the terms and conditions stated on this page.
+                  By accessing this website we assume you accept these terms and
+                  conditions. Do not continue to use Octet Design Studio if you
+                  do not agree to take all of the terms and conditions stated on
+                  this page.
                 </p>
                 <p>&nbsp;</p>
                 <p>
-                  The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: &quot;Client&quot;, &quot;You&quot; and &quot;Your&quot; refers to you, the person log on this website and compliant to the Company&apos;s terms and conditions. &quot;The Company&quot;, &quot;Ourselves&quot;, &quot;We&quot;, &quot;Our&quot; and &quot;Us&quot;, refers to our Company. &quot;Party&quot;, &quot;Parties&quot;, or &quot;Us&quot;, refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client&apos;s needs in respect of the provision of the Company&apos;s stated services, in accordance with and subject to, prevailing law of India. Any use of the above terminology or other words in the singular, plural, capitalisation and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+                  The following terminology applies to these Terms and
+                  Conditions, Privacy Statement and Disclaimer Notice and all
+                  Agreements: &quot;Client&quot;, &quot;You&quot; and
+                  &quot;Your&quot; refers to you, the person log on this website
+                  and compliant to the Company&apos;s terms and conditions.
+                  &quot;The Company&quot;, &quot;Ourselves&quot;,
+                  &quot;We&quot;, &quot;Our&quot; and &quot;Us&quot;, refers to
+                  our Company. &quot;Party&quot;, &quot;Parties&quot;, or
+                  &quot;Us&quot;, refers to both the Client and ourselves. All
+                  terms refer to the offer, acceptance and consideration of
+                  payment necessary to undertake the process of our assistance
+                  to the Client in the most appropriate manner for the express
+                  purpose of meeting the Client&apos;s needs in respect of the
+                  provision of the Company&apos;s stated services, in accordance
+                  with and subject to, prevailing law of India. Any use of the
+                  above terminology or other words in the singular, plural,
+                  capitalisation and/or he/she or they, are taken as
+                  interchangeable and therefore as referring to same.
                 </p>
               </div>
             </div>

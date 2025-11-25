@@ -17,27 +17,38 @@ const Footer = () => {
         <div className="lg:pb-16 pb-10 lg:px-0 px-5 grid lg:grid-cols-4 grid-cols-1 gap-y-5">
           <div>
             <h4 className="text-xl font-semibold py-2 mb-2">Services</h4>
-            <div>
+            <div className="flex flex-col">
               {services.map((item, index) => (
-                <p key={index} className="py-2">
+                <Link
+                  href={item?.href}
+                  key={index}
+                  className="py-2 inline-block"
+                >
                   {item.title}
-                </p>
+                </Link>
               ))}
             </div>
           </div>
           <div>
             <h4 className="text-xl font-semibold py-2 mb-2">Resources</h4>
-            <div>
+            <div className="flex flex-col">
               {resources.map((item, index) => (
-                <p key={index} className="py-2">
+                <Link
+                  href={item?.href}
+                  key={index}
+                  className="py-2 inline-block"
+                >
                   {item.title}
-                </p>
+                </Link>
               ))}
-              <div className="p-[2px] rounded-full bg-gradient-to-r from-[#FFC605] to-[#76B0FF] inline-block mt-2">
+              <Link
+                href={"/book-a-demo"}
+                className="p-[2px] rounded-full bg-gradient-to-r from-[#FFC605] to-[#76B0FF] inline-block mt-2 w-fit"
+              >
                 <button className="bg-navy-bg py-2 px-4 rounded-full">
                   Schedule a Call
                 </button>
-              </div>
+              </Link>
             </div>
           </div>
           <div>
