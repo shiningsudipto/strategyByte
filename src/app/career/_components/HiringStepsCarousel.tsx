@@ -96,7 +96,7 @@ const HiringStepsCarousel = () => {
           {/* Cards Container */}
           <div className="relative min-h-[400px] md:min-h-[450px] lg:h-[496px] w-full">
             <div className="flex gap-3 md:gap-5 items-center h-full justify-center md:justify-start">
-              {visibleSteps.map((step, index) => (
+              {visibleSteps.map((step) => (
                 <div
                   key={step.step}
                   className="flex items-center justify-center shrink-0"

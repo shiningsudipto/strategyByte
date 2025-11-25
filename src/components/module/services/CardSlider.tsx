@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 
 function CardSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,12 +45,12 @@ function CardSlider() {
     },
   ];
 
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prev) => (prev + 1) % cards.length);
     setTimeout(() => setIsAnimating(false), 600);
-  };
+  }, [isAnimating, cards.length]);
 
   // const prevSlide = () => {
   //   if (isAnimating) return;
@@ -63,7 +63,7 @@ function CardSlider() {
   useEffect(() => {
     const interval = setInterval(nextSlide, 4000);
     return () => clearInterval(interval);
-  }, []);
+  }, [nextSlide]);
 
   const getCardPosition = (index: number) => {
     const diff = (index - currentIndex + cards.length) % cards.length;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { jobs, Job } from '../_components/RecruitmentSection';
+import { jobs } from '../_components/RecruitmentSection';
 
 interface PageProps {
   params: {
