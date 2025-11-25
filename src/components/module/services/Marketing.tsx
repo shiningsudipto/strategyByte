@@ -27,8 +27,7 @@ const Marketing = ({
     <div className="container section-gap lg:py-16 py-10 lg:px-0 px-4">
       <div className="">
         <h2 className="heading">
-          {title}
-          <span className="text-blue-100">{title_highlight}</span>
+          {title} <span className="text-blue-100">{title_highlight}</span>
         </h2>
         <p className="text-xl text-neutral-500 lg:w-[1000px] mt-5">
           {description}

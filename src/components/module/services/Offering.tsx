@@ -38,7 +38,7 @@ const Offering = () => {
               <p className="text-lg">{service.desc}</p>
             </div>
             <Link
-              href={"#"}
+              href={service?.href}
               className="border-2 border-neutral-700 rounded-full flex items-center gap-2 py-4 px-3 w-fit font-bold group-hover:bg-white group-hover:text-neutral-700"
             >
               View Full Service <ArrowUpRight />
