@@ -28,9 +28,10 @@ const Area = () => {
           </p>
           <div className="flex items-center gap-3 mt-12">
             <CustomButton
-              label="View Full Service"
+              label="Book a Session"
               icon={<ArrowUpRight />}
               variant="primary"
+              href="/book-a-session"
             />
             <Call />
           </div>

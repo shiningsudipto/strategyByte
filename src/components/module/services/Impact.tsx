@@ -3,7 +3,7 @@ import CardSlider from "./CardSlider";
 
 const Impact = () => {
   return (
-    <section className="bg-navy-bg lg:px-0 px-4">
+    <section className="bg-navy-bg lg:px-0 px-4 pb-28">
       <div className="grid lg:grid-cols-2 grid-cols-1 gap-y-10 container section-gap lg:py-56 py-16 lg:pb-0 pb-30">
         <div>
           <h3 className="font-licorice text-[80px] text-navy-400">

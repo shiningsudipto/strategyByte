@@ -48,9 +48,9 @@ const SEOServices = ({
                 ))}
               </ul>
             </div>
-            <button className="p-4 rounded-full font-bold text-neutral-700 flex items-center gap-2 border-2 border-neutral-700 w-fit group-hover:bg-neutral-700 group-hover:text-white duration-300">
+            {/* <button className="p-4 rounded-full font-bold text-neutral-700 flex items-center gap-2 border-2 border-neutral-700 w-fit group-hover:bg-neutral-700 group-hover:text-white duration-300">
               Learn More <ArrowUpRight />
-            </button>
+            </button> */}
           </div>
         ))}
       </div>

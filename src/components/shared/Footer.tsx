@@ -42,7 +42,7 @@ const Footer = () => {
                 </Link>
               ))}
               <Link
-                href={"/book-a-demo"}
+                href={"/book-a-session"}
                 className="p-[2px] rounded-full bg-gradient-to-r from-[#FFC605] to-[#76B0FF] inline-block mt-2 w-fit"
               >
                 <button className="bg-navy-bg py-2 px-4 rounded-full">

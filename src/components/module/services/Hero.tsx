@@ -31,6 +31,7 @@ const Hero = (props: TProps) => {
             icon={<FiArrowUpRight />}
             variant="primary"
             className="z-10"
+            href="/book-a-session"
           />
         </div>
         <div className="relative lg:h-[600px] lg:mt-20 mt-32">

@@ -8,7 +8,7 @@ import Image from "next/image";
 import shqImg from "@/assets/FAQ Images.png";
 import { Phone } from "lucide-react";
 import CustomButton from "@/components/ui/CustomButton";
-import { FiArrowUpRight } from "react-icons/fi";
+// import { FiArrowUpRight } from "react-icons/fi";
 
 type FAQItem = {
   question: string;
@@ -62,12 +62,12 @@ const FAQS = ({ faqs, title_highlight }: TProps) => {
               </AccordionItem>
             ))}
           </Accordion>
-          <CustomButton
+          {/* <CustomButton
             label="See All FAQ's"
             icon={<FiArrowUpRight />}
             variant="bordered"
             className="lg:hidden block mx-auto"
-          />
+          /> */}
         </div>
         <div>
           <div className="xl:w-[512px] lg:w-[400px] w-full border border-[#E0E3EB] rounded-[24px] p-8 bg-white flex flex-col justify-center items-center">
@@ -89,16 +89,17 @@ const FAQS = ({ faqs, title_highlight }: TProps) => {
               icon={<Phone size={16} />}
               size={12}
               variant="primary"
+              href="tel:0410 745 998"
             />
           </div>
         </div>
       </div>
-      <CustomButton
+      {/* <CustomButton
         className="hidden lg:inline-flex"
         label="See All FAQ's"
         icon={<FiArrowUpRight />}
         variant="bordered"
-      />
+      /> */}
     </section>
   );
 };

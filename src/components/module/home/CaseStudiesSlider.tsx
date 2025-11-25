@@ -175,7 +175,7 @@ const CaseStudiesSlider = () => {
           ))}
         </div>
         <Link
-          href={"#"}
+          href={"/resources/byte-articles"}
           className="border-2 border-neutral-700 rounded-full p-4 hover:underline hover:text-yellow-200 font-bold hover:bg-neutral-700 flex items-center w-fit gap-2 group transition duration-300 book-shadow"
         >
           Read All Case Studies

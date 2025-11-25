@@ -48,7 +48,7 @@ const HeroSection = () => {
               label="Book a Session"
               icon={<FiArrowUpRight />}
               variant="primary"
-              href="/book-a-demo"
+              href="/book-a-session"
             />
           </div>
           <HeroSlider />
