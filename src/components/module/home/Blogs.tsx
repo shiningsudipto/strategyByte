@@ -1,4 +1,5 @@
 import BlogSlider from "./BlogSlider";
+import ErrorBoundary from "@/components/ErrorBoundary";
 
 const Blogs = () => {
   return (
@@ -10,7 +11,9 @@ const Blogs = () => {
           breakdowns, and growth hacks that actually work.
         </p>
       </div>
-      <BlogSlider />
+      <ErrorBoundary>
+        <BlogSlider />
+      </ErrorBoundary>
     </div>
   );
 };
