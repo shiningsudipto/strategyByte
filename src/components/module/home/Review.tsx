@@ -1,191 +1,127 @@
-import brandImg1 from "@/assets/brands/dropbox.png";
-import brandImg2 from "@/assets/brands/microsoft.png";
-import brandImg3 from "@/assets/brands/slack.png";
-import brandImg4 from "@/assets/brands/spotify.png";
-import avatarImg1 from "@/assets/avatars/avatar1.png";
-import avatarImg2 from "@/assets/avatars/avatar2.png";
-import avatarImg3 from "@/assets/avatars/avatar3.png";
 import {
   Marquee,
   MarqueeContent,
   MarqueeItem,
 } from "@/components/ui/kibo-ui/marquee";
+import { reviews } from "@/constants/reviews";
+import { Quote } from "lucide-react";
 import Image from "next/image";
 
 const Review = () => {
-  const testimonials = [
-    {
-      id: 1,
-      brand: brandImg1,
-      review:
-        "StrategyByte helped us optimize campaigns with data-driven insights. We saw immediate ROI improvements.",
-      name: "Emily Johnson",
-      avatar: avatarImg1,
-      position: "Marketing Manager at Google",
-    },
-    {
-      id: 2,
-      brand: brandImg2,
-      review:
-        "Their approach to growth is refreshing and results-oriented. Our engagement metrics skyrocketed.",
-      name: "David Lee",
-      avatar: avatarImg2,
-      position: "Growth Lead at Meta",
-    },
-    {
-      id: 3,
-      brand: brandImg3,
-      review:
-        "We trusted StrategyByte for our new product launch, and they exceeded expectations.",
-      name: "Sophia Martinez",
-      avatar: avatarImg3,
-      position: "Product Manager at Amazon",
-    },
-    {
-      id: 4,
-      brand: brandImg4,
-      review:
-        "The team delivered measurable results while being collaborative and transparent.",
-      name: "James Wilson",
-      avatar: avatarImg1,
-      position: "Head of Strategy at Airbnb",
-    },
-    {
-      id: 5,
-      brand: brandImg1,
-      review:
-        "Excellent experience — the StrategyByte team really understands data-driven scaling.",
-      name: "Olivia Chen",
-      avatar: avatarImg2,
-      position: "Senior Analyst at Microsoft",
-    },
-    {
-      id: 6,
-      brand: brandImg2,
-      review:
-        "They helped us reach new audiences with precision targeting and smart insights.",
-      name: "Michael Brown",
-      avatar: avatarImg3,
-      position: "Creative Director at Netflix",
-    },
-    {
-      id: 7,
-      brand: brandImg3,
-      review:
-        "A great partner for growth marketing. Our subscriptions increased significantly.",
-      name: "Ava Thompson",
-      avatar: avatarImg1,
-      position: "Marketing Strategist at Spotify",
-    },
-    {
-      id: 8,
-      brand: brandImg4,
-      review:
-        "Innovative, agile, and data-backed — they align perfectly with how we build products.",
-      name: "Daniel Carter",
-      avatar: avatarImg2,
-      position: "Product Lead at Tesla",
-    },
-  ];
+  // Avatar component that handles photo or fallback to initial
+  const ReviewerAvatar = ({
+    photo,
+    name,
+  }: {
+    photo: string;
+    name: string;
+  }) => {
+    if (photo) {
+      return (
+        <Image
+          src={photo}
+          alt={name}
+          width={56}
+          height={56}
+          className="size-14 rounded-full object-cover"
+        />
+      );
+    }
+
+    return (
+      <div className="size-14 rounded-full bg-gradient-to-br from-yellow-400 to-yellow-200 flex items-center justify-center text-neutral-700 font-bold text-xl shrink-0">
+        {name.charAt(0)}
+      </div>
+    );
+  };
 
   return (
     <section className="xl:py-40 lg:py-20 py-10 bg-navy-bg text-white">
       <div className="container">
         <div className="section-gap text-center lg:px-0 px-5">
           <h2 className="heading">
-            Results That <br /> Speak for Themselves
+            Real Stories from <br /> Real Australian Businesses
           </h2>
           <p className="text-xl mt-4">
-            From startups to established brands, businesses across Australia
-            trust StrategyByte to deliver <br /> results that matter.
+            Don&apos;t just take our word for it — hear from the businesses
+            across Australia <br className="hidden lg:block" /> who trust
+            StrategyByte to deliver results that matter.
           </p>
         </div>
+
         {/* reviews */}
         <div className="space-y-2 lg:mt-20 mt-10">
           <Marquee>
-            <MarqueeContent pauseOnHover={false} pauseOnClick={false}>
-              {testimonials.map((item) => (
+            <MarqueeContent pauseOnHover={true} pauseOnClick={true}>
+              {reviews.map((item, index) => (
                 <MarqueeItem
-                  key={item?.id}
-                  className="bg-white p-6 rounded-[36px] w-[534px] h-[520px] flex flex-col"
+                  key={index}
+                  className="bg-white p-8 rounded-[36px] w-[534px] min-h-[400px] flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div>
-                    <Image
-                      src={item?.brand}
-                      alt={item?.position}
-                      height={48}
-                      width={90}
-                      className="w-auto h-12"
+                  {/* Quote icon */}
+                  <div className="mb-6">
+                    <Quote
+                      size={40}
+                      className="text-yellow-400 fill-yellow-100"
                     />
                   </div>
 
-                  <p className="text-neutral-300 text-2 font-semibold mt-10">
-                    {item.review}
+                  {/* Review text */}
+                  <p className="text-neutral-700 text-lg leading-relaxed flex-1">
+                    &ldquo;{item.text}&rdquo;
                   </p>
 
-                  {/* footer */}
-                  <div className="flex gap-4 mt-auto">
-                    <Image
-                      src={item?.avatar}
-                      alt={item?.name}
-                      height={56}
-                      width={56}
-                      className="rounded-full"
-                    />
-                    <div className="flex flex-col items-start gap-2">
-                      <p className="text-neutral-700 text-xl font-semibold">
-                        {item.name}
-                      </p>
-                      <p className="text-neutral-500 text-sm">
-                        {item.position}
-                      </p>
+                  {/* Reviewer info */}
+                  <div className="mt-8 pt-6 border-t border-neutral-200">
+                    <div className="flex items-center gap-4">
+                      <ReviewerAvatar photo={item.photo} name={item.name} />
+                      <div className="flex flex-col">
+                        <p className="text-neutral-800 text-lg font-semibold">
+                          {item.name}
+                        </p>
+                        <p className="text-neutral-500 text-sm">{item.role}</p>
+                      </div>
                     </div>
                   </div>
                 </MarqueeItem>
               ))}
             </MarqueeContent>
           </Marquee>
+
           <Marquee>
             <MarqueeContent
-              pauseOnHover={false}
-              pauseOnClick={false}
+              pauseOnHover={true}
+              pauseOnClick={true}
               direction="right"
             >
-              {testimonials.map((item) => (
+              {reviews.map((item, index) => (
                 <MarqueeItem
-                  key={item?.id}
-                  className="bg-white p-6 rounded-[36px] w-[534px] h-[520px] flex flex-col"
+                  key={index}
+                  className="bg-white p-8 rounded-[36px] w-[534px] min-h-[400px] flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300"
                 >
-                  <div>
-                    <Image
-                      src={item?.brand}
-                      alt={item?.position}
-                      height={48}
-                      width={90}
-                      className="w-auto h-12"
+                  {/* Quote icon */}
+                  <div className="mb-6">
+                    <Quote
+                      size={40}
+                      className="text-yellow-400 fill-yellow-100"
                     />
                   </div>
 
-                  <p className="text-neutral-300 text-2 font-semibold mt-10">
-                    {item.review}
+                  {/* Review text */}
+                  <p className="text-neutral-700 text-lg leading-relaxed flex-1">
+                    &ldquo;{item.text}&rdquo;
                   </p>
 
-                  {/* footer */}
-                  <div className="flex gap-4 mt-auto">
-                    <Image
-                      src={item?.avatar}
-                      alt={item?.name}
-                      height={56}
-                      width={56}
-                      className="rounded-full"
-                    />
-                    <div className="flex flex-col items-start gap-2">
-                      <p className="text-neutral-700 text-xl font-semibold">
-                        {item.name}
-                      </p>
-                      <p className="text-neutral-500 text-sm">
-                        {item.position}
-                      </p>
+                  {/* Reviewer info */}
+                  <div className="mt-8 pt-6 border-t border-neutral-200">
+                    <div className="flex items-center gap-4">
+                      <ReviewerAvatar photo={item.photo} name={item.name} />
+                      <div className="flex flex-col">
+                        <p className="text-neutral-800 text-lg font-semibold">
+                          {item.name}
+                        </p>
+                        <p className="text-neutral-500 text-sm">{item.role}</p>
+                      </div>
                     </div>
                   </div>
                 </MarqueeItem>
