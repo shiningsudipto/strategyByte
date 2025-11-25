@@ -1,5 +1,7 @@
+import { redirect } from "next/navigation";
+
 const page = () => {
-  return <div></div>;
+  redirect("/our-services/website-development");
 };
 
 export default page;
