@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import StatsSection from "./StatsSection";
 
 const StarIcon = () => (
   <svg
@@ -54,7 +55,7 @@ const HeroSection = () => {
             </div>
 
             {/* Main Title */}
-            <h1 className="text-center max-w-[640px] px-4">
+            <h1 className="text-center max-w-[640px] px-4 leading-[120px]">
               <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-7xl leading-tight font-bold text-[#281c00]">
                 Careers at
               </span>
@@ -75,47 +76,7 @@ const HeroSection = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 max-w-7xl mx-auto mt-12 md:mt-16">
-          {/* Stat Card 1 */}
-          <div className="bg-[#f6f9ff] rounded-2xl p-4 md:p-5 flex flex-col gap-1">
-            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
-              43+
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
-              Brand Shaped
-            </p>
-          </div>
-
-          {/* Stat Card 2 */}
-          <div className="bg-[#f6f9ff] rounded-2xl p-4 md:p-5 flex flex-col gap-1">
-            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
-              6150+
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
-              Hours Worked
-            </p>
-          </div>
-
-          {/* Stat Card 3 */}
-          <div className="bg-[#f6f9ff] rounded-2xl p-4 md:p-5 flex flex-col gap-1">
-            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
-              650M
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
-              Help Revenue
-            </p>
-          </div>
-
-          {/* Stat Card 4 */}
-          <div className="bg-[#f6f9ff] rounded-2xl p-4 md:p-5 flex flex-col gap-1">
-            <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
-              250+
-            </p>
-            <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
-              Projects
-            </p>
-          </div>
-        </div>
+        <StatsSection />
       </div>
     </div>
   );
