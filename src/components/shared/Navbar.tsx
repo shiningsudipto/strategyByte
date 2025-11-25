@@ -13,6 +13,7 @@ import { FiArrowUpRight } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import { navLinks } from "@/constants/importantLinks";
 import MobileSidebar from "./MobileSidebar";
+import CustomButton from "../ui/CustomButton";
 
 const Navbar = () => {
   const [hoveredItem, setHoveredItem] = useState<number | null>();
@@ -54,9 +55,12 @@ const Navbar = () => {
           />
         </Link>
         <div className="flex items-center gap-4">
-          <button className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer">
+          <a
+            href="tel:0410745998"
+            className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer"
+          >
             Call
-          </button>
+          </a>
           <MobileSidebar />
         </div>
       </div>
@@ -83,7 +87,10 @@ const Navbar = () => {
               if (!link.dropdown) {
                 return (
                   <NavigationMenuItem key={link.label}>
-                    <NavigationMenuLink asChild>
+                    <NavigationMenuLink
+                      asChild
+                      className="focus:bg-transparent focus-visible:border-none focus-visible:outline-none"
+                    >
                       <Link
                         href={link.path}
                         className="hover:rounded-full px-4 py-[10px] text-[#605D5B] hover:text-[#1F1E1D] font-semibold text-base"
@@ -129,7 +136,7 @@ const Navbar = () => {
                                           : cardIndex - 1)
                                       ? "w-[40%]"
                                       : "w-[50%]"
-                                  } h-[225px] p-5 bg-[#F9F9F9] text-[#040915] rounded-[20px] group transition-all duration-300 relative`}
+                                  } h-[225px] p-5 bg-[#F9F9F9] text-[#040915] rounded-[20px] group transition-all duration-300 relative focus:bg-transparent focus-visible:border-none focus-visible:outline-none`}
                                 >
                                   <Link href={item.path}>
                                     <p className="uppercase font-bold text-2xl">
@@ -157,18 +164,19 @@ const Navbar = () => {
 
         {/* Right actions */}
         <div className="hidden md:flex items-center space-x-2">
-          <button className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer">
+          <a
+            href="tel:0410745998"
+            className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer"
+          >
             Call
-          </button>
+          </a>
           {scrollY > 620 && (
-            <button className="bg-yellow-200 font-bold cursor-pointer py-[10px] px-4 rounded-full text-neutral-700 flex items-center gap-2 book-shadow hover:bg-neutral-700 group transition duration-300">
-              <span className="group-hover:underline group-hover:text-yellow-200 transition duration-300">
-                Book a Session
-              </span>
-              <span className="bg-neutral-700 group-hover:bg-yellow-200 group-hover:text-neutral-700 rounded-full p-1 size-6 text-white transition duration-300">
-                <FiArrowUpRight className="" />
-              </span>
-            </button>
+            <CustomButton
+              label="Book a Session"
+              icon={<FiArrowUpRight />}
+              variant="primary"
+              href="/book-a-demo"
+            />
           )}
         </div>
       </div>

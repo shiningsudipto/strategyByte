@@ -14,6 +14,7 @@ const serviceList = [
       "We create targeted campaigns that drive real results and help your brand grow smarter online.",
     buttonText: "View Full Service",
     img: DMandSEO,
+    href: "/services/digital-marketing",
   },
   {
     id: 2,
@@ -22,6 +23,7 @@ const serviceList = [
       "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth.",
     buttonText: "View Full Service",
     img: StrategicBrandManagement,
+    href: "/services/brand-management",
   },
   {
     id: 3,
@@ -30,14 +32,16 @@ const serviceList = [
       "We design fast, functional, and conversion-driven websites tailored to your specific goals.",
     buttonText: "View Full Service",
     img: WebsiteDevelopment,
+    href: "/services/website-development",
   },
   {
     id: 4,
-    title: "Business Optimization",
+    title: "Content Marketing",
     description:
       "We optimize your business by refining workflows, maintaining content consistency, and implementing scalable systems to boost efficiency, clarity, and growth.",
     buttonText: "View Full Service",
     img: DataDrivenBusinessOptimization,
+    href: "/services/content-marketing",
   },
 ];
 
@@ -66,7 +70,7 @@ const Service = () => {
             </h3>
             <p>{item?.description}</p>
             <Link
-              href={"#"}
+              href={item?.href}
               className="p-4 rounded-full border-2 border-neutral-700 text-neutral-700 font-bold flex items-center w-fit gap-2 mt-14 group-hover:bg-white transition duration-300"
             >
               View Full Service <FiArrowUpRight />

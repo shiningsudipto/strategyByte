@@ -70,16 +70,17 @@ const FAQ = () => {
               icon={<Phone size={16} />}
               size={12}
               variant="primary"
+              href="tel:0410745998"
             />
           </div>
         </div>
       </div>
-      <CustomButton
+      {/* <CustomButton
         className="hidden lg:inline-flex"
         label="See All FAQ's"
         icon={<FiArrowUpRight />}
         variant="bordered"
-      />
+      /> */}
     </section>
   );
 };
