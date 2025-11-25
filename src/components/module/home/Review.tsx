@@ -100,6 +100,7 @@ const Review = () => {
             trust StrategyByte to deliver <br /> results that matter.
           </p>
         </div>
+        {/* reviews */}
         <div className="space-y-2 lg:mt-20 mt-10">
           <Marquee>
             <MarqueeContent pauseOnHover={false} pauseOnClick={false}>

@@ -7,11 +7,12 @@ import {
 import Image from "next/image";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
+import { Phone, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <nav className="bg-navy-bg">
+    <footer className="bg-navy-bg">
       <div className="container section-gap text-white xl:pt-40 lg:pt-20 pt-10 pb-10 lg:pb-16">
         {/* 1st section */}
         <div className="lg:pb-16 pb-10 lg:px-0 px-5 grid lg:grid-cols-4 grid-cols-1 gap-y-5">
@@ -66,12 +67,38 @@ const Footer = () => {
           </div>
           <div>
             <h4 className="text-xl font-semibold py-2 mb-2">Contact</h4>
-            <div className="">
-              {contact.map((item, index) => (
-                <p key={index} className="py-2">
-                  <span className="">{item.type}:</span> {item.value}
-                </p>
-              ))}
+            <div className="flex flex-col gap-1">
+              {contact.map((item, index) => {
+                const IconComponent =
+                  item.icon === "phone"
+                    ? Phone
+                    : item.icon === "email"
+                    ? Mail
+                    : MapPin;
+
+                return (
+                  <a
+                    key={index}
+                    href={item.href}
+                    target={item.icon === "location" ? "_blank" : undefined}
+                    rel={
+                      item.icon === "location"
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                    className="py-2 flex items-start gap-3 hover:text-yellow-200 transition duration-300 group"
+                  >
+                    <IconComponent
+                      size={20}
+                      className="shrink-0 mt-0.5 group-hover:scale-110 transition duration-300"
+                    />
+                    <span className="flex-1">
+                      <span className="font-medium">{item.type}:</span>{" "}
+                      {item.displayValue}
+                    </span>
+                  </a>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -120,6 +147,7 @@ const Footer = () => {
             <a
               href="https://www.facebook.com/StrategyByteAU"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-3 hover:text-yellow-200 transform duration-300"
             >
               <FaFacebook size={28} />
@@ -127,13 +155,15 @@ const Footer = () => {
             <a
               href="https://www.instagram.com/strategybyte_au"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-3 hover:text-yellow-200 transform duration-300"
             >
               <RiInstagramFill size={30} />
             </a>
             <a
-              href="https://www.facebook.com/StrategyByteAU"
+              href="https://www.linkedin.com/company/strategybyte"
               target="_blank"
+              rel="noopener noreferrer"
               className="p-3 hover:text-yellow-200 transform duration-300"
             >
               <FaLinkedin size={28} />
@@ -141,7 +171,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </footer>
   );
 };
 
