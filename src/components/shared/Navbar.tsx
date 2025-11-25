@@ -57,7 +57,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <a
             href="tel:0410745998"
-            className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer"
+            className="rounded-full py-[10px] px-6 bg-[#1F1E1D] hover:bg-neutral-700/80 text-white font-semibold cursor-pointer"
           >
             Call
           </a>
@@ -166,7 +166,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-2">
           <a
             href="tel:0410745998"
-            className="rounded-full py-[10px] px-6 bg-[#1F1E1D] text-white font-semibold cursor-pointer"
+            className="rounded-full py-[10px] px-6 bg-[#1F1E1D] hover:bg-neutral-700/80 text-white font-semibold cursor-pointer"
           >
             Call
           </a>

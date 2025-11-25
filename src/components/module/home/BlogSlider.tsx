@@ -54,6 +54,7 @@ const BlogSlider = () => {
     <div className="container lg:mt-14 mt-10 relative">
       <Swiper
         onSwiper={(swiper) => (swiperRef.current = swiper)}
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
         cssMode={true}
         // loop={true}
         slidesPerView={"auto"}
@@ -130,7 +131,7 @@ const BlogSlider = () => {
         ))}
       </div>
       <div className="flex justify-between items-center gap-2 mt-10 section-gap">
-        {/* Custom Pagination */}
+        {/* Custom Pagination index dot*/}
         <div className="lg:flex hidden justify-center gap-3">
           {articles.map((_, index) => (
             <button
@@ -148,7 +149,7 @@ const BlogSlider = () => {
           ))}
         </div>
         <Link
-          href={"#"}
+          href={"/resources/byte-articles"}
           className="border-2 border-neutral-700 rounded-full p-4 hover:underline hover:text-yellow-200 font-bold hover:bg-neutral-700 flex items-center w-fit gap-2 group transition duration-300 book-shadow"
         >
           See All Articles
