@@ -1,5 +1,6 @@
 export const hero = {
-  subtitle: "4.5 Ratings with 25 Reviews",
+  subtitle:
+    "Improve your search rankings and attract high-quality traffic with targeted SEO content and technical fixes.",
   title:
     "Effective Strategic Brand Management Services For Australian Businesses",
   description:

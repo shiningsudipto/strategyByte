@@ -1,5 +1,6 @@
 export const hero = {
-  subtitle: "4.5 Ratings with 25 Reviews",
+  subtitle:
+    "Improve your search rankings and attract high-quality traffic with targeted SEO content and technical fixes.",
   title: "Top Digital Marketing & SEO Services for Australian Businesses",
   description:
     "Boost your Australian business with targeted digital marketing strategies. From SEO and paid search to content and social media, we deliver results that increase visibility and drive customer conversions.",

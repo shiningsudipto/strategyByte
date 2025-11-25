@@ -1,6 +1,7 @@
 export const hero = {
-  subtitle: "4.5 Ratings with 25 Reviews",
-  title: "Full-Stack Website Development",
+  subtitle:
+    "High-performance sites that convert visits into enquiries. Custom WordPress builds, clean code, Core Web Vitals wins, and upfront pricing.",
+  title: "Full-Stack Website Development Services for Australian Businesses",
   description:
     "High-performance sites that convert visits into enquiries. Custom WordPress builds, clean code, Core Web Vitals wins, and upfront pricing.",
   button: "Book a Session",

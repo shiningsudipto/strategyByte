@@ -43,12 +43,12 @@ const FAQ = () => {
               </AccordionItem>
             ))}
           </Accordion>
-          <CustomButton
+          {/* <CustomButton
             label="See All FAQ's"
             icon={<FiArrowUpRight />}
             variant="bordered"
             className="lg:hidden block mx-auto"
-          />
+          /> */}
         </div>
         <div className="">
           <div className="xl:w-[512px] lg:w-[400px] w-full border border-[#E0E3EB] rounded-[24px] p-8 bg-white flex flex-col justify-center items-center">

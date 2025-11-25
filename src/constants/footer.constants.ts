@@ -42,7 +42,7 @@ export const contact = [
     type: "Address",
     value: "30 Campbell St, Blacktown NSW 2148, Australia",
     displayValue: "30 Campbell St, Blacktown NSW 2148, Australia",
-    href: "https://maps.app.goo.gl/5cip1ksP2KsBj9s67",
+    href: "https://maps.app.goo.gl/vCcwHV3ykXKypN5Z8",
     icon: "location",
   },
 ];

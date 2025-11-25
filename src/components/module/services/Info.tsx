@@ -1,3 +1,4 @@
+import BookASession from "@/components/actions/BookASession";
 import InfoSlider from "./InfoSlider";
 
 export type TStrategies = {
@@ -24,6 +25,9 @@ const Info = ({ title, subtitle, description, strategies }: TProps) => {
           <p className="text-neutral-700 text-lg lg:w-[1000px] mx-auto">
             {description}
           </p>
+          <div className="flex justify-center mt-8">
+            <BookASession />
+          </div>
         </div>
         <InfoSlider strategies={strategies} />
       </div>

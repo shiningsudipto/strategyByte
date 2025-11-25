@@ -122,9 +122,9 @@ const Organizations = ({ title }: { title?: string }) => {
               <Image
                 src={item?.img}
                 alt={item?.alt}
-                height={36}
-                width={100}
-                className="w-auto h-9"
+                height={60}
+                width={300}
+                className="w-full h-9"
               />
             </MarqueeItem>
           ))}

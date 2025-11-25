@@ -3,12 +3,12 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // import MeetingContent from "./MeetingContent";
 import CalendlyForm from "@/components/shared/CalendlyForm";
 import { Suspense } from "react";
-import CallContent from "./CallContent";
+import CallContent from "../module/home/CallContent";
 
 const Contact = ({ bg = "bg-yellow-200" }) => {
   const tabData = [
     {
-      title: "Schedule a Meeting",
+      title: "Book a Session",
       value: "meeting",
       // content: <MeetingContent />,
       content: (
