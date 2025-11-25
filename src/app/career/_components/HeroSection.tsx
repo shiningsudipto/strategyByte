@@ -20,12 +20,16 @@ const StarIcon = () => (
 
 const HeroSection = () => {
   return (
-    <div className="relative w-full bg-gradient-to-b from-[#FFFBF0] to-white py-16 md:py-20">
+    <div className="relative w-full bg-gradient-to-b from-[#FFFBF0] to-white pt-[200px] pb-20 -mt-[90px]">
       <div className="container mx-auto px-4">
         {/* Hero Content */}
         <div className="flex flex-col items-center gap-9 max-w-7xl mx-auto">
           {/* Hero Rating and Title Section */}
-          <div className="flex flex-col items-center gap-5">
+          <div className="flex flex-col items-center gap-5 relative">
+            <div className="absolute z-10 top-10 lg:-right-[100px] border-2 border-teal-300 py-2 px-5 text-sm text-teal-300 bg-white font-semibold brand-shadow animate-bounce">
+              <p>Kickstart of Dreams</p>
+              <div className="absolute size-2 bg-teal-300 -bottom-[5px] -left-[5px]" />
+            </div>
             {/* Rating Section */}
             <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3">
               {/* Avatars */}
@@ -71,7 +75,7 @@ const HeroSection = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-7xl mx-auto mt-12 md:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 max-w-7xl mx-auto mt-12 md:mt-16">
           {/* Stat Card 1 */}
           <div className="bg-[#f6f9ff] rounded-2xl p-4 md:p-5 flex flex-col gap-1">
             <p className="text-3xl sm:text-4xl md:text-5xl lg:text-[56px] leading-tight md:leading-[78px] font-semibold text-[#091736]">
@@ -109,15 +113,6 @@ const HeroSection = () => {
             </p>
             <p className="text-sm sm:text-base md:text-lg text-[#605d5b]">
               Projects
-            </p>
-          </div>
-        </div>
-
-        {/* Growth Arrow Badge - Positioned top right */}
-        <div className="absolute top-[241px] right-[224px] hidden lg:block">
-          <div className="bg-white border-2 border-[#2acf9a] rounded-sm px-5 py-2 rotate-180 scale-y-[-1]">
-            <p className="text-sm font-semibold text-[#1fa47a] whitespace-nowrap rotate-180 scale-y-[-1]">
-              Kickstart of Drems
             </p>
           </div>
         </div>
