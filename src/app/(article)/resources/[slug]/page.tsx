@@ -16,6 +16,31 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
+// Generate static params for all articles (ISR optimization)
+export async function generateStaticParams() {
+  try {
+    const allArticlesQuery = `
+      {
+        newsCollection(limit: 1000, order: sys_publishedAt_DESC) {
+          items {
+            slug
+          }
+        }
+      }
+    `;
+
+    const res = await fetchFromContentful(allArticlesQuery);
+    const articles = res?.data?.newsCollection?.items || [];
+
+    return articles.map((article: { slug: string }) => ({
+      slug: article.slug,
+    }));
+  } catch (error) {
+    console.error("Error generating static params:", error);
+    return [];
+  }
+}
+
 // Generate dynamic metadata
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;

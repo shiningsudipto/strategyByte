@@ -1,6 +1,20 @@
 import { MetadataRoute } from "next";
 import { jobs } from "./career/_components/RecruitmentSection";
+import { fetchAllArticlesForSitemap } from "@/lib/contentful";
 
+/**
+ * Dynamic Sitemap Generator
+ *
+ * Generates a sitemap.xml file that includes:
+ * - Static pages (home, about, services, etc.)
+ * - Dynamic resource pages (articles from Contentful)
+ * - Career/job postings
+ *
+ * Articles are fetched from Contentful and cached for 1 hour.
+ * The sitemap is automatically regenerated when articles are published/updated.
+ *
+ * Access at: https://www.strategybyte.com.au/sitemap.xml
+ */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.strategybyte.com.au";
 
@@ -96,53 +110,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.64,
   }));
 
-  // Fetch dynamic articles directly from Contentful
+  // Fetch dynamic articles from Contentful
   let articleRoutes: MetadataRoute.Sitemap = [];
   try {
-    const spaceId = process.env.CONTENTFUL_SPACE_ID;
-    const accessToken = process.env.CONTENTFUL_DELIVERY_API || process.env.CONTENTFUL_PREVIEW_API;
+    const articles = await fetchAllArticlesForSitemap();
 
-    if (spaceId && accessToken) {
-      const articleBlogsQuery = `
-        {
-          newsCollection(limit: 100, order: sys_publishedAt_DESC) {
-            items {
-              sys {
-                publishedAt
-              }
-              slug
-            }
-          }
+    articleRoutes = articles.map(
+      (article: {
+        slug: string;
+        sys: {
+          publishedAt: string;
+          firstPublishedAt: string;
         }
-      `;
+      }) => ({
+        url: `${baseUrl}/resources/${article.slug}`,
+        lastModified: new Date(article.sys.publishedAt || article.sys.firstPublishedAt),
+        changeFrequency: "weekly" as const,
+        priority: 0.7,
+      })
+    );
 
-      const response = await fetch(
-        `https://graphql.contentful.com/content/v1/spaces/${spaceId}`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${accessToken}`,
-          },
-          body: JSON.stringify({ query: articleBlogsQuery }),
-          next: { revalidate: 3600 }, // Revalidate every hour
-        }
-      );
-
-      const data = await response.json();
-      const articles = data?.data?.newsCollection?.items || [];
-
-      articleRoutes = articles.map(
-        (article: { slug: string; sys: { publishedAt: string } }) => ({
-          url: `${baseUrl}/resources/${article.slug}`,
-          lastModified: new Date(article.sys.publishedAt),
-          changeFrequency: "weekly" as const,
-          priority: 0.7,
-        })
-      );
-    }
+    console.log(`✅ Successfully generated sitemap with ${articleRoutes.length} articles`);
   } catch (error) {
-    console.error("Error fetching articles for sitemap:", error);
+    console.error("❌ Error fetching articles for sitemap:", error);
+    // Return empty array on error - sitemap will still work with other routes
   }
 
   // Combine all routes
