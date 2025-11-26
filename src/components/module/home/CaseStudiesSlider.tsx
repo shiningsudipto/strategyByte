@@ -4,64 +4,9 @@ import Link from "next/link";
 import { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
-
-import microsoftImg from "@/assets/caseStudy/microsoft.png";
-import paypalImg from "@/assets/caseStudy/paypal.png";
-import thumbnail from "@/assets/caseStudy/Case Studies - Thumbnail Box.png";
 import Image from "next/image";
 import { FiArrowUpRight } from "react-icons/fi";
-
-const caseStudiesList = [
-  {
-    id: 1,
-    img: microsoftImg,
-    thumbnail: thumbnail,
-    title:
-      "How we StrategyByte help Dropbox to increase their Retention 3X in just 2 Quarter of 2024",
-    tags: [
-      "Growth Mapping",
-      "Activation & Engagement",
-      "Design",
-      "Brand Strategy",
-      "Sales Hacks",
-    ],
-    published: "7 Sep, 2024",
-    cta: "Read Full Case",
-  },
-  {
-    id: 2,
-    img: paypalImg,
-    thumbnail: thumbnail,
-    title:
-      "Paypal remain 100M profitable in 2025 early quarter, How we help them to increase CVR in App",
-    tags: [
-      "Product Mapping",
-      "Activation & Engagement",
-      "Analysis",
-      "Marketing",
-    ],
-    published: "7 Sep, 2024",
-    cta: "Read Full Case",
-  },
-  {
-    id: 3,
-    img: microsoftImg,
-    thumbnail: thumbnail,
-    title: "Case Study Title Placeholder 3",
-    tags: ["Tag A", "Tag B", "Tag C"],
-    published: "Date Placeholder",
-    cta: "Read Full Case",
-  },
-  {
-    id: 4,
-    img: paypalImg,
-    thumbnail: thumbnail,
-    title: "Case Study Title Placeholder 4",
-    tags: ["Tag X", "Tag Y", "Tag Z"],
-    published: "Date Placeholder",
-    cta: "Read Full Case",
-  },
-];
+import { caseStudiesList } from "@/constants/caseStudies.constants";
 
 const CaseStudiesSlider = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -94,29 +39,23 @@ const CaseStudiesSlider = () => {
             >
               <div className="grid lg:grid-cols-2 grid-cols-1 group min-h-[508px]">
                 <div className="bg-[#F8F8F8] lg:rounded-l-[40px] lg:rounded-t-none rounded-t-[40px] lg:p-6 p-5 lg:space-y-0 space-y-5">
+                  {/* brand image */}
                   <Image
                     src={item.img}
                     alt={item.title}
-                    height={48}
-                    width={164}
+                    height={100}
+                    width={200}
+                    className="h-[80px] w-auto"
                   />
                   <h3 className="text-2xl font-semibold text-neutral-700 lg:mt-12 group-hover:underline cursor-pointer">
-                    {item.title}
+                    <Link href={"/resources/case-studies/" + item.slug}>
+                      {item.title}
+                    </Link>
                   </h3>
-                  <div className="lg:my-8 flex gap-3 items-center content-center self-stretch flex-wrap">
-                    {item.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="inline-block bg-yellow-100 border border-yellow-200 rounded-[8px] py-[6px] px-2"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                  <p className="text-neutral-500">Published : 7 Sep, 2024</p>
+                  <p className="text-neutral-500 mt-2">{item?.published}</p>
                   <div className="lg:mt-12">
                     <Link
-                      href={"#"}
+                      href={"/resources/case-studies/" + item.slug}
                       className="bg-neutral-700 rounded-full py-3 px-5 text-white font-bold flex items-center gap-2 w-fit"
                     >
                       Read Full Case

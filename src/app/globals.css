@@ -204,12 +204,12 @@
 }
 
 /* Ensure media elements stay within viewport width */
-img,
+/* img,
 video,
 iframe {
   max-width: 100%;
   height: auto;
-}
+} */
 
 /* Prevent horizontal scrolling on all devices */
 html {
