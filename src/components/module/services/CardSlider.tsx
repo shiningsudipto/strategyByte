@@ -100,7 +100,7 @@ function CardSlider() {
   };
 
   return (
-    <div className="relative lg:w-full max-w-[340px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[500px] mx-auto h-[420px] sm:h-[450px] lg:h-[456px] px-4 sm:px-0">
+    <div className="relative lg:w-full max-w-[340px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[500px] mx-auto h-[420px] sm:h-[450px] lg:h-[456px] px-4 sm:px-0 lg:overflow-x-visible overflow-x-hidden">
       {cards.map((card, index) => {
         const position = getCardPosition(index);
 
