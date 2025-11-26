@@ -20,8 +20,9 @@ const HeroSection = () => {
               <h1 className="font-bold ">Unlock Your Online</h1>
               <TextType
                 className="font-bold"
-                typingSpeed={20}
-                pauseDuration={1750}
+                typingSpeed={50}
+                pauseDuration={1800}
+                deletingSpeed={30}
                 showCursor={true}
                 cursorCharacter=""
                 text={["Potential.", "Growth.", "Business.", "Engagement."]}
