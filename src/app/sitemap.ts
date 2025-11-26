@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { jobs } from "./career/_components/RecruitmentSection";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.strategybyte.com.au";
@@ -27,13 +28,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${baseUrl}/career`,
       lastModified: new Date(),
       changeFrequency: "weekly",
-      priority: 0.7,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/resources`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.64,
     },
     {
       url: `${baseUrl}/terms-and-condition`,
       lastModified: new Date(),
       changeFrequency: "yearly",
-      priority: 0.3,
+      priority: 0.8,
     },
   ];
 
@@ -81,22 +88,53 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
-  // Fetch dynamic articles from API
+  // Career routes (job postings)
+  const careerRoutes: MetadataRoute.Sitemap = jobs.map((job) => ({
+    url: `${baseUrl}/career/${job.id}`,
+    lastModified: new Date(),
+    changeFrequency: "weekly" as const,
+    priority: 0.64,
+  }));
+
+  // Fetch dynamic articles directly from Contentful
   let articleRoutes: MetadataRoute.Sitemap = [];
   try {
-    const articlesRes = await fetch(
-      `${
-        process.env.NEXT_PUBLIC_BASE_URL || baseUrl
-      }/api/articles?limit=100&skip=0`,
-      {
-        next: { revalidate: 3600 }, // Revalidate every hour
-      }
-    );
-    if (articlesRes.ok) {
-      const articlesData = await articlesRes.json();
-      articleRoutes = articlesData.articles.map(
+    const spaceId = process.env.CONTENTFUL_SPACE_ID;
+    const accessToken = process.env.CONTENTFUL_DELIVERY_API || process.env.CONTENTFUL_PREVIEW_API;
+
+    if (spaceId && accessToken) {
+      const articleBlogsQuery = `
+        {
+          newsCollection(limit: 100, order: sys_publishedAt_DESC) {
+            items {
+              sys {
+                publishedAt
+              }
+              slug
+            }
+          }
+        }
+      `;
+
+      const response = await fetch(
+        `https://graphql.contentful.com/content/v1/spaces/${spaceId}`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${accessToken}`,
+          },
+          body: JSON.stringify({ query: articleBlogsQuery }),
+          next: { revalidate: 3600 }, // Revalidate every hour
+        }
+      );
+
+      const data = await response.json();
+      const articles = data?.data?.newsCollection?.items || [];
+
+      articleRoutes = articles.map(
         (article: { slug: string; sys: { publishedAt: string } }) => ({
-          url: `${baseUrl}/resources/byte-articles/${article.slug}`,
+          url: `${baseUrl}/resources/${article.slug}`,
           lastModified: new Date(article.sys.publishedAt),
           changeFrequency: "weekly" as const,
           priority: 0.7,
@@ -112,6 +150,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticRoutes,
     ...serviceRoutes,
     ...resourceRoutes,
+    ...careerRoutes,
     ...articleRoutes,
   ];
 }
