@@ -1,6 +1,40 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronLeft } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms and Conditions | StrategyByte",
+  description:
+    "Read the Terms and Conditions regarding the use of StrategyByte's website and digital services.",
+  alternates: {
+    canonical: "https://www.strategybyte.com.au/terms-and-condition",
+  },
+  openGraph: {
+    title: "Terms and Conditions | StrategyByte",
+    description:
+      "Read the Terms and Conditions regarding the use of StrategyByte's website and digital services.",
+    url: "https://www.strategybyte.com.au/terms-and-condition",
+    siteName: "StrategyByte",
+    images: [
+      {
+        url: "/logo/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Terms and Conditions - StrategyByte",
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  twitter: {
+    title: "Terms and Conditions | StrategyByte",
+    card: "summary_large_image",
+    description:
+      "Read the Terms and Conditions regarding the use of StrategyByte's website and digital services.",
+    images: ["/logo/twitter-card.png"],
+  },
+};
 
 const sections = [
   {

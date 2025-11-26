@@ -23,6 +23,40 @@ import {
   marketing,
   successStories,
 } from "@/constants/service.contentMarketing";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Content Marketing Services | StrategyByte",
+  description:
+    "Engage your audience with high-impact content. We craft blogs, videos, and visuals that establish authority and drive organic traffic.",
+  alternates: {
+    canonical: "https://www.strategybyte.com.au/our-services/content-marketing",
+  },
+  openGraph: {
+    title: "Content Marketing Services | StrategyByte",
+    description:
+      "Engage your audience with high-impact content. We craft blogs, videos, and visuals that establish authority and drive organic traffic.",
+    url: "https://www.strategybyte.com.au/our-services/content-marketing",
+    siteName: "StrategyByte",
+    images: [
+      {
+        url: "/logo/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Content Marketing Services - StrategyByte",
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  twitter: {
+    title: "Content Marketing Services | StrategyByte",
+    card: "summary_large_image",
+    description:
+      "Engage your audience with high-impact content. We craft blogs, videos, and visuals that establish authority and drive organic traffic.",
+    images: ["/logo/twitter-card.png"],
+  },
+};
 
 const page = () => {
   return (

@@ -23,6 +23,40 @@ import {
   hero,
   successStories,
 } from "@/constants/service.brand";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Brand Strategy & Management | StrategyByte",
+  description:
+    "Build a brand that lasts. From visual identity to tone of voice, we help you define your unique value proposition and foster loyalty.",
+  alternates: {
+    canonical: "https://www.strategybyte.com.au/our-services/brand-management",
+  },
+  openGraph: {
+    title: "Brand Strategy & Management | StrategyByte",
+    description:
+      "Build a brand that lasts. From visual identity to tone of voice, we help you define your unique value proposition and foster loyalty.",
+    url: "https://www.strategybyte.com.au/our-services/brand-management",
+    siteName: "StrategyByte",
+    images: [
+      {
+        url: "/logo/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Brand Strategy & Management - StrategyByte",
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  twitter: {
+    title: "Brand Strategy & Management | StrategyByte",
+    card: "summary_large_image",
+    description:
+      "Build a brand that lasts. From visual identity to tone of voice, we help you define your unique value proposition and foster loyalty.",
+    images: ["/logo/twitter-card.png"],
+  },
+};
 
 const page = () => {
   return (

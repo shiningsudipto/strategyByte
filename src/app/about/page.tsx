@@ -2,6 +2,40 @@ import React from "react";
 import Image from "next/image";
 import CustomButton from "@/components/ui/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About StrategyByte | Digital Transformation Experts",
+  description:
+    "We help businesses navigate the digital landscape. Learn about our data-driven approach, our values, and our mission to drive sustainable growth.",
+  alternates: {
+    canonical: "https://www.strategybyte.com.au/about",
+  },
+  openGraph: {
+    title: "About StrategyByte | Digital Transformation Experts",
+    description:
+      "We help businesses navigate the digital landscape. Learn about our data-driven approach, our values, and our mission to drive sustainable growth.",
+    url: "https://www.strategybyte.com.au/about",
+    siteName: "StrategyByte",
+    images: [
+      {
+        url: "/logo/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "About StrategyByte - Digital Transformation Experts",
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  twitter: {
+    title: "About StrategyByte | Digital Transformation Experts",
+    card: "summary_large_image",
+    description:
+      "We help businesses navigate the digital landscape. Learn about our data-driven approach, our values, and our mission to drive sustainable growth.",
+    images: ["/logo/twitter-card.png"],
+  },
+};
 
 const IMAGES = {
   // Hero Section

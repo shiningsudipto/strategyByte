@@ -13,6 +13,7 @@ import SEOServices from "@/components/module/services/SEOServices";
 import SuccessStories from "@/components/module/services/SuccessStories";
 import Area from "@/components/shared/Area";
 import FAQS from "@/components/shared/FAQS";
+import type { Metadata } from "next";
 // constants
 import {
   faq,
@@ -24,6 +25,39 @@ import {
   seoServices,
   successStories,
 } from "@/constants/service.marketing";
+
+export const metadata: Metadata = {
+  title: "Digital Marketing & SEO Services | StrategyByte",
+  description:
+    "Drive traffic and generate leads. Our holistic digital marketing services include SEO, PPC, and social media campaigns tailored to your goals.",
+  alternates: {
+    canonical: "https://www.strategybyte.com.au/our-services/digital-marketing",
+  },
+  openGraph: {
+    title: "Digital Marketing & SEO Services | StrategyByte",
+    description:
+      "Drive traffic and generate leads. Our holistic digital marketing services include SEO, PPC, and social media campaigns tailored to your goals.",
+    url: "https://www.strategybyte.com.au/our-services/digital-marketing",
+    siteName: "StrategyByte",
+    images: [
+      {
+        url: "/logo/open-graph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Digital Marketing & SEO Services - StrategyByte",
+      },
+    ],
+    locale: "en-US",
+    type: "website",
+  },
+  twitter: {
+    title: "Digital Marketing & SEO Services | StrategyByte",
+    card: "summary_large_image",
+    description:
+      "Drive traffic and generate leads. Our holistic digital marketing services include SEO, PPC, and social media campaigns tailored to your goals.",
+    images: ["/logo/twitter-card.png"],
+  },
+};
 
 const page = () => {
   return (
