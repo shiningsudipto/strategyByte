@@ -16,7 +16,7 @@ const Reviews = () => {
           alt={name}
           width={56}
           height={56}
-          className="size-14 rounded-full object-cover"
+          className="size-14 rounded-full object-cover aspect-square"
         />
       );
     }

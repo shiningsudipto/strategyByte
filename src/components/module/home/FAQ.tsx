@@ -10,17 +10,25 @@ import shqImg from "@/assets/FAQ Images.png";
 import { Phone } from "lucide-react";
 import CustomButton from "@/components/ui/CustomButton";
 import { FiArrowUpRight } from "react-icons/fi";
+import { generateFAQSchema } from "@/lib/utils";
 
 const FAQ = () => {
+  const faqSchema = generateFAQSchema(faqs);
+
   return (
-    <section
-      style={{ backgroundImage: `url("/FAQ Section Background.png")` }}
-      className="relative bg-cover bg-center overflow-hidden container section-gap xl:py-40 lg:py-20 py-10 lg:px-0 px-5"
-    >
-      <h2 className="heading">
-        Get the answers you are <br /> looking for about{" "}
-        <span className="text-[#90949F]">StrategyByte</span>
-      </h2>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section
+        style={{ backgroundImage: `url("/FAQ Section Background.png")` }}
+        className="relative bg-cover bg-center overflow-hidden container section-gap xl:py-40 lg:py-20 py-10 lg:px-0 px-5"
+      >
+        <h2 className="heading">
+          Get the answers you are <br /> looking for about{" "}
+          <span className="text-[#90949F]">StrategyByte</span>
+        </h2>
       <div className="flex lg:flex-row flex-col lg:mt-16 xl:gap-16 lg:gap-10 gap-10">
         <div>
           <Accordion
@@ -81,7 +89,8 @@ const FAQ = () => {
         icon={<FiArrowUpRight />}
         variant="bordered"
       /> */}
-    </section>
+      </section>
+    </>
   );
 };
 

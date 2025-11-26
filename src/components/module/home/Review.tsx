@@ -9,13 +9,7 @@ import Image from "next/image";
 
 const Review = () => {
   // Avatar component that handles photo or fallback to initial
-  const ReviewerAvatar = ({
-    photo,
-    name,
-  }: {
-    photo: string;
-    name: string;
-  }) => {
+  const ReviewerAvatar = ({ photo, name }: { photo: string; name: string }) => {
     if (photo) {
       return (
         <Image
@@ -23,7 +17,7 @@ const Review = () => {
           alt={name}
           width={56}
           height={56}
-          className="size-14 rounded-full object-cover"
+          className="size-14 aspect-square rounded-full object-cover"
         />
       );
     }

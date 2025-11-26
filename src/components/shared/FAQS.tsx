@@ -8,6 +8,7 @@ import Image from "next/image";
 import shqImg from "@/assets/FAQ Images.png";
 import { Phone } from "lucide-react";
 import CustomButton from "@/components/ui/CustomButton";
+import { generateFAQSchema } from "@/lib/utils";
 // import { FiArrowUpRight } from "react-icons/fi";
 
 type FAQItem = {
@@ -22,11 +23,18 @@ type TProps = {
 };
 
 const FAQS = ({ faqs, title_highlight }: TProps) => {
+  const faqSchema = generateFAQSchema(faqs);
+
   return (
-    <section
-      style={{ backgroundImage: `url("/FAQ Section Background.png")` }}
-      className="relative bg-cover bg-center overflow-hidden container section-gap xl:py-40 lg:py-20 py-10 lg:px-0 px-5"
-    >
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <section
+        style={{ backgroundImage: `url("/FAQ Section Background.png")` }}
+        className="relative bg-cover bg-center overflow-hidden container section-gap xl:py-40 lg:py-20 py-10 lg:px-0 px-5"
+      >
       <h2 className="heading">
         Get the answers you are <br /> looking for about{" "}
         <span className="text-[#90949F]">{title_highlight}</span>
@@ -100,7 +108,8 @@ const FAQS = ({ faqs, title_highlight }: TProps) => {
         icon={<FiArrowUpRight />}
         variant="bordered"
       /> */}
-    </section>
+      </section>
+    </>
   );
 };
 
