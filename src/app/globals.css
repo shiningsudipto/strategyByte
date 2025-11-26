@@ -204,14 +204,16 @@
 }
 
 /* Ensure media elements stay within viewport width */
-img, video, iframe {
+img,
+video,
+iframe {
   max-width: 100%;
   height: auto;
 }
 
 /* Prevent horizontal scrolling on all devices */
 html {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   width: 100%;
   max-width: 100vw;
   -webkit-font-smoothing: antialiased;

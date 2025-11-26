@@ -27,3 +27,52 @@ export function generateFAQSchema(faqs: FAQItem[]) {
     })),
   };
 }
+
+type ArticleSchemaProps = {
+  title: string;
+  description: string;
+  url: string;
+  imageUrl: string;
+  publishedAt: string;
+  author?: string;
+  category?: string;
+};
+
+export function generateArticleSchema({
+  title,
+  description,
+  url,
+  imageUrl,
+  publishedAt,
+  author = "StrategyByte",
+  category,
+}: ArticleSchemaProps) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description: description,
+    image: imageUrl,
+    datePublished: publishedAt,
+    dateModified: publishedAt,
+    author: {
+      "@type": "Organization",
+      name: author,
+      url: "https://www.strategybyte.com.au",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "StrategyByte",
+      url: "https://www.strategybyte.com.au",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.strategybyte.com.au/logo/open-graph-image.png",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    ...(category && { articleSection: category }),
+  };
+}

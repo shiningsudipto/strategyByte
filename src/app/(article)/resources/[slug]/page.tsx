@@ -9,12 +9,95 @@ import { BLOCKS, INLINES, Document } from "@contentful/rich-text-types";
 import React from "react";
 import ShareButtons from "./ShareButtons";
 import NextToRead from "../../_components/NextToRead";
+import type { Metadata } from "next";
+import { generateArticleSchema } from "@/lib/utils";
 
-const ArticleDetailPage = async ({
-  params,
-}: {
+type Props = {
   params: Promise<{ slug: string }>;
-}) => {
+};
+
+// Generate dynamic metadata
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+
+  const articleBySlugQuery = `
+    {
+      newsCollection(where: { slug: "${slug}" }, limit: 1) {
+        items {
+          title
+          slug
+          description
+          metaDescription
+          thumbnail {
+            url
+          }
+          sys {
+            publishedAt
+          }
+        }
+      }
+    }
+  `;
+
+  const res = await fetchFromContentful(articleBySlugQuery);
+  const article = res?.data?.newsCollection?.items?.[0];
+
+  if (!article) {
+    return {
+      title: "Article Not Found | StrategyByte",
+      description: "The requested article could not be found.",
+    };
+  }
+
+  const metaDescription =
+    article.metaDescription || article.description || article.title;
+  const imageUrl = article.thumbnail?.url || "/logo/open-graph-image.png";
+  const canonicalUrl = `https://www.strategybyte.com.au/resources/${slug}`;
+
+  return {
+    title: `${article.title} | StrategyByte`,
+    description: metaDescription,
+    alternates: {
+      canonical: canonicalUrl,
+    },
+    openGraph: {
+      title: article.title,
+      description: metaDescription,
+      url: canonicalUrl,
+      siteName: "StrategyByte",
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      locale: "en-US",
+      type: "article",
+      publishedTime: article.sys?.publishedAt,
+    },
+    twitter: {
+      title: article.title,
+      card: "summary_large_image",
+      description: metaDescription,
+      images: [imageUrl],
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-snippet": -1,
+        "max-image-preview": "large",
+        "max-video-preview": -1,
+      },
+    },
+  };
+}
+
+const ArticleDetailPage = async ({ params }: Props) => {
   const { slug } = await params;
 
   const articleBySlugQuery = `
@@ -175,18 +258,33 @@ const ArticleDetailPage = async ({
     },
   };
 
+  // Generate Article schema
+  const articleSchema = generateArticleSchema({
+    title: article.title,
+    description: article.metaDescription || article.description || article.title,
+    url: `https://www.strategybyte.com.au/resources/${article.slug}`,
+    imageUrl: article?.thumbnail?.url || "/logo/open-graph-image.png",
+    publishedAt: article.sys?.publishedAt,
+    category: article.blogCategory?.title,
+  });
+
   return (
-    <div className="container section-gap my-10">
-      <div className="flex items-center gap-1 mb-10 text-sm text-neutral-600">
-        <p>Home</p>
-        <ChevronRight size={16} />
-        <p>Resources</p>
-        <ChevronRight size={16} />
-        <p>Articles</p>
-      </div>
-      <h1 className="font-chopin text-neutral-700 text-5xl font-bold mb-4">
-        {article.title}
-      </h1>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <div className="container section-gap my-10">
+        <div className="flex items-center gap-1 mb-10 text-sm text-neutral-600">
+          <p>Home</p>
+          <ChevronRight size={16} />
+          <p>Resources</p>
+          <ChevronRight size={16} />
+          <p>Articles</p>
+        </div>
+        <h1 className="font-chopin text-neutral-700 text-5xl font-bold mb-4">
+          {article.title}
+        </h1>
       {article.description && (
         <p className="text-xl text-neutral-600 mb-6">{article.description}</p>
       )}
@@ -223,7 +321,8 @@ const ArticleDetailPage = async ({
         categorySlug={article.blogCategory?.slug}
         currentArticleSlug={article.slug}
       />
-    </div>
+      </div>
+    </>
   );
 };
 
