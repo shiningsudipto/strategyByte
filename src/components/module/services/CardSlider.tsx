@@ -144,7 +144,8 @@ function CardSlider() {
                   `}
           >
             <div className="p-4 sm:p-5 flex flex-col justify-between h-full">
-              <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-5 text-neutral-700">
+              {/* card heading */}
+              {/* <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-5 text-neutral-700">
                 <div className="bg-[#F4F4F4] p-3 sm:p-4 rounded-full">
                   <p className="text-base sm:text-lg lg:text-2xl font-bold">
                     {card.headline}
@@ -161,7 +162,7 @@ function CardSlider() {
                     {card.subMetric}
                   </p>
                 </div>
-              </div>
+              </div> */}
               <h4 className="text-base sm:text-lg lg:text-xl font-semibold line-clamp-4 sm:line-clamp-none">
                 {card.quote}
               </h4>
@@ -183,13 +184,13 @@ function CardSlider() {
                     </p>
                   </div>
                 </div>
-                <Image
+                {/* <Image
                   alt={card.author}
                   src={card.company}
                   height={36}
                   width={120}
                   className="h-7 sm:h-9 w-auto"
-                />
+                /> */}
               </div>
             </div>
           </div>

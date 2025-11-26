@@ -11,6 +11,7 @@ import ShareButtons from "./ShareButtons";
 import NextToRead from "../../../_components/NextToRead";
 import type { Metadata } from "next";
 import { generateArticleSchema } from "@/lib/utils";
+import { METADATA_IMAGES } from "@/constants/metadata.constants";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -76,7 +77,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   const metaDescription =
     article.metaDescription || article.description || article.title;
-  const imageUrl = article.thumbnail?.url || "/logo/open-graph-image.png";
+  const imageUrl = article.thumbnail?.url || METADATA_IMAGES.openGraph;
   const canonicalUrl = `https://www.strategybyte.com.au/resources/byte-articles/${slug}`;
 
   return {

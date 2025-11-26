@@ -24,6 +24,7 @@ import {
   successStories,
 } from "@/constants/service.contentMarketing";
 import type { Metadata } from "next";
+import { getOpenGraphImages, getTwitterImages } from "@/constants/metadata.constants";
 
 export const metadata: Metadata = {
   title: "Content Marketing Services | StrategyByte",
@@ -38,14 +39,7 @@ export const metadata: Metadata = {
       "Engage your audience with high-impact content. We craft blogs, videos, and visuals that establish authority and drive organic traffic.",
     url: "https://www.strategybyte.com.au/our-services/content-marketing",
     siteName: "StrategyByte",
-    images: [
-      {
-        url: "/logo/open-graph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Content Marketing Services - StrategyByte",
-      },
-    ],
+    images: getOpenGraphImages("Content Marketing Services - StrategyByte"),
     locale: "en-US",
     type: "website",
   },
@@ -54,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     description:
       "Engage your audience with high-impact content. We craft blogs, videos, and visuals that establish authority and drive organic traffic.",
-    images: ["/logo/twitter-card.png"],
+    images: getTwitterImages(),
   },
 };
 

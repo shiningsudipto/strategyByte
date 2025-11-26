@@ -24,6 +24,7 @@ import {
   webDevInfo,
 } from "@/constants/service.web.constants";
 import type { Metadata } from "next";
+import { getOpenGraphImages, getTwitterImages } from "@/constants/metadata.constants";
 
 export const metadata: Metadata = {
   title: "Custom Website Development Services | StrategyByte",
@@ -39,14 +40,7 @@ export const metadata: Metadata = {
       "Fast, secure, and conversion-focused websites. We build custom web solutions that look great and perform perfectly on all devices.",
     url: "https://www.strategybyte.com.au/our-services/website-development",
     siteName: "StrategyByte",
-    images: [
-      {
-        url: "/logo/open-graph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Custom Website Development Services - StrategyByte",
-      },
-    ],
+    images: getOpenGraphImages("Custom Website Development Services - StrategyByte"),
     locale: "en-US",
     type: "website",
   },
@@ -55,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     description:
       "Fast, secure, and conversion-focused websites. We build custom web solutions that look great and perform perfectly on all devices.",
-    images: ["/logo/twitter-card.png"],
+    images: getTwitterImages(),
   },
 };
 

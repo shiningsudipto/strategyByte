@@ -24,6 +24,7 @@ import {
   successStories,
 } from "@/constants/service.brand";
 import type { Metadata } from "next";
+import { getOpenGraphImages, getTwitterImages } from "@/constants/metadata.constants";
 
 export const metadata: Metadata = {
   title: "Brand Strategy & Management | StrategyByte",
@@ -38,14 +39,7 @@ export const metadata: Metadata = {
       "Build a brand that lasts. From visual identity to tone of voice, we help you define your unique value proposition and foster loyalty.",
     url: "https://www.strategybyte.com.au/our-services/brand-management",
     siteName: "StrategyByte",
-    images: [
-      {
-        url: "/logo/open-graph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Brand Strategy & Management - StrategyByte",
-      },
-    ],
+    images: getOpenGraphImages("Brand Strategy & Management - StrategyByte"),
     locale: "en-US",
     type: "website",
   },
@@ -54,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     description:
       "Build a brand that lasts. From visual identity to tone of voice, we help you define your unique value proposition and foster loyalty.",
-    images: ["/logo/twitter-card.png"],
+    images: getTwitterImages(),
   },
 };
 

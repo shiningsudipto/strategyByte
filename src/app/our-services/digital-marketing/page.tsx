@@ -25,6 +25,7 @@ import {
   seoServices,
   successStories,
 } from "@/constants/service.marketing";
+import { getOpenGraphImages, getTwitterImages } from "@/constants/metadata.constants";
 
 export const metadata: Metadata = {
   title: "Digital Marketing & SEO Services | StrategyByte",
@@ -39,14 +40,7 @@ export const metadata: Metadata = {
       "Drive traffic and generate leads. Our holistic digital marketing services include SEO, PPC, and social media campaigns tailored to your goals.",
     url: "https://www.strategybyte.com.au/our-services/digital-marketing",
     siteName: "StrategyByte",
-    images: [
-      {
-        url: "/logo/open-graph-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Digital Marketing & SEO Services - StrategyByte",
-      },
-    ],
+    images: getOpenGraphImages("Digital Marketing & SEO Services - StrategyByte"),
     locale: "en-US",
     type: "website",
   },
@@ -55,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     description:
       "Drive traffic and generate leads. Our holistic digital marketing services include SEO, PPC, and social media campaigns tailored to your goals.",
-    images: ["/logo/twitter-card.png"],
+    images: getTwitterImages(),
   },
 };
 
