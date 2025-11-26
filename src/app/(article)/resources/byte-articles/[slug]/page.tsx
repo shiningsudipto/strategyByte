@@ -8,7 +8,7 @@ import {
 import { BLOCKS, INLINES, Document } from "@contentful/rich-text-types";
 import React from "react";
 import ShareButtons from "./ShareButtons";
-import NextToRead from "../../_components/NextToRead";
+import NextToRead from "../../../_components/NextToRead";
 import type { Metadata } from "next";
 import { generateArticleSchema } from "@/lib/utils";
 
@@ -77,7 +77,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const metaDescription =
     article.metaDescription || article.description || article.title;
   const imageUrl = article.thumbnail?.url || "/logo/open-graph-image.png";
-  const canonicalUrl = `https://www.strategybyte.com.au/resources/${slug}`;
+  const canonicalUrl = `https://www.strategybyte.com.au/resources/byte-articles/${slug}`;
 
   return {
     title: `${article.title} | StrategyByte`,
@@ -286,7 +286,8 @@ const ArticleDetailPage = async ({ params }: Props) => {
   // Generate Article schema
   const articleSchema = generateArticleSchema({
     title: article.title,
-    description: article.metaDescription || article.description || article.title,
+    description:
+      article.metaDescription || article.description || article.title,
     url: `https://www.strategybyte.com.au/resources/${article.slug}`,
     imageUrl: article?.thumbnail?.url || "/logo/open-graph-image.png",
     publishedAt: article.sys?.publishedAt,
@@ -310,42 +311,42 @@ const ArticleDetailPage = async ({ params }: Props) => {
         <h1 className="font-chopin text-neutral-700 text-5xl font-bold mb-4">
           {article.title}
         </h1>
-      {article.description && (
-        <p className="text-xl text-neutral-600 mb-6">{article.description}</p>
-      )}
-      <Image
-        src={article?.thumbnail?.url}
-        width={1280}
-        height={720}
-        alt={article.title}
-        className="border border-neutral-200 mb-8 object-cover w-full rounded-lg"
-      />
-
-      <div className="prose prose-lg max-w-none">
-        {article.bodyText?.json &&
-          documentToReactComponents(
-            article.bodyText.json as Document,
-            renderOptions
-          )}
-      </div>
-
-      {/* Category & Share Section */}
-      <div className="flex items-center justify-between mt-10">
-        <div className="flex items-center gap-3">
-          {article.blogCategory && (
-            <span className="bg-yellow-100 rounded-xl border border-yellow-200 text-neutral-700 px-3 py-1.5 font-semibold text-sm">
-              {article.blogCategory.title}
-            </span>
-          )}
-        </div>
-        <ShareButtons
-          url={`https://www.strategybyte.com.au/resources/${article.slug}`}
+        {article.description && (
+          <p className="text-xl text-neutral-600 mb-6">{article.description}</p>
+        )}
+        <Image
+          src={article?.thumbnail?.url}
+          width={1280}
+          height={720}
+          alt={article.title}
+          className="border border-neutral-200 mb-8 object-cover w-full rounded-lg"
         />
-      </div>
-      <NextToRead
-        categorySlug={article.blogCategory?.slug}
-        currentArticleSlug={article.slug}
-      />
+
+        <div className="prose prose-lg max-w-none">
+          {article.bodyText?.json &&
+            documentToReactComponents(
+              article.bodyText.json as Document,
+              renderOptions
+            )}
+        </div>
+
+        {/* Category & Share Section */}
+        <div className="flex items-center justify-between mt-10">
+          <div className="flex items-center gap-3">
+            {article.blogCategory && (
+              <span className="bg-yellow-100 rounded-xl border border-yellow-200 text-neutral-700 px-3 py-1.5 font-semibold text-sm">
+                {article.blogCategory.title}
+              </span>
+            )}
+          </div>
+          <ShareButtons
+            url={`https://www.strategybyte.com.au/resources/${article.slug}`}
+          />
+        </div>
+        <NextToRead
+          categorySlug={article.blogCategory?.slug}
+          currentArticleSlug={article.slug}
+        />
       </div>
     </>
   );

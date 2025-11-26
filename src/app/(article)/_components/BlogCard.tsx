@@ -3,13 +3,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { format } from "date-fns";
 
-const tags = [
-  "Growth Mapping",
-  "Activation & Engagement",
-  "Design",
-  "Brand Strategy",
-  "Sales Hacks",
-];
+// const tags = [
+//   "Growth Mapping",
+//   "Activation & Engagement",
+//   "Design",
+//   "Brand Strategy",
+//   "Sales Hacks",
+// ];
 
 function formatDate(dateString: string): string {
   return format(new Date(dateString), "dd MMM, yyyy");
@@ -34,7 +34,7 @@ const BlogCard = ({ data }: { data: TArticle[] }) => {
                   Published : {formatDate(item.sys.publishedAt)}
                 </p>
                 <Link
-                  href={`/resources/${item.slug}`}
+                  href={`/resources/byte-articles/${item.slug}`}
                   className="2xl:text-4xl xl:text-3xl lg:text-2xl text-xl font-semibold lg:leading-[54px] text-neutral-600"
                 >
                   {item.title}
