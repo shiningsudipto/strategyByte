@@ -66,19 +66,19 @@ function CardSlider() {
     if (isAnimating) return;
     setIsAnimating(true);
     setCurrentIndex((prev) => (prev + 1) % cards.length);
-    setTimeout(() => setIsAnimating(false), 700);
+    setTimeout(() => setIsAnimating(false), 1400);
   }, [isAnimating, cards.length]);
 
   // const prevSlide = () => {
   //   if (isAnimating) return;
   //   setIsAnimating(true);
   //   setCurrentIndex((prev) => (prev - 1 + cards.length) % cards.length);
-  //   setTimeout(() => setIsAnimating(false), 700);
+  //   setTimeout(() => setIsAnimating(false), 1400);
   // };
 
-  // Auto-advance slides every 4 seconds
+  // Auto-advance slides every 5.5 seconds
   useEffect(() => {
-    const interval = setInterval(nextSlide, 4000);
+    const interval = setInterval(nextSlide, 5500);
     return () => clearInterval(interval);
   }, [nextSlide]);
 
@@ -107,35 +107,40 @@ function CardSlider() {
         return (
           <div
             key={index}
+            style={{
+              willChange: "transform, opacity",
+              backfaceVisibility: "hidden",
+              WebkitBackfaceVisibility: "hidden",
+              transform: "translate3d(0, 0, 0)",
+            }}
             className={`
-                    absolute inset-0 rounded-2xl shadow-2xl transition-all duration-700 ease-out
-                    bg-white border border-white/20
+                    absolute inset-0 rounded-2xl shadow-2xl bg-white border border-white/20
+                    transition-all duration-[1400ms] ease-[cubic-bezier(0.25,0.1,0.25,1)]
                     ${
                       position === "front" || position === "front-mobile"
-                        ? "z-30 scale-100 rotate-0 translate-x-0 translate-y-0 opacity-100"
+                        ? "z-30 !scale-100 !rotate-0 !translate-x-0 !translate-y-0 opacity-100"
                         : ""
                     }
                     ${
                       position === "back-mobile"
-                        ? "z-20 scale-x-[1.12] sm:scale-x-[1.15] rotate-2 sm:rotate-3 translate-x-2 sm:translate-x-3 translate-y-1 sm:translate-y-2 opacity-70"
+                        ? "z-20 !scale-x-[1.12] sm:!scale-x-[1.15] !rotate-2 sm:!rotate-3 !translate-x-2 sm:!translate-x-3 !translate-y-1 sm:!translate-y-2 opacity-70"
                         : ""
                     }
                     ${
                       position === "middle"
-                        ? "z-20 right-20 -top-10 scale-x-[1.2] rotate-6 translate-x-6 translate-y-3 opacity-80"
+                        ? "z-20 right-20 -top-10 !scale-x-[1.2] !rotate-6 !translate-x-6 !translate-y-3 opacity-80"
                         : ""
                     }
                     ${
                       position === "back"
-                        ? "z-10 right-40 -top-20 scale-x-[1.4] rotate-12 translate-x-12 translate-y-6 opacity-60"
+                        ? "z-10 right-40 -top-20 !scale-x-[1.4] !rotate-12 !translate-x-12 !translate-y-6 opacity-60"
                         : ""
                     }
                     ${
                       position === "hidden"
-                        ? "z-0 scale-85 rotate-4 translate-x-16 translate-y-8 opacity-0"
+                        ? "z-0 !scale-85 !rotate-4 !translate-x-16 !translate-y-8 opacity-0 pointer-events-none"
                         : ""
                     }
-                    ${isAnimating ? "transition-all duration-700" : ""}
                   `}
           >
             <div className="p-4 sm:p-5 flex flex-col justify-between h-full">

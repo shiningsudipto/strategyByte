@@ -16,7 +16,7 @@ const MarketingProcess = ({
   process,
 }: TProps) => {
   return (
-    <section className="container lg:px-40 section-gap-y overflow-visible">
+    <section className="container lg:px-40 section-gap-y overflow-hidden px-4">
       <div className="text-center lg:w-[800px] mx-auto px-4 lg:px-0">
         <p className="text-primary font-semibold text-2xl mb-4">
           #3 Pillar Concept
@@ -36,43 +36,32 @@ const MarketingProcess = ({
           const rotations = ["-rotate-[8deg]", "", "rotate-[8deg]"];
           const bgImage = bgImages[index];
           const rotation = rotations[index];
-          const first = index === 0;
           const second = index === 1;
-          const third = index === 2;
 
           return (
-            <div key={index} className="overflow-visible">
+            <div key={index} className="overflow-visible w-full max-w-[400px] mx-auto lg:max-w-[500px]">
               <div
                 style={{
                   backgroundImage: `url(${bgImage})`,
-                  backgroundSize: "cover",
+                  backgroundSize: "contain",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
-                  // rotate: "8deg",
                 }}
-                className={`group hover:scale-[1.1] transform duration-300 flex flex-col justify-between overflow-visible  
-                  ${
-                    first &&
-                    "p-12 lg:min-h-[500px] min-h-[450px] lg:w-full w-[390px]"
-                  } 
-                  ${second && "p-8 lg:m-7 mx-auto min-h-[450px] w-[400px]"} 
-                ${
-                  third &&
-                  "p-16 lg:min-h-[500px] min-h-[450px] lg:w-full w-[390px]"
-                }`}
+                className={`group hover:scale-[1.1] transform duration-300 flex items-center justify-center w-full aspect-square
+                  ${second && "lg:m-7"}`}
               >
-                <div className={`${rotation}`}>
-                  <div>
-                    <h3 className="lg:text-[40px] text-2xl text-neutral-700 mb-3">
+                <div className={`${rotation} w-full h-full flex flex-col justify-between p-[15%] sm:p-[16%] lg:p-[18%]`}>
+                  <div className="flex-shrink-0">
+                    <h3 className="text-base sm:text-xl lg:text-2xl text-neutral-700 mb-1 sm:mb-2 leading-tight font-semibold">
                       {process.title}
                     </h3>
-                    <p className="text-sm text-neutral-500">
+                    <p className="text-[10px] sm:text-xs lg:text-xs text-neutral-500 leading-tight">
                       {process.description}
                     </p>
                   </div>
-                  <ul className="list-disc ml-5 text-neutral-700 lg:text-base text-sm space-y-2 mt-10 font-semibold">
+                  <ul className="list-disc ml-3 sm:ml-4 lg:ml-5 text-neutral-700 text-xs sm:text-sm lg:text-sm space-y-1 sm:space-y-1.5 lg:space-y-1.5 mt-3 sm:mt-5 lg:mt-6 font-semibold">
                     {process.points.map((point, i) => (
-                      <li key={i}>{point}</li>
+                      <li key={i} className="leading-snug">{point}</li>
                     ))}
                   </ul>
                 </div>

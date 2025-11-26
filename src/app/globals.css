@@ -196,10 +196,26 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    box-sizing: border-box;
   }
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Ensure media elements stay within viewport width */
+img, video, iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Prevent horizontal scrolling on all devices */
+html {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* The CSS code `body { max-width: 1728px; margin: 0 auto; }` is styling the `body` element of the HTML
@@ -209,6 +225,9 @@ body {
   margin: 0 auto; */
   overflow-x: hidden;
   scroll-behavior: smooth;
+  width: 100%;
+  max-width: 100vw;
+  position: relative;
 }
 
 button {
@@ -274,4 +293,23 @@ button {
 .dropdown-shadow {
   box-shadow: 0 4px 8px -2px rgba(16, 24, 40, 0.1),
     0 2px 4px -2px rgba(16, 24, 40, 0.06);
+}
+
+/* Smooth animations and GPU acceleration */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Performance optimizations for animations */
+[class*="transition"],
+[class*="animate"],
+[class*="duration"] {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
 }

@@ -12,7 +12,7 @@ type TProps = {
 
 const Hero = (props: TProps) => {
   return (
-    <div className="bg-navy-bg lg:-mt-[90px] -mt-[150px] pt-[200px] pb-20">
+    <div className="bg-navy-bg lg:-mt-[90px] -mt-[150px] pt-[200px] pb-20 px-5">
       <div className="container text-white">
         <div className="lg:w-[764px] mx-auto flex flex-col justify-center items-center">
           <p className="flex items-center text-center justify-center text-neutral-700 text-sm gap-1">
@@ -20,10 +20,10 @@ const Hero = (props: TProps) => {
             <span className="text-white">4.5 Ratings with</span>
             <span className="text-teal-100">25 Reviews</span>
           </p>
-          <h1 className="font-chopin font-bold lg:text-7xl text-4xl text-navy-100 pt-5 pb-6 text-center">
+          <h1 className="font-chopin font-bold text-3xl  lg:text-7xl text-navy-100 pt-5 pb-6 text-center ">
             {props.title}
           </h1>
-          <p className="text-navy-200 text-2xl text-center lg:mb-16 mb-8">
+          <p className="text-navy-200 text-xl lg:text-2xl text-center lg:mb-16 mb-8">
             {props.subtitle}
           </p>
           <CustomButton
