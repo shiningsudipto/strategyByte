@@ -1,50 +1,12 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
+import { reviews } from "@/constants/reviews";
 
 function CardSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-
-  const cards = [
-    {
-      headline: "Daily 280+",
-      metric: "+ 40% CVR",
-      subHeadline: "Inbound Calls",
-      subMetric: "in Online Payments",
-      quote:
-        '"StrategyByte delivered outstanding results with smart digital marketing and seamless SEO implementation."',
-      author: "Jack Wilson",
-      title: "VP, Growth",
-      avatar: "/avatars/avatar1.png",
-      company: "/brands/dropbox.png",
-    },
-    {
-      headline: "37% Upsells",
-      metric: "250M Secured",
-      subHeadline: "in Q3",
-      subMetric: "Funding Round",
-      quote:
-        '"Their team helped us streamline our funnel, driving higher retention and customer lifetime value."',
-      author: "Sarah Chen",
-      title: "CEO",
-      avatar: "/avatars/avatar1.png",
-      company: "/brands/microsoft.png",
-    },
-    {
-      headline: "250M Funding",
-      metric: "+ 25% Growth",
-      subHeadline: "in One Quarter",
-      subMetric: "Revenue Expansion",
-      quote:
-        '"We saw immediate impact from their data-driven approach. The platform is now faster, stable, and converting better than ever."',
-      author: "Mike Johnson",
-      title: "Head of Product",
-      avatar: "/avatars/avatar1.png",
-      company: "/brands/slack.png",
-    },
-  ];
 
   // Detect screen size for mobile optimization
   useEffect(() => {
@@ -65,16 +27,9 @@ function CardSlider() {
   const nextSlide = useCallback(() => {
     if (isAnimating) return;
     setIsAnimating(true);
-    setCurrentIndex((prev) => (prev + 1) % cards.length);
+    setCurrentIndex((prev) => (prev + 1) % reviews.length);
     setTimeout(() => setIsAnimating(false), 1400);
-  }, [isAnimating, cards.length]);
-
-  // const prevSlide = () => {
-  //   if (isAnimating) return;
-  //   setIsAnimating(true);
-  //   setCurrentIndex((prev) => (prev - 1 + cards.length) % cards.length);
-  //   setTimeout(() => setIsAnimating(false), 1400);
-  // };
+  }, [isAnimating]);
 
   // Auto-advance slides every 5.5 seconds
   useEffect(() => {
@@ -83,7 +38,7 @@ function CardSlider() {
   }, [nextSlide]);
 
   const getCardPosition = (index: number) => {
-    const diff = (index - currentIndex + cards.length) % cards.length;
+    const diff = (index - currentIndex + reviews.length) % reviews.length;
 
     // Mobile: Simplified 2-card stack
     if (isMobile) {
@@ -101,7 +56,7 @@ function CardSlider() {
 
   return (
     <div className="relative lg:w-full max-w-[340px] sm:max-w-[380px] md:max-w-[450px] lg:max-w-[500px] mx-auto h-[420px] sm:h-[450px] lg:h-[456px] px-4 sm:px-0 lg:overflow-x-visible overflow-x-hidden">
-      {cards.map((card, index) => {
+      {reviews.map((review, index) => {
         const position = getCardPosition(index);
 
         return (
@@ -143,54 +98,36 @@ function CardSlider() {
                     }
                   `}
           >
-            <div className="p-4 sm:p-5 flex flex-col justify-between h-full">
-              {/* card heading */}
-              {/* <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:gap-5 text-neutral-700">
-                <div className="bg-[#F4F4F4] p-3 sm:p-4 rounded-full">
-                  <p className="text-base sm:text-lg lg:text-2xl font-bold">
-                    {card.headline}
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg font-semibold">
-                    {card.subHeadline}
-                  </p>
-                </div>
-                <div className="bg-[#F4F4F4] p-3 sm:p-4 rounded-full">
-                  <p className="text-base sm:text-lg lg:text-2xl font-bold">
-                    {card.metric}
-                  </p>
-                  <p className="text-sm sm:text-base lg:text-lg font-semibold">
-                    {card.subMetric}
-                  </p>
-                </div>
-              </div> */}
+            <div className="p-4 sm:p-5 flex flex-col justify-evenly h-full">
               <h4 className="text-base sm:text-lg lg:text-xl font-semibold line-clamp-4 sm:line-clamp-none">
-                {card.quote}
+                &quot;{review.text}&quot;
               </h4>
               <div className="flex items-center justify-between gap-3 sm:gap-5">
                 <div className="flex items-center gap-2 sm:gap-4">
-                  <Image
-                    alt={card.author}
-                    src={card.avatar}
-                    height={48}
-                    width={48}
-                    className="h-10 w-10 sm:h-12 sm:w-12"
-                  />
+                  {review.photo ? (
+                    <Image
+                      alt={review.name}
+                      src={review.photo}
+                      height={48}
+                      width={48}
+                      className="h-10 w-10 sm:h-12 sm:w-12 rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-neutral-200 flex items-center justify-center">
+                      <span className="text-neutral-600 font-bold text-sm sm:text-base">
+                        {review.name.charAt(0)}
+                      </span>
+                    </div>
+                  )}
                   <div>
                     <p className="font-bold text-sm sm:text-base">
-                      {card.author}
+                      {review.name}
                     </p>
                     <p className="text-neutral-500 text-xs sm:text-sm">
-                      {card.title}
+                      {review.role}
                     </p>
                   </div>
                 </div>
-                {/* <Image
-                  alt={card.author}
-                  src={card.company}
-                  height={36}
-                  width={120}
-                  className="h-7 sm:h-9 w-auto"
-                /> */}
               </div>
             </div>
           </div>
