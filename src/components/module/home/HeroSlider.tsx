@@ -6,6 +6,7 @@ import heroImg3 from "@/assets/Hero Images - 3.png";
 import heroImg4 from "@/assets/Hero Images - 4.png";
 import Image from "next/image";
 import { useKeenSlider, KeenSliderInstance } from "keen-slider/react";
+import { useState } from "react";
 
 const heroCarouselItems = [
   { id: 1, img: heroImg1 },
@@ -15,6 +16,19 @@ const heroCarouselItems = [
 ];
 
 const HeroSlider = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [loadedCount, setLoadedCount] = useState(0);
+
+  const handleImageLoad = () => {
+    setLoadedCount((prev) => {
+      const newCount = prev + 1;
+      if (newCount === heroCarouselItems.length) {
+        setIsLoaded(true);
+      }
+      return newCount;
+    });
+  };
+
   const [sliderRef] = useKeenSlider<HTMLDivElement>(
     {
       loop: true,
@@ -45,7 +59,7 @@ const HeroSlider = () => {
         <p>Brand</p>
         <div className="absolute size-2 bg-teal-300 -bottom-[5px] -right-[5px]" />
       </div>
-      <div className="absolute z-50 top-8 2xl:-right-20 xl:-right-14 lg:-right-6 right-5  border-2 text-vibe-300 text-sm font-semibold border-vibe-300 bg-white py-2 px-5 growth-shadow animate-bounce">
+      <div className="absolute z-40 top-8 2xl:-right-20 xl:-right-14 lg:-right-6 right-5  border-2 text-vibe-300 text-sm font-semibold border-vibe-300 bg-white py-2 px-5 growth-shadow animate-bounce">
         <p>Growth</p>
         <div className="absolute size-2 bg-vibe-300 -bottom-[5px] -left-[5px]" />
       </div>
@@ -53,12 +67,26 @@ const HeroSlider = () => {
         <p>Design</p>
         <div className="absolute size-2 bg-maze-400 -top-[5px] -right-[5px]" />
       </div>
-      <div className="absolute z-50 bottom-8 2xl:-right-24 xl:-right-16 lg:-right-8 right-0 border-2 bg-white text-primary text-sm font-semibold border-primary py-2 px-5 development-shadow animate-bounce">
+      <div className="absolute z-40 bottom-8 2xl:-right-24 xl:-right-16 lg:-right-8 right-0 border-2 bg-white text-primary text-sm font-semibold border-primary py-2 px-5 development-shadow animate-bounce">
         <p>Development</p>
         <div className="absolute size-2 bg-primary -top-[5px] -left-[5px]" />
       </div>
 
-      <div ref={sliderRef} className="keen-slider overflow-x-hidden">
+      {!isLoaded && (
+        <div className="2xl:h-[580px] 2xl:w-[420px] xl:h-full xl:w-full bg-gradient-to-br from-gray-200 via-gray-100 to-gray-200 animate-pulse rounded-lg flex items-center justify-center">
+          <div className="text-center">
+            <div className="w-16 h-16 border-4 border-gray-300 border-t-primary rounded-full animate-spin mx-auto mb-4" />
+            <p className="text-gray-400 font-semibold">Loading...</p>
+          </div>
+        </div>
+      )}
+
+      <div
+        ref={sliderRef}
+        className={`keen-slider overflow-x-hidden transition-opacity duration-500 ${
+          isLoaded ? "opacity-100" : "opacity-0 absolute"
+        }`}
+      >
         {heroCarouselItems.map((item) => (
           <div className="keen-slider__slide overflow-x-hidden" key={item.id}>
             <Image
@@ -68,6 +96,7 @@ const HeroSlider = () => {
               width={420}
               priority
               className="2xl:h-[580px] 2xl:w-[420px] xl:h-full xl:w-full"
+              onLoad={handleImageLoad}
             />
           </div>
         ))}
