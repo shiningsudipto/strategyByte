@@ -26,7 +26,7 @@ const MarketingProcess = ({
         </h2>
         <p className="text-lg text-neutral-500 mt-5">{description}</p>
       </div>
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-16">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-16 place-items-center">
         {process.map((process, index) => {
           const bgImages = [
             "/sticky-notes/1st.png",
@@ -48,22 +48,29 @@ const MarketingProcess = ({
                   backgroundSize: "cover",
                   backgroundRepeat: "no-repeat",
                   backgroundPosition: "center",
+                  // rotate: "8deg",
                 }}
                 className={`group hover:scale-[1.1] transform duration-300 flex flex-col justify-between overflow-visible  
-                  ${first && "p-12 min-h-[500px] w-full"} 
+                  ${
+                    first &&
+                    "p-12 lg:min-h-[500px] min-h-[450px] lg:w-full w-[390px]"
+                  } 
                   ${second && "p-8 lg:m-7 mx-auto min-h-[450px] w-[400px]"} 
-                ${third && "p-16 min-h-[500px] w-full"}`}
+                ${
+                  third &&
+                  "p-16 lg:min-h-[500px] min-h-[450px] lg:w-full w-[390px]"
+                }`}
               >
                 <div className={`${rotation}`}>
                   <div>
-                    <h3 className="lg:text-[40px] text-3xl text-neutral-700 mb-3">
+                    <h3 className="lg:text-[40px] text-2xl text-neutral-700 mb-3">
                       {process.title}
                     </h3>
                     <p className="text-sm text-neutral-500">
                       {process.description}
                     </p>
                   </div>
-                  <ul className="list-disc ml-5 text-neutral-700 space-y-2 mt-10 font-semibold">
+                  <ul className="list-disc ml-5 text-neutral-700 lg:text-base text-sm space-y-2 mt-10 font-semibold">
                     {process.points.map((point, i) => (
                       <li key={i}>{point}</li>
                     ))}

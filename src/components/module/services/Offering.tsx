@@ -3,7 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Offering = () => {
+const Offering = ({
+  id,
+}: {
+  id: "website" | "brand" | "seo" | "marketing";
+}) => {
+  const filteredServices = services.filter((service) => service.id !== id);
+
   return (
     <section className="container section-gap section-gap-y px-4 lg:px-0">
       <div className="text-center">
@@ -19,7 +25,7 @@ const Offering = () => {
         </p>
       </div>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-4 lg:mt-20 mt-10">
-        {services.map((service, index) => (
+        {filteredServices.map((service, index) => (
           <div
             key={index}
             className="bg-navy-100 p-8 rounded-[36px] flex flex-col justify-between lg:h-[500px] group hover:bg-neutral-700 hover:text-white duration-300 text-neutral-700"

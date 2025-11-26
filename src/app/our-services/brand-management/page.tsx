@@ -74,7 +74,7 @@ const page = () => {
       <MarketingProcess {...brandManagementProcess} />
       <SuccessStories {...successStories} />
       <Area />
-      <Offering />
+      <Offering id="brand" />
       <Reviews />
       <FAQS {...faq} />
       <Contact />

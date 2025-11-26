@@ -227,22 +227,32 @@ export const processPhases = [
 
 export const services = [
   {
+    id: "website",
     img: "/services/services/Website Development.png",
     title: "Website Development",
     desc: "We design fast, functional, and conversion-driven websites tailored to specific goals",
     href: "/our-services/website-development",
   },
   {
+    id: "brand",
     img: "/services/services/Strategic Brand Management.png",
     title: "Strategic Branding Management",
     desc: "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth",
     href: "/our-services/brand-management",
   },
   {
+    id: "seo",
+    img: "/services/services/dmandseo.png",
+    title: "Digital Marketing & SEO",
+    desc: "We create targeted campaigns that drive real results and help your brand grow smarter online.",
+    href: "/our-services/digital-marketing",
+  },
+  {
+    id: "marketing",
     img: "/services/services/Business Optimization.png",
-    title: "Business Optimization",
-    desc: "We optimize your business by refining workflows, maintaining content consistency, and implementing scalable systems to boost efficiency, clarity, and growth.",
-    href: "/our-services/website-development",
+    title: "CONTENT MARKETING",
+    desc: "We plan, create, and distribute high-value content that attracts the right audience, builds trust, and drives conversions.",
+    href: "/our-services/content-marketing",
   },
 ];
 

@@ -74,7 +74,7 @@ const page = () => {
       <MarketingProcess {...contentMarketingProcess} />
       <SuccessStories {...successStories} />
       <Area />
-      <Offering />
+      <Offering id="marketing" />
       <Reviews />
       <FAQS {...faq} />
       <Contact />

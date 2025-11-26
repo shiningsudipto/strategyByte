@@ -30,7 +30,8 @@ export const metadata: Metadata = {
   description:
     "Fast, secure, and conversion-focused websites. We build custom web solutions that look great and perform perfectly on all devices.",
   alternates: {
-    canonical: "https://www.strategybyte.com.au/our-services/website-development",
+    canonical:
+      "https://www.strategybyte.com.au/our-services/website-development",
   },
   openGraph: {
     title: "Custom Website Development Services | StrategyByte",
@@ -74,7 +75,7 @@ const page = () => {
       <MarketingProcess {...webDevelopmentProcess} />
       <SuccessStories {...successStories} />
       <Area />
-      <Offering />
+      <Offering id="website" />
       <Reviews />
       <FAQS {...faq} />
       <Contact />
