@@ -23,7 +23,7 @@ const Footer = () => {
                 <Link
                   href={item?.href}
                   key={index}
-                  className="py-2 inline-block"
+                  className="py-2 inline-block hover:text-yellow-200 transition duration-300"
                 >
                   {item.title}
                 </Link>
@@ -37,14 +37,14 @@ const Footer = () => {
                 <Link
                   href={item?.href}
                   key={index}
-                  className="py-2 inline-block"
+                  className="py-2 inline-block hover:text-yellow-200 transition duration-300"
                 >
                   {item.title}
                 </Link>
               ))}
               <Link
                 href={"/book-a-session"}
-                className="p-[2px] rounded-full bg-gradient-to-r from-[#FFC605] to-[#76B0FF] inline-block mt-2 w-fit"
+                className="p-[2px] rounded-full bg-gradient-to-r from-[#FFC605] to-[#76B0FF] inline-block mt-2 w-fit hover:scale-105 transition duration-300"
               >
                 <button className="bg-navy-bg py-2 px-4 rounded-full">
                   Schedule a Call
@@ -56,10 +56,10 @@ const Footer = () => {
             <h4 className="text-xl font-semibold py-2 mb-2">Company</h4>
             <div className="flex flex-col">
               {company.map((item, index) => (
-                <Link href={item.href} key={index} className="py-2">
+                <Link href={item.href} key={index} className="py-2 hover:text-yellow-200 transition duration-300">
                   {item.title}{" "}
                   {index === 0 && (
-                    <span className="text-yellow-200">We’re hiring</span>
+                    <span className="text-yellow-200">We&apos;re hiring</span>
                   )}
                 </Link>
               ))}

@@ -27,7 +27,7 @@ export const contact = [
   {
     type: "Phone",
     value: "0410 745 998",
-    displayValue: "0410 745 998 (WhatsApp)",
+    displayValue: "0410 745 998",
     href: "tel:+61410745998",
     icon: "phone",
   },
