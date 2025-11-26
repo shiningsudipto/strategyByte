@@ -26,7 +26,7 @@ const FAQ = () => {
       >
         <h2 className="heading">
           Get the answers you are <br /> looking for about{" "}
-          <span className="text-[#90949F]">StrategyByte</span>
+          <span className="text-[#000000]">StrategyByte</span>
         </h2>
         <div className="flex lg:flex-row flex-col lg:mt-16 xl:gap-16 lg:gap-10 gap-10">
           <div>

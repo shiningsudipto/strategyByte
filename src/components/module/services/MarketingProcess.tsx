@@ -22,9 +22,9 @@ const MarketingProcess = ({
           #3 Pillar Concept
         </p>
         <h2 className="heading">
-          Our 3-Step <span className="text-[#C4C2BF]">{title_highlight}</span>
+          Our 3-Step <span className="text-[#000000]">{title_highlight}</span>
         </h2>
-        <p className="text-lg text-neutral-500 mt-5">{description}</p>
+        <p className="text-lg text-[#000000] mt-5">{description}</p>
       </div>
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-5 mt-16 place-items-center">
         {process.map((process, index) => {

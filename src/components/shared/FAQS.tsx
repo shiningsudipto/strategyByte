@@ -37,7 +37,7 @@ const FAQS = ({ faqs, title_highlight }: TProps) => {
       >
       <h2 className="heading">
         Get the answers you are <br /> looking for about{" "}
-        <span className="text-[#90949F]">{title_highlight}</span>
+        <span className="text-[#000000]">{title_highlight}</span>
       </h2>
       <div className="flex lg:flex-row flex-col lg:mt-16 xl:gap-16 lg:gap-10 gap-10">
         <div>

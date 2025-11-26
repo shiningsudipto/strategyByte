@@ -13,7 +13,7 @@ export const caseStudiesList = [
   },
   {
     id: 2,
-    slug: "Alex-Rodriguez-Life-Coach-&-Counselling-Website-Refresh",
+    slug: "Alex-Rodriguez-Life-Coach-and-Counselling-Website-Refresh",
     img: "/case-studies/alex.png",
     thumbnail: thumbnail,
     file: "/case-studies/Case Study - Alexander Rodriguez.pdf",
