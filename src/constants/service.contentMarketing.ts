@@ -5,7 +5,7 @@ export const hero = {
   description:
     "Boost your Australian business with targeted digital marketing strategies. From SEO and paid search to content and social media, we deliver results that increase visibility and drive customer conversions.",
   button: "Book a Session",
-  img: "/services/Data Driven Business Optimization.png",
+  img: "/services/content-marketing.png",
 };
 
 export const marketing = {

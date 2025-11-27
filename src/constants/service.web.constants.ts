@@ -5,7 +5,7 @@ export const hero = {
   description:
     "High-performance sites that convert visits into enquiries. Custom WordPress builds, clean code, Core Web Vitals wins, and upfront pricing.",
   button: "Book a Session",
-  img: "/services/Website Development.png",
+  img: "/services/website-development.png",
 };
 
 export const webDevelopment = {

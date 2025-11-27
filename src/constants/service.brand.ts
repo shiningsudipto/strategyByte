@@ -6,7 +6,7 @@ export const hero = {
   description:
     "Transform your brand with tailored strategy and execution. We build strong, consistent identities that drive market success and customer loyalty.",
   button: "Book a Session",
-  img: "/services/Strategic Brand Management.png",
+  img: "/services/brand-management.png",
 };
 
 export const brandManagement = {
