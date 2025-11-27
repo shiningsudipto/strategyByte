@@ -24,20 +24,24 @@ import {
   successStories,
 } from "@/constants/service.brand";
 import type { Metadata } from "next";
-import { getOpenGraphImages, getTwitterImages } from "@/constants/metadata.constants";
+import {
+  getOpenGraphImages,
+  getTwitterImages,
+} from "@/constants/metadata.constants";
 
 export const metadata: Metadata = {
   title: "Brand Strategy & Management | StrategyByte",
   description:
     "Build a brand that lasts. From visual identity to tone of voice, we help you define your unique value proposition and foster loyalty.",
   alternates: {
-    canonical: "https://www.strategybyte.com.au/our-services/brand-management",
+    canonical:
+      "https://www.strategybyte.com.au/our-services/strategic-brand-management",
   },
   openGraph: {
     title: "Brand Strategy & Management | StrategyByte",
     description:
       "Build a brand that lasts. From visual identity to tone of voice, we help you define your unique value proposition and foster loyalty.",
-    url: "https://www.strategybyte.com.au/our-services/brand-management",
+    url: "https://www.strategybyte.com.au/our-services/strategic-brand-management",
     siteName: "StrategyByte",
     images: getOpenGraphImages("Brand Strategy & Management - StrategyByte"),
     locale: "en-US",

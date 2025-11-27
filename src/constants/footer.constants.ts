@@ -4,8 +4,8 @@ export const services = [
   { title: "Digital Marketing & SEO", href: "/our-services/digital-marketing" },
   { title: "Content Marketing", href: "/our-services/content-marketing" },
   {
-    title: "Strategic Branding Management",
-    href: "/our-services/brand-management",
+    title: "Strategic Brand Management",
+    href: "/our-services/strategic-brand-management",
   },
 ];
 

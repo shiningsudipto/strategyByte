@@ -236,9 +236,9 @@ export const services = [
   {
     id: "brand",
     img: "/services/services/Strategic Brand Management.png",
-    title: "Strategic Branding Management",
+    title: "Strategic Brand Management",
     desc: "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth",
-    href: "/our-services/brand-management",
+    href: "/our-services/strategic-brand-management",
   },
   {
     id: "seo",
@@ -250,7 +250,7 @@ export const services = [
   {
     id: "marketing",
     img: "/services/services/Business Optimization.png",
-    title: "CONTENT MARKETING",
+    title: "Content Marketing",
     desc: "We plan, create, and distribute high-value content that attracts the right audience, builds trust, and drives conversions.",
     href: "/our-services/content-marketing",
   },

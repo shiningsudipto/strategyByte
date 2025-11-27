@@ -67,7 +67,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/our-services/brand-management`,
+      url: `${baseUrl}/our-services/strategic-brand-management`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,
@@ -121,16 +121,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         sys: {
           publishedAt: string;
           firstPublishedAt: string;
-        }
+        };
       }) => ({
         url: `${baseUrl}/resources/${article.slug}`,
-        lastModified: new Date(article.sys.publishedAt || article.sys.firstPublishedAt),
+        lastModified: new Date(
+          article.sys.publishedAt || article.sys.firstPublishedAt
+        ),
         changeFrequency: "weekly" as const,
         priority: 0.7,
       })
     );
 
-    console.log(`✅ Successfully generated sitemap with ${articleRoutes.length} articles`);
+    console.log(
+      `✅ Successfully generated sitemap with ${articleRoutes.length} articles`
+    );
   } catch (error) {
     console.error("❌ Error fetching articles for sitemap:", error);
     // Return empty array on error - sitemap will still work with other routes

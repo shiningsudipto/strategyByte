@@ -18,9 +18,9 @@ export const navLinks = [
         path: "/our-services/digital-marketing",
       },
       {
-        title: "Strategic Branding Management",
+        title: "Strategic Brand Management",
         desc: "We build, position, and manage your brand with data-driven strategies that boost recognition, trust, and long-term growth",
-        path: "/our-services/brand-management",
+        path: "/our-services/strategic-brand-management",
       },
       {
         title: "CONTENT MARKETING",
