@@ -46,7 +46,9 @@ const BlogSlider = () => {
         setArticles(data.articles || []);
       } catch (error) {
         console.error("Error fetching articles:", error);
-        setError(error instanceof Error ? error.message : "Failed to load articles");
+        setError(
+          error instanceof Error ? error.message : "Failed to load articles"
+        );
       } finally {
         setLoading(false);
       }
@@ -188,7 +190,7 @@ const BlogSlider = () => {
             >
               <div className="rounded-[40px] h-[576px] bg-navy-100 group flex flex-col">
                 <div className="p-5 flex-1">
-                  <p className="mb-10 p-1 rounded-full border border-navy-200 w-fit h-[40px] flex items-center gap-1 overflow-hidden">
+                  <p className="mb-10 p-3 rounded-full border border-navy-200 w-fit h-[40px] flex items-center gap-1 overflow-hidden">
                     <Stars className="stroke-2 shrink-0" />
                     <span className="font-bold text-sm opacity-0 max-w-0 group-hover:opacity-100 group-hover:max-w-[200px] transition-all duration-300 ease-in-out">
                       NEW ARTICLE

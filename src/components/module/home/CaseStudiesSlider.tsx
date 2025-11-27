@@ -31,6 +31,7 @@ const CaseStudiesSlider = () => {
         className="blogSlider"
       >
         {caseStudiesList?.map((item) => {
+          const isHeadAt = item.id === 1;
           return (
             <SwiperSlide
               style={{ marginRight: "16px" }}
@@ -38,21 +39,27 @@ const CaseStudiesSlider = () => {
               className="lg:max-w-[980px] "
             >
               <div className="grid lg:grid-cols-2 grid-cols-1 group min-h-[508px]">
-                <div className="bg-[#F8F8F8] lg:rounded-l-[40px] lg:rounded-t-none rounded-t-[40px] lg:p-6 p-5 lg:space-y-0 space-y-5">
+                <div className="bg-[#F8F8F8] lg:rounded-l-[40px] lg:rounded-t-none rounded-t-[40px] lg:p-6 p-5 flex flex-col justify-between gap-4">
                   {/* brand image */}
-                  <Image
-                    src={item.img}
-                    alt={item.title}
-                    height={100}
-                    width={200}
-                    className="h-[80px] w-auto"
-                  />
-                  <h3 className="text-2xl font-semibold text-neutral-700 lg:mt-12 group-hover:underline cursor-pointer">
-                    <Link href={"/resources/case-studies/" + item.slug}>
-                      {item.title}
-                    </Link>
-                  </h3>
-                  <p className="text-neutral-500 mt-2">{item?.published}</p>
+                  <div>
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      height={100}
+                      width={200}
+                      className={`h-[80px] ${
+                        isHeadAt ? "h-[100px] w-[170px]" : "w-auto"
+                      }`}
+                    />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold text-neutral-700 lg:mt-12 group-hover:underline cursor-pointer">
+                      <Link href={"/resources/case-studies/" + item.slug}>
+                        {item.title}
+                      </Link>
+                    </h3>
+                    <p className="text-neutral-500 mt-2">{item?.published}</p>
+                  </div>
                   <div className="lg:mt-12">
                     <Link
                       href={"/resources/case-studies/" + item.slug}

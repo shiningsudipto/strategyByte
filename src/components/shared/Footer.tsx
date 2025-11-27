@@ -56,7 +56,11 @@ const Footer = () => {
             <h4 className="text-xl font-semibold py-2 mb-2">Company</h4>
             <div className="flex flex-col">
               {company.map((item, index) => (
-                <Link href={item.href} key={index} className="py-2 hover:text-yellow-200 transition duration-300">
+                <Link
+                  href={item.href}
+                  key={index}
+                  className="py-2 hover:text-yellow-200 transition duration-300"
+                >
                   {item.title}{" "}
                   {index === 0 && (
                     <span className="text-yellow-200">We&apos;re hiring</span>
@@ -114,10 +118,9 @@ const Footer = () => {
           <div className="xl:w-auto lg:w-[600px]">
             <p>
               We offer a comprehensive suite of digital marketing services that
-              cover all aspects of our online presence. From SEO and social
-              media marketing to content creation and PPC advertising, they have
-              the expertise and resources to handle our diverse marketing
-              needs. 
+              cover all aspects of online presence. From SEO and social media
+              marketing to content creation and PPC advertising—we have the
+              expertise and resources to handle diverse marketing needs.
             </p>
             <div className="flex items-center gap-2 mt-2">
               <Image
@@ -126,7 +129,7 @@ const Footer = () => {
                 height={100}
                 width={100}
                 quality={100}
-                className="size-[100px]"
+                className="size-[100px] rounded-2xl"
               />
               <Image
                 src={"/Hubspot.webp"}

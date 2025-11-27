@@ -62,7 +62,7 @@ const Review = () => {
 
                   {/* Review text */}
                   <p className="text-neutral-700 text-lg leading-relaxed flex-1">
-                    &ldquo;{item.text}&rdquo;
+                    {item.text}
                   </p>
 
                   {/* Reviewer info */}
@@ -103,7 +103,7 @@ const Review = () => {
 
                   {/* Review text */}
                   <p className="text-neutral-700 text-lg leading-relaxed flex-1">
-                    &ldquo;{item.text}&rdquo;
+                    {item.text}
                   </p>
 
                   {/* Reviewer info */}
