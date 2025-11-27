@@ -1,20 +1,4 @@
 "use client";
-import AlexanderRodriguez from "@/assets/organizations/Alexander Rodriguez.png";
-import CareAroundYou from "@/assets/organizations/Care Around You.png";
-import DisacareSolution from "@/assets/organizations/Disacare Solution.png";
-import DudleyLai from "@/assets/organizations/Dudley Lai.png";
-import ECS from "@/assets/organizations/ECS.png";
-import Ford from "@/assets/organizations/Ford.png";
-import Gelatissimo from "@/assets/organizations/Gelatissimo.png";
-import Jeep from "@/assets/organizations/Jeep.png";
-import Peugeot from "@/assets/organizations/Peugeot.png";
-import PropertyToFreedom from "@/assets/organizations/Property to Freedom.png";
-import RedBull from "@/assets/organizations/Red Bull.png";
-import SesameWorkshopBangladesh from "@/assets/organizations/Sesame Workshop Bangladesh.png";
-import SLUSoftball from "@/assets/organizations/SLU Softball.png";
-import TheDailyStar from "@/assets/organizations/The Daily Star.png";
-import WheresYourHeadAt from "@/assets/organizations/Where's Your Head At.png";
-
 import {
   Marquee,
   MarqueeContent,
@@ -26,77 +10,77 @@ import Image from "next/image";
 const organizationsList = [
   {
     id: 1,
-    img: AlexanderRodriguez,
+    img: "/organizations/alexander-rodriguez.png",
     alt: "Alexander Rodriguez",
   },
   {
     id: 2,
-    img: CareAroundYou,
+    img: "/organizations/care-around-you.png",
     alt: "Care Around You",
   },
   {
     id: 3,
-    img: DisacareSolution,
+    img: "/organizations/disacare-solution.png",
     alt: "Disacare Solution",
   },
   {
     id: 4,
-    img: DudleyLai,
+    img: "/organizations/dudley-lai.png",
     alt: "Dudley Lai",
   },
   {
     id: 5,
-    img: ECS,
+    img: "/organizations/ecs.png",
     alt: "ECS",
   },
   {
     id: 6,
-    img: Ford,
+    img: "/organizations/ford.png",
     alt: "Ford",
   },
   {
     id: 7,
-    img: Gelatissimo,
+    img: "/organizations/gelatissimo.png",
     alt: "Gelatissimo",
   },
   {
     id: 8,
-    img: Jeep,
+    img: "/organizations/jeep.png",
     alt: "Jeep",
   },
   {
     id: 9,
-    img: Peugeot,
+    img: "/organizations/peugeot.png",
     alt: "Peugeot",
   },
   {
     id: 10,
-    img: PropertyToFreedom,
+    img: "/organizations/property-to-freedom.png",
     alt: "Property to Freedom",
   },
   {
     id: 11,
-    img: RedBull,
+    img: "/organizations/red-bull.png",
     alt: "Red Bull",
   },
   {
     id: 12,
-    img: SesameWorkshopBangladesh,
+    img: "/organizations/sesame-workshop-bangladesh.png",
     alt: "Sesame Workshop Bangladesh",
   },
   {
     id: 13,
-    img: SLUSoftball,
+    img: "/organizations/slu-softball.png",
     alt: "SLU Softball",
   },
   {
     id: 14,
-    img: TheDailyStar,
+    img: "/organizations/the-daily-star.png",
     alt: "The Daily Star",
   },
   {
     id: 15,
-    img: WheresYourHeadAt,
+    img: "/organizations/wheres-your-head-at.png",
     alt: "Where's Your Head At",
   },
 ];
