@@ -123,8 +123,8 @@ export default function RootLayout({
         <Toaster richColors />
         <Navbar />
         {children}
-        <GoogleAnalytics gaId={process.env.GAID as string} />
-        <GoogleTagManager gtmId={process.env.GTMID as string} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GAID as string} />
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTMID as string} />
         <Footer />
       </body>
     </html>
