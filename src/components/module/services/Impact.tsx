@@ -1,5 +1,6 @@
 import BookASession from "@/components/actions/BookASession";
 import CardSlider from "./CardSlider";
+import FeedbackCard from "./FeedbackCard";
 
 const Impact = () => {
   return (
@@ -26,7 +27,8 @@ const Impact = () => {
           </div>
         </div>
         <div className="lg:flex justify-end lg:mt-0 mt-20">
-          <CardSlider />
+          {/* <CardSlider /> */}
+          <FeedbackCard />
         </div>
       </div>
     </section>
