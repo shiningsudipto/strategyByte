@@ -88,14 +88,8 @@ const organizationsList = [
 const Organizations = ({ title }: { title?: string }) => {
   return (
     <div className="py-20">
-      <h2 className="text-center text-neutral-500 mb-5">
-        {title ? (
-          title
-        ) : (
-          <>
-            Trust By <span className="font-bold">30+ organizations</span>
-          </>
-        )}
+      <h2 className="text-center text-neutral-500 mb-5 font-medium">
+        {title ? title : <>Brands Our Team has Worked With</>}
       </h2>
       <Marquee>
         {/* <MarqueeFade side="left" />

@@ -228,7 +228,7 @@ const BlogSlider = () => {
         })}
       </Swiper>
       <div className="flex lg:hidden justify-center gap-3 mt-10">
-        {articles.map((_, index) => (
+        {articles.slice(0, 2).map((_, index) => (
           <button
             key={index}
             onClick={() => {
@@ -246,7 +246,7 @@ const BlogSlider = () => {
       <div className="flex justify-between items-center gap-2 mt-10 section-gap">
         {/* Custom Pagination index dot*/}
         <div className="lg:flex hidden justify-center gap-3">
-          {articles.map((_, index) => (
+          {articles.slice(0, 3).map((_, index) => (
             <button
               key={index}
               onClick={() => {

@@ -6,6 +6,7 @@ import "swiper/css";
 import Navbar from "@/components/shared/Navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/shared/Footer";
+import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 import { Toaster } from "sonner";
 import {
   getOpenGraphImages,
@@ -122,6 +123,8 @@ export default function RootLayout({
         <Toaster richColors />
         <Navbar />
         {children}
+        <GoogleAnalytics gaId={process.env.GAID as string} />
+        <GoogleTagManager gtmId={process.env.GTMID as string} />
         <Footer />
       </body>
     </html>
