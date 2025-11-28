@@ -1,11 +1,11 @@
 import BookASession from "@/components/actions/BookASession";
-import CardSlider from "./CardSlider";
+// import CardSlider from "./CardSlider";
 import FeedbackCard from "./FeedbackCard";
 
 const Impact = () => {
   return (
-    <section className="bg-navy-bg lg:px-0 px-4 pb-28">
-      <div className="grid lg:grid-cols-2 grid-cols-1 gap-y-10 container section-gap lg:py-56 py-16 lg:pb-0 pb-30">
+    <section className="bg-navy-bg lg:px-0 px-4">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-y-10 container section-gap lg:py-20 py-16">
         <div>
           <h3 className="font-licorice text-[80px] text-navy-400">
             Proven Impacts
@@ -26,7 +26,7 @@ const Impact = () => {
             </p>
           </div>
         </div>
-        <div className="lg:flex justify-end lg:mt-0 mt-20">
+        <div className="lg:flex justify-end">
           {/* <CardSlider /> */}
           <FeedbackCard />
         </div>
