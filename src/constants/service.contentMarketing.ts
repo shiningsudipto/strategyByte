@@ -1,7 +1,8 @@
 export const hero = {
   subtitle:
     "We plan, create, and distribute high-value content that attracts the right audience, builds trust, and drives conversions.",
-  title: "Top Digital Marketing & SEO Services for Australian Businesses",
+  title:
+    "Elevate Your Brand with Expert Content Marketing For Australian Businesses",
   description:
     "Boost your Australian business with targeted digital marketing strategies. From SEO and paid search to content and social media, we deliver results that increase visibility and drive customer conversions.",
   button: "Book a Session",

@@ -5,7 +5,7 @@ import { reviews } from "@/constants/reviews";
 const FeedbackCard = () => {
   return (
     <div>
-      <AnimatedTestimonials testimonials={reviews} />
+      <AnimatedTestimonials testimonials={reviews} autoplay={true} />
     </div>
   );
 };
