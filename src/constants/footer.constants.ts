@@ -41,8 +41,9 @@ export const contact = [
   {
     type: "Address",
     value: "30 Campbell St, Blacktown NSW 2148, Australia",
-    displayValue: "30 Campbell St, Blacktown NSW 2148, Australia",
-    href: "https://maps.app.goo.gl/vCcwHV3ykXKypN5Z8",
+    displayValue:
+      "BRD, monthly reports, hiring (within dec 15), Dynamic Space MB",
+    href: "https://maps.app.goo.gl/2fck9WunXjaDNwFdA",
     icon: "location",
   },
 ];
