@@ -31,7 +31,7 @@ const Articles = () => {
       try {
         const res = await fetch("/api/articles?limit=8&skip=0");
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         setArticles(data.articles || []);
         setTotal(data.total || 0);
       } catch (error) {
